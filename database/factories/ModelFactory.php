@@ -16,9 +16,31 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
+    	'department_id' => function() {
+        	return factory('App\Department')->create()->id;
+        },
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Department::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->name,
+        'description' => $faker->unique()->sentence,
+    ];
+});
+
+$factory->define(App\Category::class, function (Faker\Generator $faker) {
+
+    return [
+	    'department_id' => function() {
+	    	return factory('App\Department')->create()->id;
+	    },
+        'name' => $faker->name,
+        'description' => $faker->unique()->sentence,
     ];
 });
