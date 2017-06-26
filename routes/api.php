@@ -13,6 +13,18 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::group(['namespace' => 'Api'], function() {
+	Route::get('tasks/feed', 'FeedController@index');	
+	Route::resource('tasks', 'TaskController');
+
+	Route::post('users/login', 'AuthController@login');
+	Route::get('users/categories', 'CategoryController@getTaskCategoriesForLoggedInUser');
+	
+    Route::post('users', 'AuthController@register');
+
+
 });

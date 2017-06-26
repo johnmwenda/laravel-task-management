@@ -23,6 +23,7 @@ md-toast[md-theme=warn] .md-toast-content {
 
 
 
+
 .ForgotPassword-input {
   margin-bottom: 0; }
 
@@ -124,6 +125,10 @@ md-toast[md-theme=warn] .md-toast-content {
 
 
 
+
+.ForgotPassword-formContainer {
+  margin-top: 80px;
+  margin-bottom: 80px; }
 
 .Footer {
   text-align: center;

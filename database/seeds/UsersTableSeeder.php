@@ -28,16 +28,16 @@ class UsersTableSeeder extends Seeder
         $user->password=bcrypt('victor123');
         $user->department_id = Department::first()->id;
         $user->save();
-        $user->assignRole(['Normal Employee']);
+        $user->assignRole(['User']);
 
         $dept_head = new User();
         $dept_head->name = 'Alice Department Head';
         $dept_head->email='alice@gmail.com';
         $dept_head->password=bcrypt('alice123');
-        $dept_head->department_id = 1;
+        $dept_head->department_id =  Department::first()->id;
         $dept_head->save();
         $dept_head->assignRole(['Department Head']);
-        $dept_head->assignRole(['Normal Employee']);
+        $dept_head->assignRole(['User']);
         
     }
 }

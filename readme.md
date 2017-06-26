@@ -54,7 +54,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 
 CUSTOM README
-remove testing suite from package.json... used for FE testing.. i dont think i will use it for now
+remove testing suite from package.json... used for FrontEnd testing.. i dont think i will use it for now
 "phantomjs-prebuilt": "^2.1.6",
 "karma": "^0.13.22",
 "karma-babel-preprocessor": "~4.0.0",
@@ -64,3 +64,5 @@ remove testing suite from package.json... used for FE testing.. i dont think i w
 "karma-ngannotate-preprocessor": "^0.1.2",
 "karma-phantomjs-launcher": "^1.0.0",
 "laravel-elixir-karma": "^0.2.2",
+
+the backend only does API. Attached please find the API Spec

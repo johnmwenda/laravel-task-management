@@ -1,0 +1,124 @@
+<section class="content-header">
+	<h1>
+		Create Task
+		<!-- <small>Preview</small> -->
+	</h1>
+     <!--  <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Forms</a></li>
+        <li class="active">General Elements</li>
+    </ol> -->
+</section>
+
+
+<section class="content">
+<div class="row">
+        <!-- left column -->
+        
+        <!--/.col (left) -->
+        <!-- right column -->
+        <div class="col-md-9">
+          <!-- Horizontal Form -->
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Create new task</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form class="form-horizontal">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="name" class="col-sm-2 control-label">Name</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" placeholder="Give a summary of the task">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="category" class="col-sm-2 control-label">Category</label>
+
+                  <div class="col-sm-10">
+                  <select name="category" required="" class="form-control" ng-model="vm.institution.type" ng-options="item.name for item in vm.tak_categories" >
+                  		<option value="">Select task category</option>
+                  	</select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="category" class="col-sm-2 control-label">Description</label>
+
+                  <div class="col-sm-10">
+                  <textarea class="form-control" rows="3" placeholder="description of task"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="category" class="col-sm-2 control-label">Access Level</label>
+
+                  <div class="col-sm-10">
+                  <select name="category" required="" class="form-control" ng-model="vm.institution.type" ng-options="item.name for item in vm.tak_categories" >
+                  		<option value="">Access level</option>
+                  	</select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="category" class="col-sm-2 control-label">Priority</label>
+
+                  <div class="col-sm-10">
+                  <select name="category" required="" class="form-control" ng-model="vm.institution.type" ng-options="item.name for item in vm.tak_categories" >
+                  		<option value="">Set priority for this task</option>
+                  	</select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="category" class="col-sm-2 control-label">Due date</label>
+
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control" placeholder="Due date">
+                  </div>
+                </div>
+
+                
+                <div class="form-group">
+                  <label for="category" class="col-sm-2 control-label">Assign people</label>
+
+                  <div class="col-sm-10">
+                  <select name="multipleSelect" class="form-control" id="multipleSelect" ng-model="data.multipleSelect" multiple>
+                  		<option value="option-1">Option 1</option>
+                  		<option value="option-2">Option 2</option>
+                  		<option value="option-3">Option 3</option>
+                  	</select>
+                  	<small>Hold ctrl to select multiple</small>
+                  </div>
+                </div>
+
+  <!--                 $table->unsignedInteger('user_id');
+            $table->unsignedInteger('department_id');
+            $table->unsignedInteger('category_id');
+            $table->string('name');
+            $table->text('summary');
+            $table->string('access_level');
+            $table->smallInteger('prority');
+            $table->dateTime('due_date');
+            $table->smallInteger('progress_status'); //1%-100% -->
+
+                
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <!-- <button type="submit" class="btn btn-default">Cancel</button> -->
+                <button type="submit" class="btn btn-info pull-right">Create</button>
+              </div>
+              <!-- /.box-footer -->
+            </form>
+          </div>
+          <!-- /.box -->
+          <!-- general form elements disabled -->
+    
+          <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+      </div>
+</section>

@@ -56,9 +56,9 @@
 
 	__webpack_require__(17);
 
-	__webpack_require__(46);
+	__webpack_require__(47);
 
-	__webpack_require__(49);
+	__webpack_require__(50);
 
 /***/ }),
 /* 1 */
@@ -227,10 +227,20 @@
 	    data: {
 	      bodyClass: 'hold-transition skin-blue sidebar-mini'
 	    }
+	  }).state('app.create-task', {
+	    url: '/create-task',
+	    data: {
+	      // auth: true
+	    },
+	    views: {
+	      'main@app': {
+	        templateUrl: getView('create-task')
+	      }
+	    }
 	  }).state('app.landing', {
 	    url: '/',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -240,7 +250,7 @@
 	  }).state('app.tablessimple', {
 	    url: '/tables-simple',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -250,7 +260,7 @@
 	  }).state('app.uiicons', {
 	    url: '/ui-icons',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -260,7 +270,7 @@
 	  }).state('app.uimodal', {
 	    url: '/ui-modal',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -270,7 +280,7 @@
 	  }).state('app.uitimeline', {
 	    url: '/ui-timeline',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -280,7 +290,7 @@
 	  }).state('app.uibuttons', {
 	    url: '/ui-buttons',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -290,7 +300,7 @@
 	  }).state('app.uigeneral', {
 	    url: '/ui-general',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -300,7 +310,7 @@
 	  }).state('app.formsgeneral', {
 	    url: '/forms-general',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -310,7 +320,7 @@
 	  }).state('app.chartjs', {
 	    url: '/charts-chartjs',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -320,7 +330,7 @@
 	  }).state('app.comingsoon', {
 	    url: '/comingsoon',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -330,7 +340,7 @@
 	  }).state('app.profile', {
 	    url: '/profile',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -343,7 +353,7 @@
 	  }).state('app.userlist', {
 	    url: '/user-lists',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -353,7 +363,7 @@
 	  }).state('app.useredit', {
 	    url: '/user-edit/:userId',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -367,7 +377,7 @@
 	  }).state('app.userroles', {
 	    url: '/user-roles',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -377,7 +387,7 @@
 	  }).state('app.userpermissions', {
 	    url: '/user-permissions',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -387,7 +397,7 @@
 	  }).state('app.userpermissionsadd', {
 	    url: '/user-permissions-add',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -400,7 +410,7 @@
 	  }).state('app.userpermissionsedit', {
 	    url: '/user-permissions-edit/:permissionId',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -414,7 +424,7 @@
 	  }).state('app.userrolesadd', {
 	    url: '/user-roles-add',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -427,7 +437,7 @@
 	  }).state('app.userrolesedit', {
 	    url: '/user-roles-edit/:roleId',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -441,7 +451,7 @@
 	  }).state('app.widgets', {
 	    url: '/widgets',
 	    data: {
-	      auth: true
+	      // auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -577,7 +587,7 @@
 	    return true;
 	  };
 
-	  $authProvider.loginUrl = '/api/auth/login';
+	  $authProvider.loginUrl = '/api/users/login';
 	  $authProvider.signupUrl = '/api/auth/register';
 	  $authProvider.tokenRoot = 'data'; // compensates success response macro
 	}
@@ -826,7 +836,9 @@
 
 	var _registerForm = __webpack_require__(45);
 
-	angular.module('app.components').component('tablesSimple', _tablesSimple.TablesSimpleComponent).component('uiModal', _uiModal.UiModalComponent).component('uiTimeline', _uiTimeline.UiTimelineComponent).component('uiButtons', _uiButtons.UiButtonsComponent).component('uiIcons', _uiIcons.UiIconsComponent).component('uiGeneral', _uiGeneral.UiGeneralComponent).component('formsGeneral', _formsGeneral.FormsGeneralComponent).component('chartsChartjs', _chartsChartjs.ChartsChartjsComponent).component('widgets', _widgets.WidgetsComponent).component('userProfile', _userProfile.UserProfileComponent).component('userVerification', _userVerification.UserVerificationComponent).component('comingSoon', _comingSoon.ComingSoonComponent).component('userEdit', _userEdit.UserEditComponent).component('userPermissionsEdit', _userPermissionsEdit.UserPermissionsEditComponent).component('userPermissionsAdd', _userPermissionsAdd.UserPermissionsAddComponent).component('userPermissions', _userPermissions.UserPermissionsComponent).component('userRolesEdit', _userRolesEdit.UserRolesEditComponent).component('userRolesAdd', _userRolesAdd.UserRolesAddComponent).component('userRoles', _userRoles.UserRolesComponent).component('userLists', _userLists.UserListsComponent).component('dashboard', _dashboard.DashboardComponent).component('navSidebar', _navSidebar.NavSidebarComponent).component('navHeader', _navHeader.NavHeaderComponent).component('loginLoader', _loginLoader.LoginLoaderComponent).component('resetPassword', _resetPassword.ResetPasswordComponent).component('forgotPassword', _forgotPassword.ForgotPasswordComponent).component('loginForm', _loginForm.LoginFormComponent).component('registerForm', _registerForm.RegisterFormComponent);
+	var _create_task = __webpack_require__(46);
+
+	angular.module('app.components').component('tablesSimple', _tablesSimple.TablesSimpleComponent).component('uiModal', _uiModal.UiModalComponent).component('uiTimeline', _uiTimeline.UiTimelineComponent).component('uiButtons', _uiButtons.UiButtonsComponent).component('uiIcons', _uiIcons.UiIconsComponent).component('uiGeneral', _uiGeneral.UiGeneralComponent).component('formsGeneral', _formsGeneral.FormsGeneralComponent).component('chartsChartjs', _chartsChartjs.ChartsChartjsComponent).component('widgets', _widgets.WidgetsComponent).component('userProfile', _userProfile.UserProfileComponent).component('userVerification', _userVerification.UserVerificationComponent).component('comingSoon', _comingSoon.ComingSoonComponent).component('userEdit', _userEdit.UserEditComponent).component('userPermissionsEdit', _userPermissionsEdit.UserPermissionsEditComponent).component('userPermissionsAdd', _userPermissionsAdd.UserPermissionsAddComponent).component('userPermissions', _userPermissions.UserPermissionsComponent).component('userRolesEdit', _userRolesEdit.UserRolesEditComponent).component('userRolesAdd', _userRolesAdd.UserRolesAddComponent).component('userRoles', _userRoles.UserRolesComponent).component('userLists', _userLists.UserListsComponent).component('dashboard', _dashboard.DashboardComponent).component('navSidebar', _navSidebar.NavSidebarComponent).component('navHeader', _navHeader.NavHeaderComponent).component('loginLoader', _loginLoader.LoginLoaderComponent).component('resetPassword', _resetPassword.ResetPasswordComponent).component('forgotPassword', _forgotPassword.ForgotPasswordComponent).component('loginForm', _loginForm.LoginFormComponent).component('registerForm', _registerForm.RegisterFormComponent).component('createTask', _create_task.CreateTaskComponent);
 
 /***/ }),
 /* 18 */
@@ -2229,23 +2241,40 @@
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var DashboardController = function DashboardController($scope) {
-	  'ngInject';
+	var DashboardController = function () {
+	  DashboardController.$inject = ["$scope", "userService"];
+	  function DashboardController($scope, userService) {
+	    'ngInject';
 
-	  _classCallCheck(this, DashboardController);
+	    _classCallCheck(this, DashboardController);
 
-	  $scope.labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-	  $scope.series = ['Series A', 'Series B'];
-	  $scope.data = [[65, 59, 80, 81, 56, 55, 40], [28, 48, 40, 19, 86, 27, 90]];
+	    this.userService = userService;
+	  }
 
-	  $scope.onClick = function () {};
+	  _createClass(DashboardController, [{
+	    key: '$onInit',
+	    value: function $onInit() {
+	      this.fetchUserTasks();
+	    }
+	    // both reporter taks and assigned tasks
 
-	  $scope.pieLabels = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
-	  $scope.pieData = [300, 500, 100];
-	};
-	DashboardController.$inject = ["$scope"];
+	  }, {
+	    key: 'fetchUserTasks',
+	    value: function fetchUserTasks() {
+	      this.userService.fetchUserTasks().then(function (resp) {
+	        console.log(resp);
+	      }, function (error) {
+	        console.log(error);
+	      });
+	    }
+	  }]);
+
+	  return DashboardController;
+	}();
 
 	var DashboardComponent = exports.DashboardComponent = {
 	  templateUrl: './views/app/components/dashboard/dashboard.component.html',
@@ -2279,6 +2308,7 @@
 	    this.can = AclService.can;
 
 	    ContextService.me(function (data) {
+	      console.log('from Nav SIde bar', data);
 	      navSideBar.userData = data;
 	    });
 	  }
@@ -2586,20 +2616,24 @@
 	      this.unverified = false;
 
 	      var user = {
-	        email: this.email,
-	        password: this.password
+	        user: {
+	          email: this.email,
+	          password: this.password
+	        }
 	      };
 
 	      this.$auth.login(user).then(function (response) {
-	        var data = response.data.data;
-	        var AclService = _this.AclService;
+	        // console.log(response);
+	        // console.log(response.user);
+	        var data = response.user;
+	        // let AclService = this.AclService
 
-	        angular.forEach(data.userRole, function (value) {
-	          AclService.attachRole(value);
-	        });
+	        // angular.forEach(data.userRole, function (value) {
+	        //   AclService.attachRole(value)
+	        // })
 
-	        AclService.setAbilities(data.abilities);
-	        _this.$auth.setToken(response.data);
+	        // AclService.setAbilities(data.abilities)
+	        _this.$auth.setToken(response.data.user.token);
 	        _this.$state.go('app.landing');
 	      }).catch(this.failedLogin.bind(this));
 	    }
@@ -2714,18 +2748,56 @@
 
 /***/ }),
 /* 46 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var CreateTaskController = function () {
+	    function CreateTaskController() {
+	        'ngInject';
+
+	        //
+
+	        _classCallCheck(this, CreateTaskController);
+	    }
+
+	    _createClass(CreateTaskController, [{
+	        key: '$onInit',
+	        value: function $onInit() {}
+	    }]);
+
+	    return CreateTaskController;
+	}();
+
+	var CreateTaskComponent = exports.CreateTaskComponent = {
+	    templateUrl: './views/app/components/create_task/create_task.component.html',
+	    controller: CreateTaskController,
+	    controllerAs: 'vm',
+	    bindings: {}
+	};
+
+/***/ }),
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _routeBodyclass = __webpack_require__(47);
+	var _routeBodyclass = __webpack_require__(48);
 
-	var _passwordVerify = __webpack_require__(48);
+	var _passwordVerify = __webpack_require__(49);
 
 	angular.module('app.components').directive('routeBodyclass', _routeBodyclass.RouteBodyClassComponent).directive('passwordVerify', _passwordVerify.PasswordVerifyClassComponent);
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2761,7 +2833,7 @@
 	var RouteBodyClassComponent = exports.RouteBodyClassComponent = routeBodyClass;
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2806,19 +2878,21 @@
 	var PasswordVerifyClassComponent = exports.PasswordVerifyClassComponent = passwordVerifyClass;
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _context = __webpack_require__(50);
+	var _context = __webpack_require__(51);
 
-	var _API = __webpack_require__(51);
+	var _API = __webpack_require__(52);
 
-	angular.module('app.services').service('ContextService', _context.ContextService).service('API', _API.APIService);
+	var _userService = __webpack_require__(53);
+
+	angular.module('app.services').service('ContextService', _context.ContextService).service('API', _API.APIService).service('userService', _userService.userService);
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2870,7 +2944,7 @@
 	}();
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2915,6 +2989,41 @@
 	    });
 	  });
 	}];
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var userService = exports.userService = function () {
+	  userService.$inject = ["$http"];
+	  function userService($http) {
+	    'ngInject';
+
+	    _classCallCheck(this, userService);
+
+	    this.$http = $http;
+	    this.urlBase = "http://localhost:8001/api/";
+	  }
+
+	  _createClass(userService, [{
+	    key: 'fetchUserTasks',
+	    value: function fetchUserTasks() {
+	      return this.$http.get(this.urlBase + 'tasks/feed');
+	    }
+	  }]);
+
+	  return userService;
+	}();
 
 /***/ })
 /******/ ]);

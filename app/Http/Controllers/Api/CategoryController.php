@@ -1,25 +1,27 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Category;
-use Illuminate\Http\Request;
+use App\TaskManagement\Transformers\CategoryTransformer;
+// use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class CategoryController extends ApiController
 {
-    public function __construct()
+    public function __construct(CategoryTransformer $transformer)
     {
-        $this->middleware(['auth', 'category']);
+        $this->transformer = $transformer;
+        // $this->middleware(['auth', 'category']);
             // ->except('index', 'show');
     }
     /**
-     * Display a listing of the resource.
+     * Display a listing of all categories will include filters such as ...
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -102,5 +104,17 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         //
+    }
+
+    /**
+     * get task categories for the logged in user... used in creating a task
+     * @return [type] [description]
+     */
+    public function getTaskCategoriesForLoggedInUser(){
+        $user = auth()->user();
+
+        $categories = Category::where('department_id', $user->department_id );
+
+        return respondWithTransformer($categories);
     }
 }

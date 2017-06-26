@@ -9,15 +9,22 @@
         <a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
     </div>
-    <form action="#" method="get" class="sidebar-form">
-      <div class="input-group">
+    <form action="#" method="get" class="" style="    margin-left: 15px;
+    margin-bottom: 11px;">
+    <!--   <div class="input-group">
         <input type="text" name="q" class="form-control" placeholder="Search...">
         <span class="input-group-btn">
           <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
           </button>
         </span>
-      </div>
+      </div> -->
+
+       <a ui-sref ="app.create-task" style="color: white" class="btn btn-primary">
+        Create Task
+        </a>
     </form>
+
+
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
       <li>
@@ -25,7 +32,8 @@
           <i class="fa fa-dashboard"></i> <span>Dashboard</span>
         </a>
       </li>
-      <li class="treeview" ng-show="vm.can('manage.users')">
+      
+    <!--   <li class="treeview" ng-show="vm.can('manage.users')">
         <a href="javascript:void(0)">
           <i class="fa fa-users"></i> <span>Users</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
@@ -121,8 +129,8 @@
           <i class="fa fa-envelope"></i> <span>Mailbox</span>
           <small class="label pull-right bg-yellow">12</small>
         </a>
-      </li>
-      <li class="header">LABELS</li>
+      </li> -->
+      <!-- <li class="header">LABELS</li>
       <li class="treeview">
         <a href="javascript:void(0)">
           <i class="fa fa-folder"></i> <span>Examples</span>
@@ -139,7 +147,7 @@
           <li><a ui-sref="app.comingsoon"><i class="fa fa-circle-o"></i> Blank Page</a></li>
           <li><a ui-sref="app.comingsoon"><i class="fa fa-circle-o"></i> Pace Page</a></li>
         </ul>
-      </li>
+      </li> -->
     </ul>
   </section>
 </aside>

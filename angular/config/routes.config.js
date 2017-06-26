@@ -30,10 +30,25 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         bodyClass: 'hold-transition skin-blue sidebar-mini'
       }
     })
+
+    .state('app.create-task', {
+      url: '/create-task',
+      data: {
+        // auth: true
+      },
+      views: {
+        'main@app': {
+          templateUrl: getView('create-task')
+        }
+      }
+    })
+
+
+
     .state('app.landing', {
       url: '/',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -44,7 +59,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.tablessimple', {
       url: '/tables-simple',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -55,7 +70,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.uiicons', {
       url: '/ui-icons',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -66,7 +81,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.uimodal', {
       url: '/ui-modal',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -77,7 +92,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.uitimeline', {
       url: '/ui-timeline',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -88,7 +103,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.uibuttons', {
       url: '/ui-buttons',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -99,7 +114,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.uigeneral', {
       url: '/ui-general',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -110,7 +125,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.formsgeneral', {
       url: '/forms-general',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -121,7 +136,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.chartjs', {
       url: '/charts-chartjs',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -132,7 +147,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.comingsoon', {
       url: '/comingsoon',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -143,7 +158,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.profile', {
       url: '/profile',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -157,7 +172,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.userlist', {
       url: '/user-lists',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -168,7 +183,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.useredit', {
       url: '/user-edit/:userId',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -183,7 +198,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.userroles', {
       url: '/user-roles',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -194,7 +209,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.userpermissions', {
       url: '/user-permissions',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -205,7 +220,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.userpermissionsadd', {
       url: '/user-permissions-add',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -219,7 +234,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.userpermissionsedit', {
       url: '/user-permissions-edit/:permissionId',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -234,7 +249,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.userrolesadd', {
       url: '/user-roles-add',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -248,7 +263,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.userrolesedit', {
       url: '/user-roles-edit/:roleId',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {
@@ -263,7 +278,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
     .state('app.widgets', {
       url: '/widgets',
       data: {
-        auth: true
+        // auth: true
       },
       views: {
         'main@app': {

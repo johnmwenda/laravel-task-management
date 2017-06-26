@@ -32,10 +32,10 @@ elixir(function (mix) {
       'public/css/final.css'
     ],
     scripts = [
-      './public/js/vendor.js',
-      './public/js/partials.js',
-      './public/js/app.js',
-      './public/dist/js/app.js'
+      './public/js/vendor.js', //bower Js
+      './public/js/partials.js', //angular partials html templates
+      './public/js/app.js', //angular app
+      './public/dist/js/app.js' //
     ],
     styles = [
       './public/css/vendor.css',
@@ -59,7 +59,7 @@ elixir(function (mix) {
     .styles(styles, './public/css/final.css')
     .version(assets)
     .browserSync({
-      proxy: 'localhost:8000'
+      proxy: 'localhost:8001'
     })
     // .karma({
     //   jsDir: karmaJsDir

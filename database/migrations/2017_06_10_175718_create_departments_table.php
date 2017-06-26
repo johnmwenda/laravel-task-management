@@ -19,6 +19,13 @@ class CreateDepartmentsTable extends Migration
             $table->text('description');   
             $table->timestamps();
         });
+
+        Schema::table('users', function($table) {
+            $table->integer('department_id')->after('id');
+
+            $table->foreign('department_id')->references('id')->on('departments')
+                ->onUpdate('cascade')->onDelete('cascade');                
+        });
     }
 
     /**
@@ -27,7 +34,12 @@ class CreateDepartmentsTable extends Migration
      * @return void
      */
     public function down()
-    {
+    {   
+        Schema::table('users', function($table)
+        {
+            $table->dropColumn('department_id');
+        });
+
         Schema::dropIfExists('departments');
     }
 }

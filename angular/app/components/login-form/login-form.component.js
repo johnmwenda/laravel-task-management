@@ -27,21 +27,25 @@ class LoginFormController {
     this.unverified = false
 
     let user = {
-      email: this.email,
-      password: this.password
+      user: {
+        email: this.email,
+        password: this.password
+      }
     }
 
     this.$auth.login(user)
       .then((response) => {
-        let data = response.data.data
-        let AclService = this.AclService
+        // console.log(response);
+        // console.log(response.user);
+        let data = response.user
+        // let AclService = this.AclService
 
-        angular.forEach(data.userRole, function (value) {
-          AclService.attachRole(value)
-        })
+        // angular.forEach(data.userRole, function (value) {
+        //   AclService.attachRole(value)
+        // })
 
-        AclService.setAbilities(data.abilities)
-        this.$auth.setToken(response.data)
+        // AclService.setAbilities(data.abilities)
+        this.$auth.setToken(response.data.user.token);
         this.$state.go('app.landing')
       })
       .catch(this.failedLogin.bind(this))

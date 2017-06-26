@@ -14,7 +14,7 @@ class RolesTableSeeder extends Seeder
     public function run()
     {
         $role_normal_employee = new Role();
-        $role_normal_employee->name = "Normal Employee";
+        $role_normal_employee->name = "User";
         $role_normal_employee->description = "Normal department member";
         $role_normal_employee->save();
 
