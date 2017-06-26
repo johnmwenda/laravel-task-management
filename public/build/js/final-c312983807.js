@@ -108174,7 +108174,7 @@ module.run(['$templateCache', function($templateCache) {
 	    _classCallCheck(this, userService);
 
 	    this.$http = $http;
-	    this.urlBase = "http://localhost:8001/api/";
+	    this.urlBase = "https://cytonn-web-app.herokuapp.com/api/";
 	  }
 
 	  _createClass(userService, [{
