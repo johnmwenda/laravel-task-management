@@ -13,6 +13,9 @@ class CategoryController extends ApiController
         $this->transformer = $transformer;
         // $this->middleware(['auth', 'category']);
             // ->except('index', 'show');
+            // 
+        $this->middleware('auth.api')->except(['index', 'show']);
+        $this->middleware('auth.api:optional')->only(['index', 'show']);
     }
     /**
      * Display a listing of all categories will include filters such as ...
@@ -112,6 +115,8 @@ class CategoryController extends ApiController
      */
     public function getTaskCategoriesForLoggedInUser(){
         $user = auth()->user();
+
+        dd($user);
 
         $categories = Category::where('department_id', $user->department_id );
 

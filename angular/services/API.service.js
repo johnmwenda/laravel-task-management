@@ -21,7 +21,8 @@ export class APIService {
         .addFullRequestInterceptor(function (element, operation, what, url, headers) {
           var token = $window.localStorage.satellizer_token
           if (token) {
-            headers.Authorization = 'Bearer ' + token
+            console.log('tokenRestangular called', token);
+            // headers.Authorization = 'Token ' + token  
           }
         })
         .addResponseInterceptor(function (response, operation, what) {

@@ -587,10 +587,14 @@
 	    return true;
 	  };
 
-	  $authProvider.loginUrl = '/api/users/login';
-	  $authProvider.signupUrl = '/api/auth/register';
+	  $authProvider.loginUrl = 'http://localhost:8001/api/users/login';
+	  $authProvider.signupUrl = 'http://localhost:8001/api/auth/register';
 	  $authProvider.tokenRoot = 'data'; // compensates success response macro
+	  $authProvider.tokenHeader = 'Authorization';
+	  $authProvider.tokenType = 'Token';
 	}
+
+	// /#/login
 
 /***/ }),
 /* 9 */
@@ -2761,17 +2765,26 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var CreateTaskController = function () {
-	    function CreateTaskController() {
+	    CreateTaskController.$inject = ["userService"];
+	    function CreateTaskController(userService) {
 	        'ngInject';
 
-	        //
-
 	        _classCallCheck(this, CreateTaskController);
+
+	        this.userService = userService;
+
+	        //
 	    }
 
 	    _createClass(CreateTaskController, [{
 	        key: '$onInit',
-	        value: function $onInit() {}
+	        value: function $onInit() {
+	            this.userService.getTaskCategories().then(function (resp) {
+	                console.log(resp);
+	            }, function (error) {
+	                console.log(error);
+	            });
+	        }
 	    }]);
 
 	    return CreateTaskController;
@@ -2976,7 +2989,8 @@
 	    }).addFullRequestInterceptor(function (element, operation, what, url, headers) {
 	      var token = $window.localStorage.satellizer_token;
 	      if (token) {
-	        headers.Authorization = 'Bearer ' + token;
+	        console.log('tokenRestangular called', token);
+	        // headers.Authorization = 'Token ' + token  
 	      }
 	    }).addResponseInterceptor(function (response, operation, what) {
 	      if (operation === 'getList') {
@@ -3005,20 +3019,44 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var userService = exports.userService = function () {
-	  userService.$inject = ["$http"];
-	  function userService($http) {
+	  userService.$inject = ["$http", "$window"];
+	  function userService($http, $window) {
 	    'ngInject';
 
 	    _classCallCheck(this, userService);
 
 	    this.$http = $http;
-	    this.urlBase = "https://cytonn-web-app.herokuapp.com/api/";
+	    this.urlBase = "http://localhost:8001/api/";
+	    this.$window = $window;
+
+	    this.token = this.$window.localStorage.satellizer_token;
 	  }
 
 	  _createClass(userService, [{
 	    key: 'fetchUserTasks',
 	    value: function fetchUserTasks() {
-	      return this.$http.get(this.urlBase + 'tasks/feed');
+	      var vm = this;
+	      return this.$http({
+	        method: 'get',
+	        url: this.urlBase + 'tasks/feed',
+	        headers: {
+	          authorization: 'Token ' + vm.token
+	        }
+	      });
+	    }
+	  }, {
+	    key: 'getTaskCategories',
+	    value: function getTaskCategories() {
+	      var vm = this;
+	      return this.$http({
+	        method: 'get',
+	        url: this.urlBase + 'users/categories',
+	        headers: {
+	          authorization: 'Token ' + vm.token
+	        }
+	      });
+
+	      // get(this.urlBase+ 'users/categories');
 	    }
 	  }]);
 

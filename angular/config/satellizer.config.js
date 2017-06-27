@@ -5,7 +5,11 @@ export function SatellizerConfig ($authProvider) {
     return true
   }
 
-  $authProvider.loginUrl = '/api/users/login'
-  $authProvider.signupUrl = '/api/auth/register'
+  $authProvider.loginUrl = 'http://localhost:8001/api/users/login'
+  $authProvider.signupUrl = 'http://localhost:8001/api/auth/register'
   $authProvider.tokenRoot = 'data' // compensates success response macro
+  $authProvider.tokenHeader = 'Authorization'
+  $authProvider.tokenType = 'Token'
 }
+
+// /#/login
