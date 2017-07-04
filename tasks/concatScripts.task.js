@@ -10,5 +10,5 @@ Elixir.extend('concatScripts', function (scripts, dest) {
     return gulp.src(scripts)
       .pipe(concat(dest))
       .pipe(gulp.dest(Elixir.config.js.outputFolder))
-  }).watch(scripts)
+  }).watch(scripts, {usePolling: true})
 })

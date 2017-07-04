@@ -50,7 +50,7 @@ Elixir.extend('bower', function (jsOutputFile, jsOutputFolder, cssOutputFile, cs
         icon: __dirname + '/../node_modules/laravel-elixir/icons/laravel.png',
         message: ' '
       }))
-  }).watch('bower.json')
+  }).watch('bower.json', {usePolling: true})
 
   new Task('bower-css', function () {
     return gulp.src(mainBowerFiles({
@@ -88,7 +88,7 @@ Elixir.extend('bower', function (jsOutputFile, jsOutputFolder, cssOutputFile, cs
         icon: __dirname + '/../node_modules/laravel-elixir/icons/laravel.png',
         message: ' '
       }))
-  }).watch('bower.json')
+  }).watch('bower.json', {usePolling: true})
 
   new Task('bower-fonts', function () {
     return gulp.src(mainBowerFiles({
@@ -102,5 +102,5 @@ Elixir.extend('bower', function (jsOutputFile, jsOutputFolder, cssOutputFile, cs
     }))
       .pipe(filter('**/*.{eot,svg,ttf,woff,woff2}'))
       .pipe(gulp.dest(config.fonts.outputFolder))
-  }).watch('bower.json')
+  }).watch('bower.json', {usePolling: true})
 })

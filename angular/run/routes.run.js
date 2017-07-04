@@ -16,6 +16,9 @@ export function RoutesRun ($rootScope, $state, $auth, AclService, $timeout, API,
   })
 
   function stateChange () {
+
+    console.log('state change called')
+
     $timeout(function () {
       // fix sidebar
       var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight()
@@ -36,8 +39,10 @@ export function RoutesRun ($rootScope, $state, $auth, AclService, $timeout, API,
       if ($auth.isAuthenticated() && !$rootScope.me) {
         ContextService.getContext()
           .then((response) => {
+
             response = response.plain()
-            $rootScope.me = response.data
+            console.log(response)
+            $rootScope.me = response.user
           })
       }
     })

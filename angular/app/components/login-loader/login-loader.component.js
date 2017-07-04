@@ -2,6 +2,8 @@ class LoginLoaderController {
   constructor ($state, $auth, API, AclService) {
     'ngInject'
 
+    console.log('login loader called') 
+
     API.oneUrl('authenticate').one('user').get().then((response) => {
       if (!response.error) {
         let data = response.data

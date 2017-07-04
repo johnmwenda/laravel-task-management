@@ -4,7 +4,8 @@ export class APIService {
     // content negotiation
     var headers = {
       'Content-Type': 'application/json',
-      'Accept': 'application/x.laravel.v1+json'
+      'Accept': 'application/x.laravel.v1+json',
+      'Authorization': 'Token '+$window.localStorage.satellizer_token
     }
 
     return Restangular.withConfig(function (RestangularConfigurer) {
@@ -18,13 +19,13 @@ export class APIService {
             // }
           }
         })
-        .addFullRequestInterceptor(function (element, operation, what, url, headers) {
-          var token = $window.localStorage.satellizer_token
-          if (token) {
-            console.log('tokenRestangular called', token);
-            // headers.Authorization = 'Token ' + token  
-          }
-        })
+        // .addFullRequestInterceptor(function (element, operation, what, url, headers) {
+        //   var token = $window.localStorage.satellizer_token
+        //   if (token) {
+        //     console.log('tokenRestangular called', token);
+        //     headers.Authorization = ' s ' + token  
+        //   }
+        // })
         .addResponseInterceptor(function (response, operation, what) {
           if (operation === 'getList') {
             var newResponse = response.data[what]

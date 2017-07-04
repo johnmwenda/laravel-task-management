@@ -48,7 +48,7 @@ elixir(function (mix) {
       jsOutputFolder + '/partials.js',
       jsOutputFolder + '/app.js',
       'tests/angular/**/*.spec.js'
-  ]
+  ] 
 
   mix
     .bower()
@@ -59,7 +59,8 @@ elixir(function (mix) {
     .styles(styles, './public/css/final.css')
     .version(assets)
     .browserSync({
-      proxy: 'localhost:8001'
+      proxy: 'http://cytonn.local.app',
+      open: false
     })
     // .karma({
     //   jsDir: karmaJsDir

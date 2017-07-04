@@ -114,6 +114,9 @@
 	  });
 
 	  function stateChange() {
+
+	    console.log('state change called');
+
 	    $timeout(function () {
 	      // fix sidebar
 	      var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
@@ -133,8 +136,10 @@
 	      // get user current context
 	      if ($auth.isAuthenticated() && !$rootScope.me) {
 	        ContextService.getContext().then(function (response) {
+
 	          response = response.plain();
-	          $rootScope.me = response.data;
+	          console.log(response);
+	          $rootScope.me = response.user;
 	        });
 	      }
 	    });
@@ -587,11 +592,11 @@
 	    return true;
 	  };
 
-	  $authProvider.loginUrl = 'http://localhost:8001/api/users/login';
-	  $authProvider.signupUrl = 'http://localhost:8001/api/auth/register';
+	  $authProvider.loginUrl = 'http://cytonn.local.app/api/users/login';
+	  $authProvider.signupUrl = 'http://cytonn.local.app/api/auth/register';
 	  $authProvider.tokenRoot = 'data'; // compensates success response macro
 	  $authProvider.tokenHeader = 'Authorization';
-	  $authProvider.tokenType = 'Token';
+	  $authProvider.authToken = 'Token';
 	}
 
 	// /#/login
@@ -2356,6 +2361,7 @@
 	    var navHeader = this;
 
 	    ContextService.me(function (data) {
+	      console.log(data);
 	      navHeader.userData = data;
 	    });
 	  }
@@ -2391,6 +2397,8 @@
 	  'ngInject';
 
 	  _classCallCheck(this, LoginLoaderController);
+
+	  console.log('login loader called');
 
 	  API.oneUrl('authenticate').one('user').get().then(function (response) {
 	    if (!response.error) {
@@ -2976,7 +2984,8 @@
 
 	  var headers = {
 	    'Content-Type': 'application/json',
-	    'Accept': 'application/x.laravel.v1+json'
+	    'Accept': 'application/x.laravel.v1+json',
+	    'Authorization': 'Token ' + $window.localStorage.satellizer_token
 	  };
 
 	  return Restangular.withConfig(function (RestangularConfigurer) {
@@ -2986,13 +2995,15 @@
 	        // return ToastService.error(response.data.errors[error][0])
 	        // }
 	      }
-	    }).addFullRequestInterceptor(function (element, operation, what, url, headers) {
-	      var token = $window.localStorage.satellizer_token;
-	      if (token) {
-	        console.log('tokenRestangular called', token);
-	        // headers.Authorization = 'Token ' + token  
-	      }
-	    }).addResponseInterceptor(function (response, operation, what) {
+	    }
+	    // .addFullRequestInterceptor(function (element, operation, what, url, headers) {
+	    //   var token = $window.localStorage.satellizer_token
+	    //   if (token) {
+	    //     console.log('tokenRestangular called', token);
+	    //     headers.Authorization = ' s ' + token  
+	    //   }
+	    // })
+	    ).addResponseInterceptor(function (response, operation, what) {
 	      if (operation === 'getList') {
 	        var newResponse = response.data[what];
 	        newResponse.error = response.error;
@@ -3026,7 +3037,7 @@
 	    _classCallCheck(this, userService);
 
 	    this.$http = $http;
-	    this.urlBase = "http://localhost:8001/api/";
+	    this.urlBase = "http://cytonn.local.app/api/";
 	    this.$window = $window;
 
 	    this.token = this.$window.localStorage.satellizer_token;
@@ -3040,7 +3051,7 @@
 	        method: 'get',
 	        url: this.urlBase + 'tasks/feed',
 	        headers: {
-	          authorization: 'Token ' + vm.token
+	          // authorization: 'Token '+vm.token
 	        }
 	      });
 	    }
@@ -3052,7 +3063,10 @@
 	        method: 'get',
 	        url: this.urlBase + 'users/categories',
 	        headers: {
-	          authorization: 'Token ' + vm.token
+	          // 'authorization': function(config) {
+	          //   console.log(config);
+	          //   // 'Token '+vm.token
+	          // } 
 	        }
 	      });
 

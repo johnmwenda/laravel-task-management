@@ -98984,7 +98984,7 @@ module.run(['$templateCache', function($templateCache) {
     '<header class="main-header">\n' +
     '  <a href="/" class="logo">\n' +
     '    <span class="logo-mini"><b>A</b>LT</span>\n' +
-    '    <span class="logo-lg"><b>Admin</b>LTE</span>\n' +
+    '    <span class="logo-lg"><b>Task Management</b></span>\n' +
     '  </a>\n' +
     '  <nav class="navbar navbar-static-top">\n' +
     '    <a href="javascript:void(0)" class="sidebar-toggle" data-toggle="offcanvas" role="button">\n' +
@@ -99236,7 +99236,7 @@ module.run(['$templateCache', function($templateCache) {
     '        <a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>\n' +
     '      </div>\n' +
     '    </div>\n' +
-    '    <form action="#" method="get" class="" style="    margin-left: 15px;\n' +
+    '    <form action="#" method="get" class="create-task" style="    margin-left: 15px;\n' +
     '    margin-bottom: 11px;">\n' +
     '    <!--   <div class="input-group">\n' +
     '        <input type="text" name="q" class="form-control" placeholder="Search...">\n' +
@@ -105276,6 +105276,9 @@ module.run(['$templateCache', function($templateCache) {
 	  });
 
 	  function stateChange() {
+
+	    console.log('state change called');
+
 	    $timeout(function () {
 	      // fix sidebar
 	      var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
@@ -105295,8 +105298,10 @@ module.run(['$templateCache', function($templateCache) {
 	      // get user current context
 	      if ($auth.isAuthenticated() && !$rootScope.me) {
 	        ContextService.getContext().then(function (response) {
+
 	          response = response.plain();
-	          $rootScope.me = response.data;
+	          console.log(response);
+	          $rootScope.me = response.user;
 	        });
 	      }
 	    });
@@ -105749,11 +105754,11 @@ module.run(['$templateCache', function($templateCache) {
 	    return true;
 	  };
 
-	  $authProvider.loginUrl = 'http://localhost:8001/api/users/login';
-	  $authProvider.signupUrl = 'http://localhost:8001/api/auth/register';
+	  $authProvider.loginUrl = 'http://cytonn.local.app/api/users/login';
+	  $authProvider.signupUrl = 'http://cytonn.local.app/api/auth/register';
 	  $authProvider.tokenRoot = 'data'; // compensates success response macro
 	  $authProvider.tokenHeader = 'Authorization';
-	  $authProvider.tokenType = 'Token';
+	  $authProvider.authToken = 'Token';
 	}
 
 	// /#/login
@@ -107518,6 +107523,7 @@ module.run(['$templateCache', function($templateCache) {
 	    var navHeader = this;
 
 	    ContextService.me(function (data) {
+	      console.log(data);
 	      navHeader.userData = data;
 	    });
 	  }
@@ -107553,6 +107559,8 @@ module.run(['$templateCache', function($templateCache) {
 	  'ngInject';
 
 	  _classCallCheck(this, LoginLoaderController);
+
+	  console.log('login loader called');
 
 	  API.oneUrl('authenticate').one('user').get().then(function (response) {
 	    if (!response.error) {
@@ -108138,7 +108146,8 @@ module.run(['$templateCache', function($templateCache) {
 
 	  var headers = {
 	    'Content-Type': 'application/json',
-	    'Accept': 'application/x.laravel.v1+json'
+	    'Accept': 'application/x.laravel.v1+json',
+	    'Authorization': 'Token ' + $window.localStorage.satellizer_token
 	  };
 
 	  return Restangular.withConfig(function (RestangularConfigurer) {
@@ -108148,13 +108157,15 @@ module.run(['$templateCache', function($templateCache) {
 	        // return ToastService.error(response.data.errors[error][0])
 	        // }
 	      }
-	    }).addFullRequestInterceptor(function (element, operation, what, url, headers) {
-	      var token = $window.localStorage.satellizer_token;
-	      if (token) {
-	        console.log('tokenRestangular called', token);
-	        // headers.Authorization = 'Token ' + token  
-	      }
-	    }).addResponseInterceptor(function (response, operation, what) {
+	    }
+	    // .addFullRequestInterceptor(function (element, operation, what, url, headers) {
+	    //   var token = $window.localStorage.satellizer_token
+	    //   if (token) {
+	    //     console.log('tokenRestangular called', token);
+	    //     headers.Authorization = ' s ' + token  
+	    //   }
+	    // })
+	    ).addResponseInterceptor(function (response, operation, what) {
 	      if (operation === 'getList') {
 	        var newResponse = response.data[what];
 	        newResponse.error = response.error;
@@ -108188,7 +108199,7 @@ module.run(['$templateCache', function($templateCache) {
 	    _classCallCheck(this, userService);
 
 	    this.$http = $http;
-	    this.urlBase = "http://localhost:8001/api/";
+	    this.urlBase = "http://cytonn.local.app/api/";
 	    this.$window = $window;
 
 	    this.token = this.$window.localStorage.satellizer_token;
@@ -108202,7 +108213,7 @@ module.run(['$templateCache', function($templateCache) {
 	        method: 'get',
 	        url: this.urlBase + 'tasks/feed',
 	        headers: {
-	          authorization: 'Token ' + vm.token
+	          // authorization: 'Token '+vm.token
 	        }
 	      });
 	    }
@@ -108214,7 +108225,10 @@ module.run(['$templateCache', function($templateCache) {
 	        method: 'get',
 	        url: this.urlBase + 'users/categories',
 	        headers: {
-	          authorization: 'Token ' + vm.token
+	          // 'authorization': function(config) {
+	          //   console.log(config);
+	          //   // 'Token '+vm.token
+	          // } 
 	        }
 	      });
 

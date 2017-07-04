@@ -26,5 +26,11 @@ Route::group(['namespace' => 'Api'], function() {
 	
     Route::post('users', 'AuthController@register');
 
+    Route::get('users/me', 'UserController@index');
+
+    Route::get('/test', function () {
+    	return JWTAuth::parseToken('token')->authenticate();
+    });
+
 
 });

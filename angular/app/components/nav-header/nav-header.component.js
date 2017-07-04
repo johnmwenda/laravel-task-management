@@ -5,6 +5,7 @@ class NavHeaderController {
     let navHeader = this
 
     ContextService.me(function (data) {
+      console.log(data)
       navHeader.userData = data
     })
   }

@@ -116,10 +116,11 @@ class CategoryController extends ApiController
     public function getTaskCategoriesForLoggedInUser(){
         $user = auth()->user();
 
-        dd($user);
+        // // dd($user);
 
-        $categories = Category::where('department_id', $user->department_id );
+        $categories = Category::where('department_id', $user->department_id )->get();
 
-        return respondWithTransformer($categories);
+        // dd($categories);
+        return $this->respondWithTransformer($categories);
     }
 }

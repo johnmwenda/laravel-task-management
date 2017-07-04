@@ -22,6 +22,6 @@ export class ContextService {
   me (cb) {
     this.$rootScope.$watch('me', function (nv) {
       cb(nv)
-    })
+    })  
   }
 }

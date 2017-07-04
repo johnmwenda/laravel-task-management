@@ -44,7 +44,7 @@ class AuthenticateWithJWT extends BaseMiddleware
         } catch (TokenExpiredException $e) {
             return $this->respondError('JWT error: Token has expired');
         } catch (TokenInvalidException $e) {
-            error_log(print_r($e, 1));
+            // error_log(print_r($e, 1));
             return $this->respondError('JWT error: Token is invalid');
         } catch (JWTException $e) {
             if ($optional === null) {
