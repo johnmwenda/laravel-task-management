@@ -105397,7 +105397,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.create-task', {
 	    url: '/create-task',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105407,7 +105407,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.landing', {
 	    url: '/',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105417,7 +105417,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.tablessimple', {
 	    url: '/tables-simple',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105427,7 +105427,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.uiicons', {
 	    url: '/ui-icons',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105437,7 +105437,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.uimodal', {
 	    url: '/ui-modal',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105447,7 +105447,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.uitimeline', {
 	    url: '/ui-timeline',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105457,7 +105457,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.uibuttons', {
 	    url: '/ui-buttons',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105467,7 +105467,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.uigeneral', {
 	    url: '/ui-general',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105477,7 +105477,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.formsgeneral', {
 	    url: '/forms-general',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105487,7 +105487,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.chartjs', {
 	    url: '/charts-chartjs',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105497,7 +105497,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.comingsoon', {
 	    url: '/comingsoon',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105507,7 +105507,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.profile', {
 	    url: '/profile',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105520,7 +105520,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.userlist', {
 	    url: '/user-lists',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105530,7 +105530,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.useredit', {
 	    url: '/user-edit/:userId',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105544,7 +105544,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.userroles', {
 	    url: '/user-roles',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105554,7 +105554,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.userpermissions', {
 	    url: '/user-permissions',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105564,7 +105564,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.userpermissionsadd', {
 	    url: '/user-permissions-add',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105577,7 +105577,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.userpermissionsedit', {
 	    url: '/user-permissions-edit/:permissionId',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105591,7 +105591,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.userrolesadd', {
 	    url: '/user-roles-add',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105604,7 +105604,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.userrolesedit', {
 	    url: '/user-roles-edit/:roleId',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
@@ -105618,7 +105618,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }).state('app.widgets', {
 	    url: '/widgets',
 	    data: {
-	      // auth: true
+	      auth: true
 	    },
 	    views: {
 	      'main@app': {
