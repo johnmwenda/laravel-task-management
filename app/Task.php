@@ -2,8 +2,11 @@
 
 namespace App;
 
+use App\Department;
+use App\Progress;
 use App\TaskManagement\Filters\Filterable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Task extends Model
 {
@@ -14,10 +17,15 @@ class Task extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'summary', 'access_level', 'prority', 'due_date', 'progress_status'
-    ]; 
+    // protected $fillable = [
+    //     'name', 'summary', 'access_level', 'prority', 'due_date', 'progress_status'
+    // ]; 
+    // 
+    protected $guarded = [];
 
+    protected $with = [
+        'department'
+    ];
     // $table->string('name');
     // $table->text('summary');
     // $table->string('access_level');
@@ -46,8 +54,8 @@ class Task extends Model
      * Get the assignees that have been assigned
      * @return [type] [description]
      */
-    public function assignees() {
-    	return $this->belongsToMany(User::class);
+    public function assignee() {
+    	return $this->belongsTo(User::class);
     }
 
     /**
@@ -73,8 +81,9 @@ class Task extends Model
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeLoadRelations($query) {
-        return $query->with(['category'])
-            ->with(['assignees']);
+        return $query->with('category')
+            ->with('assignee')
+            ->with('reporter');
     }
 
     // public function scopeLoadRelations($query)
@@ -87,4 +96,88 @@ class Task extends Model
     //         }])
     //         ->withCount('favorited');
     // }
+    
+    /**
+     * add Progress status
+     * @return [type] [description]
+     */
+    public function addProgressStatus($progress) {
+        
+        // return $this->belongsTo(Department::class);
+        $this->progresses()->create($progress);
+    }
+
+    /**
+     * a task may have many progress messages and statuses, 0%, 20%, 30%
+     * @return [type] [description]
+     */
+    public function progresses() {
+        
+        return $this->hasMany(Progress::class);
+    }
+
+
+    /**
+     * A task has one or many subscriptions
+     * @return [type] [description]
+     */
+    public function subscriptions() {
+        
+        // return $this->hasMany(Progress::class);
+        return $this->hasMany(TaskSubscription::class);
+    }
+
+    /**
+     * users_array is a list of valid user_ids
+     * @param  [type] $users_array [description]
+     * @return [type]              [description]
+     */
+    public function users_subscribe($users_array) {
+        $filtered = User::whereIn('id', $users_array )->get();
+
+        foreach ($filtered as $value) {
+            print_r($value->id);
+        }
+    }
+
+    public function departments_subscribe($departments_array) {
+
+        // dd(auth()->user()->email);
+        $filtered_departments = Department::whereIn('id', $departments_array )->get();
+
+        // dd($filtered_departments[0] -> members() -> get());
+        foreach ($filtered_departments as $department) {
+            foreach($department->members()->where('email','!=' , auth()->user()->email)->get() as $member) {
+                $this->subscribe($member->id);
+            }
+        }
+    }
+
+
+    /**
+     * A user may subscribe(follow) to a thread
+     * @return [type] [description]
+     */
+    public function subscribe($userId = null) {
+        $this->subscriptions()->create([
+                'user_id' => $userId ?: auth()->id()
+            ]);
+        // return $this->hasMany(Progress::class);
+        return $this;
+    }
+
+
+    /**
+     * Unsubscribe a user from the current task.
+     *
+     * @param int|null $userId
+     */
+    public function unsubscribe($userId = null)
+    {
+        $this->subscriptions()
+            ->where('user_id', $userId ?: auth()->id())
+            ->delete();
+    }
+
+    
 }

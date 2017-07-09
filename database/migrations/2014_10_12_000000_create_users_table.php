@@ -17,6 +17,8 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             // $table->integer('department_id');
             $table->string('name');
+            $table->enum('user_type', ['normal', 'department_head']);
+            // $table->string('user_type'); //whether they are normal user/department head
             $table->string('avatar', 2048)->nullable();
             $table->string('email')->unique();
             $table->string('password');

@@ -43,6 +43,64 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
 
+    .state('app.tasks', {
+      url: '/tasks/:filter',
+      data: {
+        // auth: true
+      },
+      params: {
+        filter: null //retrieve all tasks whether reportedBy or assignedTo
+      },
+      views: {
+        'main@app': {
+          template: '<tasks></tasks>' 
+        }
+      }
+    })
+
+    .state('app.tasks.single-task', {
+      url: '/:id',
+      data: {
+        // auth: true
+      },
+      params: {
+        filter: null //retrieve all tasks whether reportedBy or assignedTo
+      },
+      views: {
+        'main@app': {
+          template: '<task></task>' 
+        }
+      }
+    })
+
+    // .state('app.tasks', {
+    //   url: '/tasks',
+    //   data: {
+    //     // auth: true
+    //   },
+    //   views: {
+    //     'main@app': {
+    //       templateUrl: getView('tasks')
+    //     }
+    //   }
+    // })
+
+    .state('app.department-tasks', {
+      url: '/department-tasks',
+      data: {
+        // auth: true
+      },
+      views: {
+        'main@app': {
+          templateUrl: getView('department-tasks')
+        }
+      }
+    }) 
+
+    
+
+    
+
 
 
     .state('app.landing', {

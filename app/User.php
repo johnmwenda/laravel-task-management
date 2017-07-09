@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Department;
 use App\Task;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -30,6 +31,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    //eager load department relationship
+    protected $with = [
+        'department'
+    ];
+
 
     /**
      * Generate a JWT token for the user.
@@ -42,6 +48,26 @@ class User extends Authenticatable
         return JWTAuth::fromUser($this);
     }
 
+    //helper that creates tasks and add either department_members or specific users to the task_subscriptions table
+    public function create_task($task, $departments_subscribe=null, $users_subscribe=null) {
+        
+        // dd($users_subscribe);
+
+
+        $task = $this->mytasks()->create($task);
+
+        if($users_subscribe) {
+            $task -> users_subscribe($users_subscribe);   
+        }
+        if($departments_subscribe) {
+            $task -> departments_subscribe($departments_subscribe);
+        }
+
+        $task->subscribe(); //the reporter/owner of this task should also be subscribed to this task
+        
+        return $task;
+    }   
+
     /**
      * tasks that this user has created, which can be many
      * @return [type] [description]
@@ -50,12 +76,14 @@ class User extends Authenticatable
        return $this->hasMany(Task::class);
     }
 
+
+
     /**
      * tasks that this user has been assigned to
      * @return [type] [description]
      */
     public function assigned_tasks(){
-        return $this->belongsToMany(Task::class)->withTimeStamps();
+        return $this->hasMany(Task::class, 'assignee_id')->withTimeStamps();
     }
 
     /**
@@ -72,6 +100,13 @@ class User extends Authenticatable
         // dd('hello');
 
         return Task::loadRelations()->whereIn('id', $assignedTasksIds)->orWhere('user_id', $this->id);
+    }
+
+    /**
+     * 
+     */
+    public function department() {
+        return $this->belongsTo(Department::class);
     }
 }
  

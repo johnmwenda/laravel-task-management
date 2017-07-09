@@ -11,6 +11,34 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <title>Laravel Angular Admin-LTE</title>
+    <!-- system wide css -->
+    <style type="text/css">
+        .no-padding-right{
+            padding-right: 0 !important;
+        }
+        .no-padding-left{
+            padding-left: 0 !important;
+        }
+        .no-padding-top{
+            padding-top: 0 !important;
+        }
+        .no-padding-bottom{
+            padding-bottom: 0 !important;
+        }
+
+        .no-margin-right{
+            margin-right: 0 !important;
+        }
+        .no-margin-left{
+            margin-left: 0 !important;
+        }
+        .no-margin-top{
+            margin-top: 0 !important;
+        }
+        .no-margin-bottom{
+            margin-bottom: 0 !important;
+        }
+    </style>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

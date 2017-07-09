@@ -6,7 +6,7 @@ use ReflectionClass;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 
-abstract class Filter
+abstract class Filter 
 {
     /**
      * @var \Illuminate\Http\Request

@@ -18,12 +18,13 @@ class CreateTasksTable extends Migration
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('department_id');
             $table->unsignedInteger('category_id');
+            $table->unsignedInteger('assignee_id');
             $table->string('name');
             $table->text('summary');
-            $table->string('access_level');
-            $table->smallInteger('prority');
+            $table->enum('access_level', ['private', 'public']);
+            // $table->string('access_level');
+            $table->smallInteger('priority');
             $table->dateTime('due_date');
-            $table->smallInteger('progress_status'); //1%-100%
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')
@@ -33,6 +34,9 @@ class CreateTasksTable extends Migration
             ->onUpdate('cascade')->onDelete('cascade');
 
             $table->foreign('category_id')->references('id')->on('categories')
+            ->onUpdate('cascade')->onDelete('cascade');
+
+            $table->foreign('assignee_id')->references('id')->on('users')
             ->onUpdate('cascade')->onDelete('cascade');
         });
 

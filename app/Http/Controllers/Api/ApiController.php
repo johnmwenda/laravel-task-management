@@ -14,7 +14,7 @@ use Illuminate\Support\Collection;
 
 class ApiController extends Controller
 {
-    // transformer that will be injected to children og this class
+    // transformer that will be injected to children of this class
     protected $transformer = null;
 
     /**
@@ -27,6 +27,7 @@ class ApiController extends Controller
      */
     protected function respond($data, $statusCode = 200, $headers = [])
     {   
+        
         return response()->json($data, $statusCode, $headers);
     }
 
@@ -40,12 +41,15 @@ class ApiController extends Controller
      */
     protected function respondWithTransformer($data, $statusCode = 200, $headers = [])
     {
+
         $this->checkTransformer();
 
         if ($data instanceof Collection) {
             $data = $this->transformer->collection($data);
         } else {
+
             $data = $this->transformer->item($data);
+
         }
 
         return $this->respond($data, $statusCode, $headers);

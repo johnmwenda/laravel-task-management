@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Requests\Api\UpdateUser;
 use App\TaskManagement\Transformers\UserTransformer;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends ApiController
 {
@@ -45,4 +47,22 @@ class UserController extends ApiController
 
         return $this->respondWithTransformer($user);
     }
+
+    public function getAllUsers()
+    {
+        if(auth()->user()->user_type == 'department_head' ) {
+            //get all users including Department heads
+            $users = User::where('id','!=' , Auth::id())->get();
+        }else {
+            //get only normal users
+            $users = User::where([
+                ['user_type', 'normal'],
+                ['id','!=' , Auth::id()],
+                ])->get();    
+        }
+        
+
+        return $this->respondWithTransformer($users);
+    }
+
 }

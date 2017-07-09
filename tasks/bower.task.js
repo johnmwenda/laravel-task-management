@@ -32,7 +32,7 @@ Elixir.extend('bower', function (jsOutputFile, jsOutputFolder, cssOutputFile, cs
     return gulp.src(mainBowerFiles({
       overrides: {
         bootstrap: {
-          'ignore': true
+          // 'ignore': true 
         },
         AdminLTE: {
           'ignore': true
@@ -74,6 +74,11 @@ Elixir.extend('bower', function (jsOutputFile, jsOutputFolder, cssOutputFile, cs
         },
         'angular-bootstrap': {
           'ignore': true
+        },
+        'angular-loading': {
+          main: [
+            './angular-loading.css'
+          ]
         }
       }
     }))

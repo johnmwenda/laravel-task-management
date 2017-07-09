@@ -12,6 +12,7 @@ class CategoryTransformer extends Transformer
             'name'              => $data['name'],
             'description'       => $data['description'],
             'department_id'	    => $data['department_id'],
+            'id'                => $data['id'],
             
         ];
     }

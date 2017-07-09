@@ -26,7 +26,18 @@ class UsersTableSeeder extends Seeder
         $user->name = 'Victor Normal User';
         $user->email='victor@gmail.com';
         $user->avatar = 'dist/img/user2-160x160.jpg';
+        $user->user_type = 'normal';
         $user->password=bcrypt('victor123');
+        $user->department_id = Department::first()->id;
+        $user->save();
+        $user->assignRole(['User']);
+
+        $user = new User();
+        $user->name = 'Brenda Wambui';
+        $user->email='brenda@gmail.com';
+        $user->avatar = 'dist/img/user2-160x160.jpg';
+        $user->user_type = 'normal';
+        $user->password=bcrypt('password');
         $user->department_id = Department::first()->id;
         $user->save();
         $user->assignRole(['User']);
@@ -34,7 +45,8 @@ class UsersTableSeeder extends Seeder
         $dept_head = new User();
         $dept_head->name = 'Alice Department Head';
         $dept_head->email='alice@gmail.com';
-        $user->avatar = 'dist/img/user2-160x160.jpg';
+        $dept_head->avatar = 'dist/img/user2-160x160.jpg';
+        $dept_head->user_type = 'department_head';
         $dept_head->password=bcrypt('alice123');
         $dept_head->department_id =  Department::first()->id;
         $dept_head->save();

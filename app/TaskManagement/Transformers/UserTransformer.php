@@ -13,7 +13,12 @@ class UserTransformer extends Transformer
             'token'         => $data['token'],
             'name'			=>$data['name'],
             'avatar'        =>$data['avatar'],
-            'department_id' => $data['department_id']
+            'user_type'     =>$data['user_type'],
+            'department' => [
+                'name'        => $data['department']['name'],
+                'description' => $data['department']['description'],
+                'id'          => $data['department']['id']
+            ]
         ];
     }
 }

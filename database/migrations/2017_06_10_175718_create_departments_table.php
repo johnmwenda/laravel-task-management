@@ -21,7 +21,7 @@ class CreateDepartmentsTable extends Migration
         });
 
         Schema::table('users', function($table) {
-            $table->integer('department_id')->after('id');
+            $table->integer('department_id')->after('id')->nullable;
 
             $table->foreign('department_id')->references('id')->on('departments')
                 ->onUpdate('cascade')->onDelete('cascade');                

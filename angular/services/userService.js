@@ -25,15 +25,49 @@ export class userService {
       method: 'get',
       url: this.urlBase+ 'users/categories',
       headers: {
+        // 'authorization': function(config) { 
+        //   console.log(config);
+        //   // 'Token '+vm.token
+        // } 
+       }
+    });
+    // get(this.urlBase+ 'users/categories');
+  }
+
+  getAllUsers() {
+    let vm = this;
+    return this.$http({
+      method: 'get',
+      url: this.urlBase+ 'users/all',
+      headers: {
         // 'authorization': function(config) {
         //   console.log(config);
         //   // 'Token '+vm.token
         // } 
        }
     });
-
-
-
-    // get(this.urlBase+ 'users/categories');
   }
+
+  getDepartmentAndUsers() {
+    let vm = this;
+    return this.$http({
+      method: 'get',
+      url: this.urlBase+ 'departments ',
+      headers: {
+        // 'authorization': function(config) {
+        //   console.log(config);
+        //   // 'Token '+vm.token
+        // } 
+       }
+    });
+  }
+
+  getTasks(filter) {
+    return this.$http.get(this.urlBase + 'tasks');
+  }
+
+  createTask(data) {
+    return this.$http.post(this.urlBase + 'tasks', data);
+  }
+
 }

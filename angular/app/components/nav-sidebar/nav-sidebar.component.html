@@ -27,9 +27,42 @@
 
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
-      <li>
+      <li ui-sref-active = "active">
         <a ui-sref='app.landing'>
           <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+        </a>
+      </li>
+
+
+      
+
+      <li ui-sref-active = "active">
+        <a ui-sref="app.tasks({filter: 'all'})">
+          <i class="fa fa-files-o"></i></i> <span>Tasks</span>
+        </a>
+      </li>
+
+      <li ui-sref-active = "active">
+        <a ui-sref='app.department-tasks'>
+          <i class="fa fa-book"></i> <span>Departments</span>
+        </a>
+      </li>
+
+      <li ui-sref-active = "active">
+        <a ui-sref='app.user-board'>
+          <i class="fa fa-th"></i></i> <span>Users Board</span>
+        </a>
+      </li>
+      
+      <li ui-sref-active = "active">
+        <a ui-sref='app.reports'>
+         <i class="fa fa-pie-chart"></i></i> <span>Reports</span>
+        </a>
+      </li>
+
+      <li ui-sref-active = "active">
+        <a ui-sref='app.reports'>
+         <i class="fa fa-laptop"></i> <span>Administrator</span>
         </a>
       </li>
       

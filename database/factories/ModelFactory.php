@@ -15,10 +15,15 @@
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
+    // dd(factory('App\Department')->create()->id);
+    // dd('called');
+
     return [
     	'department_id' => function() {
         	return factory('App\Department')->create()->id;
         },
+        'user_type' => 'normal',
+        'avatar' => 'dist/img/user2-160x160.jpg',
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),

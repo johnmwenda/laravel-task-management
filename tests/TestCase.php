@@ -19,6 +19,7 @@ abstract class TestCase extends BaseTestCase
 
     protected function signIn($user = null)
     {
+        // dd('called');
         $user = $user ?: create('App\User');
 
         // print_r($user);

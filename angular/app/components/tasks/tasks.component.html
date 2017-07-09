@@ -1,0 +1,35 @@
+<section class="content-header">
+	<h1 style="display: inline-block;float: left;">
+		{{vm.current_filter_name}} 
+		<!-- <small>Preview</small> -->
+	</h1>
+  <div class="dropdown" style="margin-left: 10px; float: left">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Switch filter
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a ng-click = "vm.changeFilter('all')" href=""><i ng-if ="vm.current_filter == 'all' " class="fa fa-fw fa-check"></i> All tasks</a></li>
+        <li><a ng-click = "vm.changeFilter('reported-by-me')" href=""><i ng-if ="vm.current_filter == 'reported-by-me' " class="fa fa-fw fa-check"></i>Reported by me</a></li>
+        <li><a ng-click = "vm.changeFilter('assigned-to-me')" href=""><i ng-if ="vm.current_filter == 'assigned-to-me' " class="fa fa-fw fa-check"></i>Assigned to me</a></li>
+        <li><a ng-click = "vm.changeFilter('private-tasks')" href=""><i ng-if ="vm.current_filter == 'private-tasks' " class="fa fa-fw fa-check"></i>Private tasks</a></li>
+        <li><a ng-click = "vm.changeFilter('public-tasks')" href=""><i ng-if ="vm.current_filter == 'public-tasks' " class="fa fa-fw fa-check"></i>Public tasks</a></li>
+        <li><a ng-click = "vm.changeFilter('following')" href=""><i ng-if ="vm.current_filter == 'following' " class="fa fa-fw fa-check"></i>Following</a></li>
+
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+     <!--  <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Forms</a></li>
+        <li class="active">General Elements</li>
+    </ol> -->
+</section>
+
+
+<section class="content">
+<div class="row">
+
+  <tasks-display></tasks-display>
+        <!-- left column -->  
+        <!--/.col (right) -->
+      </div>
+</section>

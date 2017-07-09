@@ -6,7 +6,7 @@ class NavSidebarController {
     this.can = AclService.can
 
     ContextService.me(function (data) {
-      console.log('from Nav SIde bar',data);
+      // console.log('from Nav SIde bar',data);
       navSideBar.userData = data
     })
   }

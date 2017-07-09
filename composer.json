@@ -9,12 +9,14 @@
         "alrik11es/cowsayphp": "^1.2",
         "barryvdh/laravel-cors": "^0.9.2",
         "barryvdh/laravel-debugbar": "^2.4",
+        "doctrine/dbal": "^2.5",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "spatie/laravel-permission": "^1.12",
         "tymon/jwt-auth": "0.5.*"
     },
     "require-dev": {
+        "laravelangular/generators": "^2.7",
         "fzaninotto/faker": "~1.4",
         "laravel/homestead": "^5.4",
         "mockery/mockery": "0.9.*",

@@ -17,7 +17,7 @@ export function RoutesRun ($rootScope, $state, $auth, AclService, $timeout, API,
 
   function stateChange () {
 
-    console.log('state change called')
+    // console.log('state change called')
 
     $timeout(function () {
       // fix sidebar
@@ -41,7 +41,7 @@ export function RoutesRun ($rootScope, $state, $auth, AclService, $timeout, API,
           .then((response) => {
 
             response = response.plain()
-            console.log(response)
+            // console.log(response)
             $rootScope.me = response.user
           })
       }

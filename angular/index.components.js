@@ -1,3 +1,5 @@
+import {TaskComponent} from './app/components/task/task.component';
+import {TasksDisplayComponent} from './app/components/tasks-display/tasks-display.component';
 import { TablesSimpleComponent } from './app/components/tables-simple/tables-simple.component'
 import { UiModalComponent } from './app/components/ui-modal/ui-modal.component'
 import { UiTimelineComponent } from './app/components/ui-timeline/ui-timeline.component'
@@ -27,8 +29,13 @@ import { ForgotPasswordComponent } from './app/components/forgot-password/forgot
 import { LoginFormComponent } from './app/components/login-form/login-form.component'
 import { RegisterFormComponent } from './app/components/register-form/register-form.component'
 import {CreateTaskComponent} from './app/components/create_task/create_task.component';
+import {TasksComponent} from './app/components/tasks/tasks.component';
+// import {DepartmentsComponent} from './app/components/departments/departments.component';
+import {DepartmentTasksComponent} from './app/components/department-tasks/department-tasks.component';
 
 angular.module('app.components')
+	.component('task', TaskComponent)
+	.component('tasksDisplay', TasksDisplayComponent)
   .component('tablesSimple', TablesSimpleComponent)
   .component('uiModal', UiModalComponent)
   .component('uiTimeline', UiTimelineComponent)
@@ -58,3 +65,6 @@ angular.module('app.components')
   .component('loginForm', LoginFormComponent)
   .component('registerForm', RegisterFormComponent)
   .component('createTask', CreateTaskComponent)
+  .component('tasks', TasksComponent)
+  // .component('departments', DepartmentsComponent)
+  .component('departmentTasks', DepartmentTasksComponent)
