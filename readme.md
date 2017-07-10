@@ -21,3 +21,6 @@ Seeding the database with the above command will create the following users and 
 1. Alice Kiprop - alice@gmail.com - role "department head"
 1. Brenda Wambui - brenda@gmail.com - role "normal"
 1. Victor Macharia - victor@gmail.com - role "normal"
+
+### API Spec ###
+The entire back end is completely API Based. You will see the API Specification file in this folder, called ApiSpec.json
