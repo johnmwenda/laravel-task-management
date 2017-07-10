@@ -14,7 +14,7 @@ class DepartmentTransformer extends Transformer
             'dep_id'            => $data['id'],
             'name'              => $data['name'],
             'description'       => $data['description'],
-            'members'           => $data['users']
+            'members'           => $data['members']
         ];
     }
 

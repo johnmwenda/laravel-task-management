@@ -12,7 +12,13 @@ class TaskPolicy
 
 
     //add before method to override if current user is department_head and this task belongs to your department
-
+    public function before($user, Task $task)
+    {
+        if($user->user_type == 'department_head' && $user->department_id == $task->department_id)
+        {
+            return true
+        }
+    }
     /**
      * Determine whether the user can view the task.
      *
@@ -21,8 +27,18 @@ class TaskPolicy
      * @return mixed
      */
     public function view(User $user, Task $task)
-    {
-        //
+    {   
+        //private tasks should only be viewed by reporter,assigned user and department head
+        if($task->access_level == 'private') {
+            if($user->id == $task->user_id || $user->id == $task->assignee_id) {
+                return true;
+            }
+        }
+
+        if($task->access_level == 'public') { 
+            return true;
+        }
+
     }
 
     /**

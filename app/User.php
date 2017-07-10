@@ -64,6 +64,9 @@ class User extends Authenticatable
         }
 
         $task->subscribe(); //the reporter/owner of this task should also be subscribed to this task
+
+        //now that all necessary people are subscribed to tasks, lets prepare notifications
+        $task->notifyTaskCreatedToSubscribers();
         
         return $task;
     }   
@@ -108,5 +111,6 @@ class User extends Authenticatable
     public function department() {
         return $this->belongsTo(Department::class);
     }
+
 }
  

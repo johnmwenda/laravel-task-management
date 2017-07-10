@@ -27,12 +27,16 @@ Route::group(['namespace' => 'Api'], function() {
     // Task Progress
     Route::post('tasks/{task}/progress', 'TaskController@addProgressStatus');
     //Task subscriptions
-    Route::post('tasks/{task}/subscriptions', 'TaskSubscriptionController@store');
-    Route::delete('tasks/{task}/subscriptions', 'TaskSubscriptionController@delete');
+    // Route::post('tasks/{task}/subscriptions', 'TaskSubscriptionController@store');
+    // Route::delete('tasks/{task}/subscriptions', 'TaskSubscriptionController@destroy');
     //Get 'me' object
     Route::get('users/me', 'UserController@index');
     //Current logged in user tasks
     Route::get('users/me/tasks', 'TaskController@authenticatedUserTasks');
+    //Get notifications
+    Route::get('users/me/notifications', 'UserNotificationsController@index');
+    //Delete notifications
+    Route::delete('users/me/notifications/{notification}', 'UserNotificationsController@destroy');
     //Current logged in user categories
     Route::get('users/me/categories', 'CategoryController@getTaskCategoriesForLoggedInUser');
     //Other user's tasks

@@ -24,8 +24,12 @@ class Task extends Model
     protected $guarded = [];
 
     protected $with = [
-        'department'
+        'department','assignee', 'reporter'
     ];
+
+    // protected $appends = [
+    //     'isSubscribedTo'
+    // ];
     // $table->string('name');
     // $table->text('summary');
     // $table->string('access_level');
@@ -80,11 +84,11 @@ class Task extends Model
      * @param \Illuminate\Database\Eloquent\Builder $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopeLoadRelations($query) {
-        return $query->with('category')
-            ->with('assignee')
-            ->with('reporter');
-    }
+    // public function scopeLoadRelations($query) {
+    //     return $query->with('category')
+    //         ->with('assignee')
+    //         ->with('reporter');
+    // }
 
     // public function scopeLoadRelations($query)
     // {
@@ -177,6 +181,27 @@ class Task extends Model
         $this->subscriptions()
             ->where('user_id', $userId ?: auth()->id())
             ->delete();
+
+        return $this;
+    }
+
+    /**
+     * check if auth user has subscribed to this task
+     *
+     * @param int|null $userId
+     */
+    public function getIsSubscribedToAttribute()
+    {
+        return $this->subscriptions()
+            ->where('user_id', auth()->id())
+            ->exists();
+    }
+
+    public function notifyTaskCreatedToSubscribers() {
+        $this->subscriptions
+        ->where('user_id', '!=', $this->user_id)
+        ->each
+        ->notify('create', $this);
     }
 
     

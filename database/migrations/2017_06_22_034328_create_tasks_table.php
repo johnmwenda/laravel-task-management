@@ -27,6 +27,8 @@ class CreateTasksTable extends Migration
             $table->dateTime('due_date');
             $table->timestamps();
 
+            $table->unique(['name', 'summary']);
+
             $table->foreign('user_id')->references('id')->on('users')
                 ->onUpdate('cascade')->onDelete('cascade');
 
@@ -42,21 +44,21 @@ class CreateTasksTable extends Migration
 
 
         //Task::assignee() and User::assigned_tasks() - morphToMany()
-         Schema::create('task_user', function (Blueprint $table) {
-            $table->integer('task_id')->unsigned()->index();
-            $table->integer('user_id')->unsigned()->index();
+        //  Schema::create('task_user', function (Blueprint $table) {
+        //     $table->integer('task_id')->unsigned()->index();
+        //     $table->integer('user_id')->unsigned()->index();
 
-            $table->unique(['user_id', 'task_id']);
+        //     $table->unique(['user_id', 'task_id']);
 
-            $table->foreign('task_id')->references('id')->on('tasks')
-                ->onUpdate('cascade')->onDelete('cascade');
+        //     $table->foreign('task_id')->references('id')->on('tasks')
+        //         ->onUpdate('cascade')->onDelete('cascade');
 
-            $table->foreign('user_id')->references('id')->on('users')
-                ->onUpdate('cascade')->onDelete('cascade');
+        //     $table->foreign('user_id')->references('id')->on('users')
+        //         ->onUpdate('cascade')->onDelete('cascade');
 
-            $table->timestamps();
+        //     $table->timestamps();
 
-        });
+        // });
     }
 
     /**

@@ -19,6 +19,7 @@ class CreateTaskSubscriptionsTable extends Migration
             $table->unsignedInteger('task_id');
             $table->timestamps();
 
+            $table->unique(['user_id', 'task_id']);
             $table->foreign('task_id')
                 ->references('id')
                 ->on('tasks')

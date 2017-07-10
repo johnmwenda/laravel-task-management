@@ -23,7 +23,7 @@ export class userService {
     let vm = this;
   	return this.$http({
       method: 'get',
-      url: this.urlBase+ 'users/categories',
+      url: this.urlBase+ 'users/me/categories ',
       headers: {
         // 'authorization': function(config) { 
         //   console.log(config);
@@ -62,8 +62,16 @@ export class userService {
     });
   }
 
-  getTasks(filter) {
-    return this.$http.get(this.urlBase + 'tasks');
+  getMyTasks(filter) { 
+    return this.$http.get(this.urlBase + 'users/me/tasks/?'+filter+'=true');
+  }
+
+  getMyNotifications() {
+    return this.$http.get(this.urlBase + 'users/me/notifications');
+  }
+
+  markNotificationAsRead(id) {
+    return this.$http.delete(this.urlBase + 'users/me/notifications/'+id);
   }
 
   createTask(data) {

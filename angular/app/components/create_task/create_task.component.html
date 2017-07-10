@@ -113,7 +113,7 @@
                   <label for="category" class="col-sm-2 control-label">Assign to</label>
 
                   <div class="col-sm-10">
-                  <select required="" class="form-control" ng-model="vm.data.assigned_user" ng-options="user.email as user.name + '     -     ' + user.department.name for user in vm.allUsers">
+                  <select required="" class="form-control" ng-model="vm.data.assignee_id" ng-options="user.id as user.name + '     -     ' + user.department.name for user in vm.allUsers">
                   		<option value=""> </option>
                   	</select>
                   	<!-- <small>Hold ctrl to select multiple</small><br> -->
@@ -121,11 +121,11 @@
                     <table class="">
                       <tr><td class="col-md-1">Selected</td>
                       <td>
-                        <span ng-if = "!vm.data.assigned_user">None</span>
-                        <!-- {{vm.data.assigned_user }} -->
-                        <span ng-if = "vm.data.assigned_user">
+                        <span ng-if = "!vm.data.assignee_id">None</span>
+                        <!-- {{vm.data.assignee_id }} -->
+                        <span ng-if = "vm.data.assignee_id">
                           
-                          <span><i class="fa fa-fw fa-check"></i> {{vm.data.assigned_user}} </span>
+                          <span><i class="fa fa-fw fa-check"></i> {{vm.data.assignee_id}} </span>
                           
                         </span>   
                       </td>

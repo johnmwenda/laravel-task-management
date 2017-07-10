@@ -21,6 +21,7 @@ class TaskTransformer extends Transformer {
             'priority'           => $data['priority'],
             'due_date'           => $data['due_date'],
             'progress'           => $data['progresses'],
+            'isSubscribedTo'     =>$data['isSubscribedTo'], //get mutator
             'category' => [
                 'name'      => $data['category']['name'],
                 'id'        => $data['category']['id'],

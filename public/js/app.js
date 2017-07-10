@@ -2405,14 +2405,33 @@
 	  _createClass(DashboardController, [{
 	    key: '$onInit',
 	    value: function $onInit() {
-	      this.fetchUserTasks();
+	      this.fetchTasksAssignedToMe();
+	      this.getMyNotifications();
 	    }
 	    // both reporter taks and assigned tasks
 
 	  }, {
-	    key: 'fetchUserTasks',
-	    value: function fetchUserTasks() {
-	      this.userService.fetchUserTasks().then(function (resp) {
+	    key: 'fetchTasksAssignedToMe',
+	    value: function fetchTasksAssignedToMe() {
+	      this.userService.getMyTasks('assigned_to_me').then(function (resp) {
+	        console.log(resp);
+	      }, function (error) {
+	        console.log(error);
+	      });
+	    }
+	  }, {
+	    key: 'getMyNotifications',
+	    value: function getMyNotifications() {
+	      this.userService.getMyNotifications().then(function (resp) {
+	        console.log(resp);
+	      }, function (error) {
+	        console.log(error);
+	      });
+	    }
+	  }, {
+	    key: 'markNotificationAsRead',
+	    value: function markNotificationAsRead(notificationId) {
+	      this.userService.markNotificationAsRead().then(function (resp) {
 	        console.log(resp);
 	      }, function (error) {
 	        console.log(error);
@@ -3480,7 +3499,7 @@
 	      var vm = this;
 	      return this.$http({
 	        method: 'get',
-	        url: this.urlBase + 'users/categories',
+	        url: this.urlBase + 'users/me/categories ',
 	        headers: {
 	          // 'authorization': function(config) { 
 	          //   console.log(config);
@@ -3521,9 +3540,14 @@
 	      });
 	    }
 	  }, {
-	    key: 'getTasks',
-	    value: function getTasks(filter) {
-	      return this.$http.get(this.urlBase + 'tasks');
+	    key: 'getMyTasks',
+	    value: function getMyTasks(filter) {
+	      return this.$http.get(this.urlBase + 'users/me/tasks/?' + filter + '=true');
+	    }
+	  }, {
+	    key: 'getMyNotifications',
+	    value: function getMyNotifications() {
+	      return this.$http.get(this.urlBase + 'users/me/notifications');
 	    }
 	  }, {
 	    key: 'createTask',

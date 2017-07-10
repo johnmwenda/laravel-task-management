@@ -34,7 +34,7 @@ class TaskController extends ApiController
      */
     public function index(TaskFilter $filter)
     {
-        $tasks = new Paginate(Task::loadRelations()->filter($filter));
+        $tasks = new Paginate(Task::filter($filter));
 
         return $this->respondWithPagination($tasks);
     }
@@ -61,10 +61,7 @@ class TaskController extends ApiController
         // dd( auth()->id() );
         
 
-        // dd($request->input('task') );
-        // dd('hello store');
-        
-        // dd($request->input('task.notify') );
+        //determine who to notify
         $who_to_notify = $request->input('task.notify');
         if(! empty($who_to_notify['departments'] )) {
             // dd($who_to_notify['departments']);
@@ -80,9 +77,10 @@ class TaskController extends ApiController
             $user_subscribers = null;
         }
 
-
-
-// user_subscribers
+        //check assignee id != user_id
+        if($request->input('task.assignee_id') == auth()->id()) {
+            return $this->respondError('You cannot assign yourself a task_version 1.0');
+        }
 
         $task = $user->create_task([
             'user_id' => auth()->id(),
@@ -152,7 +150,7 @@ class TaskController extends ApiController
      */
     public function addProgressStatus(CreateProgress $request, Task $task)
     {
-        $this->authorize('update', $task);
+        $this->authorize('update', $task); // TaskPolicy::update
 
         $task->addProgressStatus([
             // 'body' => request('body'),
@@ -176,7 +174,7 @@ class TaskController extends ApiController
      */
     public function authenticatedUserTasks(TaskFilter $filter)
     {
-        $tasks = new Paginate(Task::loadRelations()->filter($filter));
+        $tasks = new Paginate(Task::where('user_id', auth()->user()->id)->orWhere('assignee_id', auth()->user()->id)->filter($filter) );
 
         return $this->respondWithPagination($tasks);
     }

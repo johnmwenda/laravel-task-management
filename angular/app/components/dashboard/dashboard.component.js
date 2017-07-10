@@ -6,16 +6,35 @@ class DashboardController {
   }
 
   $onInit() {
-    this.fetchUserTasks();
+    this.fetchTasksAssignedToMe();
+    this.getMyNotifications();
   }
   // both reporter taks and assigned tasks
-  fetchUserTasks() {
-    this.userService.fetchUserTasks().then(function(resp){
+  fetchTasksAssignedToMe() {
+    this.userService.getMyTasks('assigned_to_me').then(function(resp){
       console.log(resp);
 
     }, function(error){
       console.log(error);
     })
+  }
+
+  getMyNotifications() {
+    this.userService.getMyNotifications().then(function(resp){
+      console.log(resp);
+
+    }, function(error){
+      console.log(error);
+    });
+  }
+
+  markNotificationAsRead(notificationId) {
+    this.userService.markNotificationAsRead().then(function(resp){
+      console.log(resp);
+
+    }, function(error){
+      console.log(error);
+    });
   }
 
 

@@ -65,7 +65,8 @@ class ApiController extends Controller
      */
     protected function respondWithPagination($paginated, $statusCode = 200, $headers = [])
     {
-        $this->checkPaginated($paginated);
+        // dd($paginated);
+        // $this->checkPaginated($paginated);
 
         $this->checkTransformer();
 

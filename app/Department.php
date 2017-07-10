@@ -18,7 +18,7 @@ class Department extends Model
     public function scopeLoadUserRelations($query)
     {
         // dd("called");
-        return $query->with(['users' => function ($query) {
+        return $query->with(['members' => function ($query) {
             $query->where('id','!=' , Auth::id());
         }]);
     }

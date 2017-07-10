@@ -100224,7 +100224,7 @@ module.run(['$templateCache', function($templateCache) {
     '                  <label for="category" class="col-sm-2 control-label">Assign to</label>\n' +
     '\n' +
     '                  <div class="col-sm-10">\n' +
-    '                  <select required="" class="form-control" ng-model="vm.data.assigned_user" ng-options="user.email as user.name + \'     -     \' + user.department.name for user in vm.allUsers">\n' +
+    '                  <select required="" class="form-control" ng-model="vm.data.assignee_id" ng-options="user.id as user.name + \'     -     \' + user.department.name for user in vm.allUsers">\n' +
     '                  		<option value=""> </option>\n' +
     '                  	</select>\n' +
     '                  	<!-- <small>Hold ctrl to select multiple</small><br> -->\n' +
@@ -100232,11 +100232,11 @@ module.run(['$templateCache', function($templateCache) {
     '                    <table class="">\n' +
     '                      <tr><td class="col-md-1">Selected</td>\n' +
     '                      <td>\n' +
-    '                        <span ng-if = "!vm.data.assigned_user">None</span>\n' +
-    '                        <!-- {{vm.data.assigned_user }} -->\n' +
-    '                        <span ng-if = "vm.data.assigned_user">\n' +
+    '                        <span ng-if = "!vm.data.assignee_id">None</span>\n' +
+    '                        <!-- {{vm.data.assignee_id }} -->\n' +
+    '                        <span ng-if = "vm.data.assignee_id">\n' +
     '                          \n' +
-    '                          <span><i class="fa fa-fw fa-check"></i> {{vm.data.assigned_user}} </span>\n' +
+    '                          <span><i class="fa fa-fw fa-check"></i> {{vm.data.assignee_id}} </span>\n' +
     '                          \n' +
     '                        </span>   \n' +
     '                      </td>\n' +
@@ -101431,12 +101431,79 @@ module.run(['$templateCache', function($templateCache) {
     '      </div> -->\n' +
     '      <div class="box box-default">\n' +
     '        <div class="box-header with-border">\n' +
-    '          <h3 class="box-title">Notifications</h3>\n' +
+    '          <h3 class="box-title">Notifications <span class="label label-danger">9</span> </h3>\n' +
     '          <div class="box-tools pull-right">\n' +
     '            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>\n' +
     '            </button>\n' +
     '            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>\n' +
     '          </div>\n' +
+    '        </div>\n' +
+    '\n' +
+    '        <div class="box-body">\n' +
+    '         <!--  <ul>\n' +
+    '              <li></li>\n' +
+    '              <li></li>\n' +
+    '              <li></li>\n' +
+    '              <li></li>\n' +
+    '          </ul> -->\n' +
+    '          <style type="text/css">\n' +
+    '            .item blockquote {\n' +
+    '                  padding: 0px 6px;\n' +
+    '                  margin: 0 0 -4px;\n' +
+    '                  font-size: 14px;\n' +
+    '            }\n' +
+    '\n' +
+    '            .item > span {\n' +
+    '              margin-bottom: 5px;\n' +
+    '            }\n' +
+    '          </style>\n' +
+    '          <ul class="products-list product-list-in-box">\n' +
+    '              <li class="item"><span><a href="">Jonathan Butler</a> <small>created</small> a task</span>\n' +
+    '                <blockquote>\n' +
+    '                Update some stuff on the inventory database \n' +
+    '                      \n' +
+    '                   \n' +
+    '\n' +
+    '                  <a style="\n' +
+    '                  /* float: left; */\n' +
+    '                  "></a>\n' +
+    '\n' +
+    '                </blockquote>\n' +
+    '              </li>\n' +
+    '\n' +
+    '              <li class="item"><span><a href="">Jonathan Butler</a> <small>added</small> a progress message on tasks</span>\n' +
+    '                <blockquote>\n' +
+    '                Update some stuff on the inventory database \n' +
+    '                    \n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                </blockquote>\n' +
+    '              </li>\n' +
+    '\n' +
+    '              <li class="item"><span><a href="">Jonathan Butler</a> <small>created</small> a task</span>\n' +
+    '                <blockquote>\n' +
+    '                Update some stuff on the inventory database \n' +
+    '                    \n' +
+    '                  \n' +
+    '\n' +
+    '                \n' +
+    '\n' +
+    '                </blockquote>\n' +
+    '              </li>\n' +
+    '\n' +
+    '              <li class="item"><span><a href="">Jonathan Butler</a> <small>created</small> a task</span>\n' +
+    '                <blockquote>\n' +
+    '                Update some stuff on the inventory database\n' +
+    '                    \n' +
+    '                   \n' +
+    '\n' +
+    '        \n' +
+    '\n' +
+    '                </blockquote>\n' +
+    '              </li>\n' +
+    '          </ul>\n' +
     '        </div>\n' +
     '      <!--   <div class="box-body">\n' +
     '          <div class="row">\n' +
@@ -107811,18 +107878,6 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/create-task/create-task.page.html',
-    '<create-task></create-task>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/components/widgets/widgets.component.html',
     '<section class="content-header">\n' +
     '  <h1>\n' +
@@ -108573,6 +108628,18 @@ module.run(['$templateCache', function($templateCache) {
     '  </div>\n' +
     '</section>\n' +
     '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/create-task/create-task.page.html',
+    '<create-task></create-task>');
 }]);
 })();
 
@@ -111260,14 +111327,33 @@ module.run(['$templateCache', function($templateCache) {
 	  _createClass(DashboardController, [{
 	    key: '$onInit',
 	    value: function $onInit() {
-	      this.fetchUserTasks();
+	      this.fetchTasksAssignedToMe();
+	      this.getMyNotifications();
 	    }
 	    // both reporter taks and assigned tasks
 
 	  }, {
-	    key: 'fetchUserTasks',
-	    value: function fetchUserTasks() {
-	      this.userService.fetchUserTasks().then(function (resp) {
+	    key: 'fetchTasksAssignedToMe',
+	    value: function fetchTasksAssignedToMe() {
+	      this.userService.getMyTasks('assigned_to_me').then(function (resp) {
+	        console.log(resp);
+	      }, function (error) {
+	        console.log(error);
+	      });
+	    }
+	  }, {
+	    key: 'getMyNotifications',
+	    value: function getMyNotifications() {
+	      this.userService.getMyNotifications().then(function (resp) {
+	        console.log(resp);
+	      }, function (error) {
+	        console.log(error);
+	      });
+	    }
+	  }, {
+	    key: 'markNotificationAsRead',
+	    value: function markNotificationAsRead(notificationId) {
+	      this.userService.markNotificationAsRead().then(function (resp) {
 	        console.log(resp);
 	      }, function (error) {
 	        console.log(error);
@@ -112335,7 +112421,7 @@ module.run(['$templateCache', function($templateCache) {
 	      var vm = this;
 	      return this.$http({
 	        method: 'get',
-	        url: this.urlBase + 'users/categories',
+	        url: this.urlBase + 'users/me/categories ',
 	        headers: {
 	          // 'authorization': function(config) { 
 	          //   console.log(config);
@@ -112376,9 +112462,14 @@ module.run(['$templateCache', function($templateCache) {
 	      });
 	    }
 	  }, {
-	    key: 'getTasks',
-	    value: function getTasks(filter) {
-	      return this.$http.get(this.urlBase + 'tasks');
+	    key: 'getMyTasks',
+	    value: function getMyTasks(filter) {
+	      return this.$http.get(this.urlBase + 'users/me/tasks/?' + filter + '=true');
+	    }
+	  }, {
+	    key: 'getMyNotifications',
+	    value: function getMyNotifications() {
+	      return this.$http.get(this.urlBase + 'users/me/notifications');
 	    }
 	  }, {
 	    key: 'createTask',
