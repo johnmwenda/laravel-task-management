@@ -27,7 +27,6 @@ class ApiController extends Controller
      */
     protected function respond($data, $statusCode = 200, $headers = [])
     {   
-        
         return response()->json($data, $statusCode, $headers);
     }
 
@@ -65,7 +64,7 @@ class ApiController extends Controller
      */
     protected function respondWithPagination($paginated, $statusCode = 200, $headers = [])
     {
-        // dd($paginated);
+        
         // $this->checkPaginated($paginated);
 
         $this->checkTransformer();

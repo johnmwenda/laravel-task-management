@@ -14,10 +14,12 @@ class TasksController{
         this.current_filter = this.$stateParams.filter || 'all';
         this.current_filter_name = 'All Tasks';
 
-        this.userService.getTasks(this.current_filter).then(function(resp){
+        this.userService.getMyTasks(this.current_filter).then(function(resp){
             // console.log(resp);
             vm.loadingFilter = false;
-        }, function(error){
+
+            vm.tasks = resp.data.tasks; 
+        }, function(error){ 
             // console.log(error);
             vm.loadingFilter = false;
         })
@@ -25,22 +27,26 @@ class TasksController{
 
     changeFilter(filter) {
         let vm = this;
+        vm.tasks = []; 
         this.loadingFilter = true;
 
         this.current_filter = filter; 
         let obj = {
             "all": "All Tasks",
-            "reported-by-me": "Reported by me",
-            "assigned-to-me": "Assigned to me",
-            "private-tasks": "Private tasks",
-            "public-tasks": "Public tasks",
+            "reported_by_me": "Reported by me",
+            "assigned_to_me": "Assigned to me",
+            "private_tasks": "Private tasks",
+            "public_tasks": "Public tasks",
             "following": "Tasks that I am following"
             }
         this.current_filter_name = obj[filter];
 
-        this.userService.getTasks(this.current_filter).then(function(resp){
+        this.userService.getMyTasks(this.current_filter).then(function(resp){
             // console.log(resp);
             vm.loadingFilter = false;
+
+            vm.tasks = resp.data.tasks;
+
         }, function(error){
             // console.log(error);
             vm.loadingFilter = false;

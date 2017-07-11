@@ -9,17 +9,12 @@ class NotificationTransformer extends Transformer
     public function transform($data)
     {
         return [
-            'id'            => $data['id'], //will change this later...should use users email
-            'email'         => $data['email'],
-            'token'         => $data['token'],
-            'name'			=> $data['name'],
-            'avatar'        => $data['avatar'],
-            'user_type'     => $data['user_type'],
-            'department' => [
-                'name'        => $data['department']['name'],
-                'description' => $data['department']['description'],
-                'id'          => $data['department']['id']
-            ]
+            'id'                => $data['id'], //will change this later...should use users email
+            'data'              => $data['data'],
+            'notifiable_type'   => $data['notifiable_type'],
+            'read_at'			=> $data['read_at'],
+            'task_id'           => $data['task_id'],
+            'owner'             => $data['owner'],
         ];
     }
 }

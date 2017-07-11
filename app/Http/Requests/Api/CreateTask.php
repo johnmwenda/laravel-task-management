@@ -31,7 +31,7 @@ class CreateTask extends ApiRequest
             'name' => 'required|string|max:255',
             'summary' => 'required',
             'access_level' => 'required|string',
-            'priority' => 'required|integer',
+            'priority' => 'required',
             // 'progress_status' => 'required|integer',
             'due_date' => 'required|date',
             'assignee_id' => 'required|exists:users,id',

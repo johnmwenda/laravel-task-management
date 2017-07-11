@@ -15,7 +15,7 @@ class TaskFilter extends Filter
      * @param $boolean... should be true
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    protected function reportedByMe($param)
+    protected function reported_by_me($param)
     {
         if($param === true || $param == 'true') {
             $user = auth()->user() ?: null;
@@ -35,7 +35,7 @@ class TaskFilter extends Filter
      * @param $boolean... should be true
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    protected function assignedToMe($param)
+    protected function assigned_to_me($param)
     {
         if($param === true || $param == 'true') {
             $user = auth()->user() ?: null;
@@ -55,7 +55,7 @@ class TaskFilter extends Filter
      * @param $boolean... should be true
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    protected function private_task($param)
+    protected function private_tasks($param)
     {
         if($param === true || $param == 'true') {
             $user = auth()->user() ?: null;
@@ -64,7 +64,7 @@ class TaskFilter extends Filter
 
             $userId = $user ? $user->id : null;
 
-            return $this->builder->whereUserId($userId)->orWhere('assignee_id', $userId)->where('access_level', 'private' );
+            return $this->builder->where('access_level','private' );
         }   
     }
 
@@ -76,8 +76,9 @@ class TaskFilter extends Filter
      * @param $boolean... should be true
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    protected function public_task($param)
+    protected function public_tasks($param)
     {
+        // dd($param);
         if($param === true || $param == 'true') {
             $user = auth()->user() ?: null;
 
@@ -85,7 +86,7 @@ class TaskFilter extends Filter
 
             $userId = $user ? $user->id : null;
 
-            return $this->builder->whereUserId($userId)->orWhere('assignee_id', $userId)->where('access_level', 'public' );
+            return $this->builder->where('access_level', 'public' );
         }   
     }
 

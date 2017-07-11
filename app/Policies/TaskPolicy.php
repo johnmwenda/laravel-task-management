@@ -12,13 +12,13 @@ class TaskPolicy
 
 
     //add before method to override if current user is department_head and this task belongs to your department
-    public function before($user, Task $task)
-    {
-        if($user->user_type == 'department_head' && $user->department_id == $task->department_id)
-        {
-            return true
-        }
-    }
+    // public function before(User $user,Task $task)
+    // {
+    //     if($user->user_type == 'department_head' && $user->department_id == $task->department_id)
+    //     {
+    //         return true;
+    //     }
+    // }
     /**
      * Determine whether the user can view the task.
      *

@@ -415,20 +415,20 @@
               </div>
             </li>
           </ul> -->
-          <table class="table">
+          <table class="table table-striped table-hover">
                 <tbody>
                 <tr>
                   <th style="width: 10px">#</th>
                    <th>Task</th>
-                  <th style="width: 18%">Category</th>
+                  <th style="width: 28%">Category</th>
                  
                   
                   <th style="width: 40px">Progress</th>
                 </tr>
-                <tr>
-                  <td>1.</td>
-                  <td>Update software</td>
-                  <td>Software Development</td>
+                <tr style="cursor: pointer" ng-click = "vm.goToDetail(task)" ng-repeat = "task in vm.tasks_assigned">
+                  <td>{{$index+1}}</td>
+                  <td>{{task.name}}</td>
+                  <td>{{task.category.name}}</td>
                   <td><span class="badge bg-red">55%</span></td>
                 </tr>
                 
@@ -495,7 +495,7 @@
       </div> -->
       <div class="box box-default">
         <div class="box-header with-border">
-          <h3 class="box-title">Notifications <span class="label label-danger">9</span> </h3>
+          <h3 class="box-title">Notifications <span class="label label-danger">{{vm.notifications.length}}</span> </h3>
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
             </button>
@@ -519,23 +519,35 @@
 
             .item > span {
               margin-bottom: 5px;
+              display: inline-block;
             }
           </style>
           <ul class="products-list product-list-in-box">
-              <li class="item"><span><a href="">Jonathan Butler</a> <small>created</small> a task</span>
-                <blockquote>
-                Update some stuff on the inventory database 
-                      
-                   
+              
 
-                  <a style="
-                  /* float: left; */
-                  "></a>
 
+              <li ng-repeat = "item in vm.notifications" class="item">
+
+                <span ng-if="item.data.type == 'create_task'"><a href="">{{item.data.reporter_name}}</a> 
+                 <span><small>created</small> a task</span>
+               </span>
+
+               <span ng-if="item.data.type == 'update_progress_status' ">
+                  <a href="">{{item.data.progress.owner.name}}</a>  
+                 <span><small>added</small> a progress message on <a ui-sref="app.single-task({id: item.data.task_id})">task-{{item.data.task_id}}</a></span>
+               </span><br/>
+
+                <blockquote ng-if = "item.data.type == 'create_task'">
+                <a ui-sref="app.single-task({id: item.data.task_id})">{{item.data.task_name}}</a>
                 </blockquote>
+
+                <span ng-if = "item.data.type == 'update_progress_status'">
+                  <a ui-sref="app.single-task({id: item.data.task_id})">-{{item.data.progress.message}} </a>
+                  
+                </span>
               </li>
 
-              <li class="item"><span><a href="">Jonathan Butler</a> <small>added</small> a progress message on tasks</span>
+              <!-- <li class="item"><span><a href="">Jonathan Butler</a> <span><small>added</small> a progress message on tasks</span></span>
                 <blockquote>
                 Update some stuff on the inventory database 
                     
@@ -566,7 +578,7 @@
         
 
                 </blockquote>
-              </li>
+              </li> -->
           </ul>
         </div>
       <!--   <div class="box-body">

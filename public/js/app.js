@@ -56,9 +56,9 @@
 
 	__webpack_require__(17);
 
-	__webpack_require__(51);
+	__webpack_require__(52);
 
-	__webpack_require__(55);
+	__webpack_require__(56);
 
 /***/ }),
 /* 1 */
@@ -255,6 +255,19 @@
 	        template: '<tasks></tasks>'
 	      }
 	    }
+	  }).state('app.single-task', {
+	    url: '/singletask/:id',
+	    data: {
+	      // auth: true
+	    },
+	    params: {
+	      id: null //retrieve all tasks whether reportedBy or assignedTo
+	    },
+	    views: {
+	      'main@app': {
+	        template: '<task></task>'
+	      }
+	    }
 	  }).state('app.tasks.single-task', {
 	    url: '/:id',
 	    data: {
@@ -283,10 +296,14 @@
 	  // })
 
 	  ).state('app.department-tasks', {
-	    url: '/department-tasks',
+	    url: '/department-tasks/:department_name',
 	    data: {
 	      // auth: true
 	    },
+	    params: {
+	      department_name: null
+	    },
+
 	    views: {
 	      'main@app': {
 	        templateUrl: getView('department-tasks')
@@ -839,73 +856,75 @@
 
 	'use strict';
 
-	var _task = __webpack_require__(18);
+	var _taskDetailDirective = __webpack_require__(18);
 
-	var _tasksDisplay = __webpack_require__(19);
+	var _task = __webpack_require__(19);
 
-	var _tablesSimple = __webpack_require__(20);
+	var _tasksDisplay = __webpack_require__(20);
 
-	var _uiModal = __webpack_require__(21);
+	var _tablesSimple = __webpack_require__(21);
 
-	var _uiTimeline = __webpack_require__(22);
+	var _uiModal = __webpack_require__(22);
 
-	var _uiButtons = __webpack_require__(23);
+	var _uiTimeline = __webpack_require__(23);
 
-	var _uiIcons = __webpack_require__(24);
+	var _uiButtons = __webpack_require__(24);
 
-	var _uiGeneral = __webpack_require__(25);
+	var _uiIcons = __webpack_require__(25);
 
-	var _formsGeneral = __webpack_require__(26);
+	var _uiGeneral = __webpack_require__(26);
 
-	var _chartsChartjs = __webpack_require__(27);
+	var _formsGeneral = __webpack_require__(27);
 
-	var _widgets = __webpack_require__(28);
+	var _chartsChartjs = __webpack_require__(28);
 
-	var _userProfile = __webpack_require__(29);
+	var _widgets = __webpack_require__(29);
 
-	var _userVerification = __webpack_require__(30);
+	var _userProfile = __webpack_require__(30);
 
-	var _comingSoon = __webpack_require__(31);
+	var _userVerification = __webpack_require__(31);
 
-	var _userEdit = __webpack_require__(32);
+	var _comingSoon = __webpack_require__(32);
 
-	var _userPermissionsEdit = __webpack_require__(33);
+	var _userEdit = __webpack_require__(33);
 
-	var _userPermissionsAdd = __webpack_require__(34);
+	var _userPermissionsEdit = __webpack_require__(34);
 
-	var _userPermissions = __webpack_require__(35);
+	var _userPermissionsAdd = __webpack_require__(35);
 
-	var _userRolesEdit = __webpack_require__(36);
+	var _userPermissions = __webpack_require__(36);
 
-	var _userRolesAdd = __webpack_require__(37);
+	var _userRolesEdit = __webpack_require__(37);
 
-	var _userRoles = __webpack_require__(38);
+	var _userRolesAdd = __webpack_require__(38);
 
-	var _userLists = __webpack_require__(39);
+	var _userRoles = __webpack_require__(39);
 
-	var _dashboard = __webpack_require__(40);
+	var _userLists = __webpack_require__(40);
 
-	var _navSidebar = __webpack_require__(41);
+	var _dashboard = __webpack_require__(41);
 
-	var _navHeader = __webpack_require__(42);
+	var _navSidebar = __webpack_require__(42);
 
-	var _loginLoader = __webpack_require__(43);
+	var _navHeader = __webpack_require__(43);
 
-	var _resetPassword = __webpack_require__(44);
+	var _loginLoader = __webpack_require__(44);
 
-	var _forgotPassword = __webpack_require__(45);
+	var _resetPassword = __webpack_require__(45);
 
-	var _loginForm = __webpack_require__(46);
+	var _forgotPassword = __webpack_require__(46);
 
-	var _registerForm = __webpack_require__(47);
+	var _loginForm = __webpack_require__(47);
 
-	var _create_task = __webpack_require__(48);
+	var _registerForm = __webpack_require__(48);
 
-	var _tasks = __webpack_require__(49);
+	var _create_task = __webpack_require__(49);
 
-	var _departmentTasks = __webpack_require__(50);
+	var _tasks = __webpack_require__(50);
 
-	angular.module('app.components').component('task', _task.TaskComponent).component('tasksDisplay', _tasksDisplay.TasksDisplayComponent).component('tablesSimple', _tablesSimple.TablesSimpleComponent).component('uiModal', _uiModal.UiModalComponent).component('uiTimeline', _uiTimeline.UiTimelineComponent).component('uiButtons', _uiButtons.UiButtonsComponent).component('uiIcons', _uiIcons.UiIconsComponent).component('uiGeneral', _uiGeneral.UiGeneralComponent).component('formsGeneral', _formsGeneral.FormsGeneralComponent).component('chartsChartjs', _chartsChartjs.ChartsChartjsComponent).component('widgets', _widgets.WidgetsComponent).component('userProfile', _userProfile.UserProfileComponent).component('userVerification', _userVerification.UserVerificationComponent).component('comingSoon', _comingSoon.ComingSoonComponent).component('userEdit', _userEdit.UserEditComponent).component('userPermissionsEdit', _userPermissionsEdit.UserPermissionsEditComponent).component('userPermissionsAdd', _userPermissionsAdd.UserPermissionsAddComponent).component('userPermissions', _userPermissions.UserPermissionsComponent).component('userRolesEdit', _userRolesEdit.UserRolesEditComponent).component('userRolesAdd', _userRolesAdd.UserRolesAddComponent).component('userRoles', _userRoles.UserRolesComponent).component('userLists', _userLists.UserListsComponent).component('dashboard', _dashboard.DashboardComponent).component('navSidebar', _navSidebar.NavSidebarComponent).component('navHeader', _navHeader.NavHeaderComponent).component('loginLoader', _loginLoader.LoginLoaderComponent).component('resetPassword', _resetPassword.ResetPasswordComponent).component('forgotPassword', _forgotPassword.ForgotPasswordComponent).component('loginForm', _loginForm.LoginFormComponent).component('registerForm', _registerForm.RegisterFormComponent).component('createTask', _create_task.CreateTaskComponent).component('tasks', _tasks.TasksComponent
+	var _departmentTasks = __webpack_require__(51);
+
+	angular.module('app.components').component('taskDetailDirective', _taskDetailDirective.TaskDetailDirectiveComponent).component('task', _task.TaskComponent).component('tasksDisplay', _tasksDisplay.TasksDisplayComponent).component('tablesSimple', _tablesSimple.TablesSimpleComponent).component('uiModal', _uiModal.UiModalComponent).component('uiTimeline', _uiTimeline.UiTimelineComponent).component('uiButtons', _uiButtons.UiButtonsComponent).component('uiIcons', _uiIcons.UiIconsComponent).component('uiGeneral', _uiGeneral.UiGeneralComponent).component('formsGeneral', _formsGeneral.FormsGeneralComponent).component('chartsChartjs', _chartsChartjs.ChartsChartjsComponent).component('widgets', _widgets.WidgetsComponent).component('userProfile', _userProfile.UserProfileComponent).component('userVerification', _userVerification.UserVerificationComponent).component('comingSoon', _comingSoon.ComingSoonComponent).component('userEdit', _userEdit.UserEditComponent).component('userPermissionsEdit', _userPermissionsEdit.UserPermissionsEditComponent).component('userPermissionsAdd', _userPermissionsAdd.UserPermissionsAddComponent).component('userPermissions', _userPermissions.UserPermissionsComponent).component('userRolesEdit', _userRolesEdit.UserRolesEditComponent).component('userRolesAdd', _userRolesAdd.UserRolesAddComponent).component('userRoles', _userRoles.UserRolesComponent).component('userLists', _userLists.UserListsComponent).component('dashboard', _dashboard.DashboardComponent).component('navSidebar', _navSidebar.NavSidebarComponent).component('navHeader', _navHeader.NavHeaderComponent).component('loginLoader', _loginLoader.LoginLoaderComponent).component('resetPassword', _resetPassword.ResetPasswordComponent).component('forgotPassword', _forgotPassword.ForgotPasswordComponent).component('loginForm', _loginForm.LoginFormComponent).component('registerForm', _registerForm.RegisterFormComponent).component('createTask', _create_task.CreateTaskComponent).component('tasks', _tasks.TasksComponent
 	// .component('departments', DepartmentsComponent)
 	).component('departmentTasks', _departmentTasks.DepartmentTasksComponent);
 	// import {DepartmentsComponent} from './app/components/departments/departments.component';
@@ -924,18 +943,169 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var TaskController = function () {
-	    function TaskController() {
+	var TaskDetailDirectiveController = function () {
+	    TaskDetailDirectiveController.$inject = ["userService", "$state", "ContextService", "$location", "$anchorScroll"];
+	    function TaskDetailDirectiveController(userService, $state, ContextService, $location, $anchorScroll) {
 	        'ngInject';
 
-	        //
+	        _classCallCheck(this, TaskDetailDirectiveController);
+
+	        var vm = this;
+	        this.userService = userService;
+	        this.$state = $state;
+	        this.$location = $location;
+	        this.$anchorScroll = $anchorScroll;
+
+	        ContextService.me(function (data) {
+	            console.log(data);
+	            vm.userData = data;
+	        });
+	    }
+
+	    _createClass(TaskDetailDirectiveController, [{
+	        key: '$onInit',
+	        value: function $onInit() {
+	            this.progress_data = {};
+	            this.statuses = ['ON GOING', 'COMPLETE', 'NOT STARTED'];
+	            this.progress_data.overall_status = 'NOT STARTED';
+
+	            this.notifications = [{
+	                "id": "ecfb468e-32b9-49d3-87c7-8477c4b79ba0",
+	                "data": {
+	                    "type": "create_task",
+	                    "reporter_name": "Alice Department Head",
+	                    "task_name": "asd"
+	                },
+	                "notifiable_type": 'App\\User',
+	                "read_at": null,
+	                "task_id": null,
+	                "$$hashKey": "object:59"
+	            }, {
+	                "id": "96d1ba05-5a76-4892-9566-8247420fc793",
+	                "data": {
+	                    "message": "Temporary placeholder"
+	                },
+	                "notifiable_type": 'App\\User',
+	                "read_at": null,
+	                "task_id": null,
+	                "$$hashKey": "object:60"
+	            }];
+	        }
+	    }, {
+	        key: '$onChanges',
+	        value: function $onChanges(changes) {
+	            var vm = this;
+	            // console.log('called onChanges',changes);
+	            if (angular.isDefined(changes.taskid.currentValue)) {
+	                vm.taskid = changes.taskid.currentValue;
+	                vm.loadingfilterDetail = true;
+	                console.log(vm.taskid);
+	                vm.userService.getSingleTask(vm.taskid).then(function (resp) {
+	                    vm.loadingfilterDetail = false;
+	                    // console.log(resp);
+	                    vm.task = resp.data.task;
+	                }, function (error) {
+	                    vm.loadingfilterDetail = false;
+	                    // console.log(error);
+	                });
+	            }
+	        }
+	    }, {
+	        key: 'changeCurrentStatus',
+	        value: function changeCurrentStatus() {
+	            if (this.progress_data.overall_status == 'NOT STARTED') {
+	                this.progress_data.progress_status_percent = "0";
+	            } else if (this.progress_data.overall_status == 'COMPLETE') {
+	                this.progress_data.progress_status_percent = "100";
+	            } else {
+	                this.progress_data.progress_status_percent = null;
+	            }
+	        }
+	    }, {
+	        key: 'goToDetailPage',
+	        value: function goToDetailPage(id) {
+	            if (this.$state.current.name == 'app.single-task' || this.$state.current.name == 'app.tasks.single-task') {
+	                return;
+	            }
+
+	            this.$state.go('app.tasks.single-task', { id: id });
+	        }
+	    }, {
+	        key: 'addProgressMessage',
+	        value: function addProgressMessage(id) {
+	            var vm = this;
+	            this.show_progress_created = false;
+	            this.show_progress_error = false;
+
+	            console.log(this.progress_data);
+
+	            this.loadingfilterDetail = true;
+	            this.userService.addProgressMessage(id, { progress: this.progress_data }).then(function (resp) {
+	                vm.loadingfilterDetail = false;
+	                vm.$location.hash('cytonn-app');
+	                vm.$anchorScroll();
+	                console.log(resp);
+	                vm.show_progress_created = true;
+	                vm.task = resp.data.task;
+	                vm.progress_data = {};
+	            }, function (error) {
+	                vm.loadingfilterDetail = false;
+	                vm.$location.hash('cytonn-app');
+	                vm.$anchorScroll();
+	                console.log(error);
+	                vm.show_progress_error = true;
+	            });
+	        }
+	    }]);
+
+	    return TaskDetailDirectiveController;
+	}();
+
+	var TaskDetailDirectiveComponent = exports.TaskDetailDirectiveComponent = {
+	    templateUrl: './views/app/components/task-detail-directive/task-detail-directive.component.html',
+	    controller: TaskDetailDirectiveController,
+	    controllerAs: 'vm',
+	    bindings: {
+	        taskid: '<'
+	    }
+	};
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var TaskController = function () {
+	    TaskController.$inject = ["userService", "$stateParams"];
+	    function TaskController(userService, $stateParams) {
+	        'ngInject';
 
 	        _classCallCheck(this, TaskController);
+
+	        this.userService = userService;
+	        this.$stateParams = $stateParams;
+
+	        var vm = this;
+
+	        //
 	    }
 
 	    _createClass(TaskController, [{
 	        key: '$onInit',
-	        value: function $onInit() {}
+	        value: function $onInit() {
+	            var vm = this;
+
+	            vm.taskid = this.$stateParams.id;
+	        }
 	    }]);
 
 	    return TaskController;
@@ -949,7 +1119,7 @@
 	};
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -969,12 +1139,30 @@
 	        _classCallCheck(this, TasksDisplayController);
 
 	        this.hgt = window.innerHeight - 135;
-	        console.log(this.hgt);
 	    }
 
 	    _createClass(TasksDisplayController, [{
 	        key: '$onInit',
 	        value: function $onInit() {}
+	    }, {
+	        key: '$onChanges',
+	        value: function $onChanges(changes) {
+	            var vm = this;
+	            vm.taskid = undefined;
+	            console.log('called onChanges', changes);
+	            if (angular.isDefined(changes.tasks.currentValue)) {
+	                if (changes.tasks.currentValue.length == 0) {
+	                    vm.taskid = undefined;
+	                } else {
+	                    vm.taskid = changes.tasks.currentValue[0]['id'];
+	                }
+
+	                console.log('task id in parent', vm.taskid);
+	            }
+	        }
+	    }, {
+	        key: 'displayOnSide',
+	        value: function displayOnSide() {}
 	    }]);
 
 	    return TasksDisplayController;
@@ -984,11 +1172,14 @@
 	    templateUrl: './views/app/components/tasks-display/tasks-display.component.html',
 	    controller: TasksDisplayController,
 	    controllerAs: 'vm',
-	    bindings: {}
+	    bindings: {
+	        tasks: '<',
+	        loadingfilter: '<'
+	    }
 	};
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1026,7 +1217,7 @@
 	};
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1233,7 +1424,7 @@
 	};
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1271,7 +1462,7 @@
 	};
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1309,7 +1500,7 @@
 	};
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1347,7 +1538,7 @@
 	};
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1385,7 +1576,7 @@
 	};
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1423,7 +1614,7 @@
 	};
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1506,7 +1697,7 @@
 	};
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1544,7 +1735,7 @@
 	};
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1632,7 +1823,7 @@
 	};
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1677,7 +1868,7 @@
 	};
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1715,7 +1906,7 @@
 	};
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1806,7 +1997,7 @@
 	};
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1875,7 +2066,7 @@
 	};
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1944,7 +2135,7 @@
 	};
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2036,7 +2227,7 @@
 	};
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2126,7 +2317,7 @@
 	};
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2195,7 +2386,7 @@
 	};
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2287,7 +2478,7 @@
 	};
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2379,7 +2570,7 @@
 	};
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2393,18 +2584,20 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var DashboardController = function () {
-	  DashboardController.$inject = ["$scope", "userService"];
-	  function DashboardController($scope, userService) {
+	  DashboardController.$inject = ["$scope", "userService", "$state"];
+	  function DashboardController($scope, userService, $state) {
 	    'ngInject';
 
 	    _classCallCheck(this, DashboardController);
 
 	    this.userService = userService;
+	    this.$state = $state;
 	  }
 
 	  _createClass(DashboardController, [{
 	    key: '$onInit',
 	    value: function $onInit() {
+	      var vm = this;
 	      this.fetchTasksAssignedToMe();
 	      this.getMyNotifications();
 	    }
@@ -2413,8 +2606,10 @@
 	  }, {
 	    key: 'fetchTasksAssignedToMe',
 	    value: function fetchTasksAssignedToMe() {
+	      var vm = this;
 	      this.userService.getMyTasks('assigned_to_me').then(function (resp) {
 	        console.log(resp);
+	        vm.tasks_assigned = resp.data.tasks;
 	      }, function (error) {
 	        console.log(error);
 	      });
@@ -2422,8 +2617,10 @@
 	  }, {
 	    key: 'getMyNotifications',
 	    value: function getMyNotifications() {
+	      var vm = this;
 	      this.userService.getMyNotifications().then(function (resp) {
 	        console.log(resp);
+	        vm.notifications = resp.data.notifications;
 	      }, function (error) {
 	        console.log(error);
 	      });
@@ -2431,11 +2628,17 @@
 	  }, {
 	    key: 'markNotificationAsRead',
 	    value: function markNotificationAsRead(notificationId) {
+	      var vm = this;
 	      this.userService.markNotificationAsRead().then(function (resp) {
 	        console.log(resp);
 	      }, function (error) {
 	        console.log(error);
 	      });
+	    }
+	  }, {
+	    key: 'goToDetail',
+	    value: function goToDetail(task) {
+	      this.$state.go('app.single-task', { id: task.id });
 	    }
 	  }]);
 
@@ -2450,7 +2653,7 @@
 	};
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2495,7 +2698,7 @@
 	};
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2539,7 +2742,7 @@
 	};
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2581,7 +2784,7 @@
 	};
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2673,7 +2876,7 @@
 	};
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2735,7 +2938,7 @@
 	};
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2835,7 +3038,7 @@
 	};
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2916,7 +3119,7 @@
 	};
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2949,10 +3152,10 @@
 	            var vm = this;
 	            this.data = {};
 	            this.access_level = ['private', 'public'];
-	            this.priority = [{ name: 'Low', id: 0 }, { name: 'Normal', id: 5 }, { name: 'High', id: 10 }];
+	            this.priority = ['Low', 'Normal', 'High'];
 
 	            this.data.access_level = 'public';
-	            this.data.priority = 5;
+	            this.data.priority = 'Normal';
 
 	            this.userService.getTaskCategories().then(function (resp) {
 	                console.log(resp);
@@ -3074,7 +3277,7 @@
 	};
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3109,9 +3312,11 @@
 	            this.current_filter = this.$stateParams.filter || 'all';
 	            this.current_filter_name = 'All Tasks';
 
-	            this.userService.getTasks(this.current_filter).then(function (resp) {
+	            this.userService.getMyTasks(this.current_filter).then(function (resp) {
 	                // console.log(resp);
 	                vm.loadingFilter = false;
+
+	                vm.tasks = resp.data.tasks;
 	            }, function (error) {
 	                // console.log(error);
 	                vm.loadingFilter = false;
@@ -3121,22 +3326,25 @@
 	        key: 'changeFilter',
 	        value: function changeFilter(filter) {
 	            var vm = this;
+	            vm.tasks = [];
 	            this.loadingFilter = true;
 
 	            this.current_filter = filter;
 	            var obj = {
 	                "all": "All Tasks",
-	                "reported-by-me": "Reported by me",
-	                "assigned-to-me": "Assigned to me",
-	                "private-tasks": "Private tasks",
-	                "public-tasks": "Public tasks",
+	                "reported_by_me": "Reported by me",
+	                "assigned_to_me": "Assigned to me",
+	                "private_tasks": "Private tasks",
+	                "public_tasks": "Public tasks",
 	                "following": "Tasks that I am following"
 	            };
 	            this.current_filter_name = obj[filter];
 
-	            this.userService.getTasks(this.current_filter).then(function (resp) {
+	            this.userService.getMyTasks(this.current_filter).then(function (resp) {
 	                // console.log(resp);
 	                vm.loadingFilter = false;
+
+	                vm.tasks = resp.data.tasks;
 	            }, function (error) {
 	                // console.log(error);
 	                vm.loadingFilter = false;
@@ -3155,7 +3363,7 @@
 	};
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3169,17 +3377,77 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var DepartmentTasksController = function () {
-	    function DepartmentTasksController() {
+	    DepartmentTasksController.$inject = ["$stateParams", "ContextService", "userService"];
+	    function DepartmentTasksController($stateParams, ContextService, userService) {
 	        'ngInject';
 
-	        //
-
 	        _classCallCheck(this, DepartmentTasksController);
+
+	        var vm = this;
+	        this.$stateParams = $stateParams;
+	        this.userService = userService;
+
+	        ContextService.me(function (data) {
+	            console.log(data);
+	            vm.userData = data;
+	            vm.current_department = vm.userData.department;
+	            vm.loadingFilter = true;
+	            vm.getInitialDepartmentTasks();
+	        });
 	    }
 
 	    _createClass(DepartmentTasksController, [{
 	        key: '$onInit',
-	        value: function $onInit() {}
+	        value: function $onInit() {
+	            var vm = this;
+
+	            this.userService.getAllDepartments().then(function (resp) {
+	                // console.log(resp);
+	                vm.departments = resp.data;
+	            }, function (error) {
+	                // console.log(error);
+	            });
+	        }
+	    }, {
+	        key: 'getInitialDepartmentTasks',
+	        value: function getInitialDepartmentTasks() {
+	            var vm = this;
+
+	            // console.log(this.current_filter);
+
+
+	            vm.userService.getDepartmentTasks(vm.userData.department.id).then(function (resp) {
+	                // console.log(resp);
+	                vm.loadingFilter = false;
+
+	                vm.tasks = resp.data.tasks;
+	            }, function (error) {
+	                // console.log(error);
+	                vm.loadingFilter = false;
+	            });
+	        }
+	    }, {
+	        key: 'changeFilter',
+	        value: function changeFilter(department) {
+	            var vm = this;
+
+	            vm.current_department = department;
+
+	            vm.tasks = [];
+	            this.loadingFilter = true;
+
+	            this.dep_id = vm.current_department.id;
+
+	            this.userService.getMyTasks(this.dep_id).then(function (resp) {
+	                // console.log(resp);
+	                vm.loadingFilter = false;
+
+	                vm.tasks = resp.data.tasks;
+	            }, function (error) {
+	                // console.log(error);
+	                vm.loadingFilter = false;
+	            });
+	        }
 	    }]);
 
 	    return DepartmentTasksController;
@@ -3193,21 +3461,21 @@
 	};
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _showLoader = __webpack_require__(52);
+	var _showLoader = __webpack_require__(53);
 
-	var _routeBodyclass = __webpack_require__(53);
+	var _routeBodyclass = __webpack_require__(54);
 
-	var _passwordVerify = __webpack_require__(54);
+	var _passwordVerify = __webpack_require__(55);
 
 	angular.module('app.components').directive('routeBodyclass', _routeBodyclass.RouteBodyClassComponent).directive('passwordVerify', _passwordVerify.PasswordVerifyClassComponent).directive('showLoader', _showLoader.ShowLoaderDirective);
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3256,7 +3524,7 @@
 	var ShowLoaderDirective = exports.ShowLoaderDirective = ShowLoader;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3292,7 +3560,7 @@
 	var RouteBodyClassComponent = exports.RouteBodyClassComponent = routeBodyClass;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3337,21 +3605,21 @@
 	var PasswordVerifyClassComponent = exports.PasswordVerifyClassComponent = passwordVerifyClass;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _context = __webpack_require__(56);
+	var _context = __webpack_require__(57);
 
-	var _API = __webpack_require__(57);
+	var _API = __webpack_require__(58);
 
-	var _userService = __webpack_require__(58);
+	var _userService = __webpack_require__(59);
 
 	angular.module('app.services').service('ContextService', _context.ContextService).service('API', _API.APIService).service('userService', _userService.userService);
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3403,7 +3671,7 @@
 	}();
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3454,7 +3722,7 @@
 	}];
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3542,7 +3810,11 @@
 	  }, {
 	    key: 'getMyTasks',
 	    value: function getMyTasks(filter) {
-	      return this.$http.get(this.urlBase + 'users/me/tasks/?' + filter + '=true');
+	      if (filter == 'all') {
+	        return this.$http.get(this.urlBase + 'users/me/tasks');
+	      } else {
+	        return this.$http.get(this.urlBase + 'users/me/tasks/?' + filter + '=true');
+	      }
 	    }
 	  }, {
 	    key: 'getMyNotifications',
@@ -3550,9 +3822,40 @@
 	      return this.$http.get(this.urlBase + 'users/me/notifications');
 	    }
 	  }, {
+	    key: 'markNotificationAsRead',
+	    value: function markNotificationAsRead(id) {
+	      return this.$http.delete(this.urlBase + 'users/me/notifications/' + id);
+	    }
+	  }, {
 	    key: 'createTask',
 	    value: function createTask(data) {
 	      return this.$http.post(this.urlBase + 'tasks', data);
+	    }
+	  }, {
+	    key: 'getSingleTask',
+	    value: function getSingleTask(id) {
+	      if (id == null) {
+	        return;
+	      }
+	      return this.$http.get(this.urlBase + 'tasks/' + id);
+	    }
+	  }, {
+	    key: 'addProgressMessage',
+	    value: function addProgressMessage(id, progress) {
+	      return this.$http.post(this.urlBase + 'tasks/' + id + '/progress', progress);
+	    }
+
+	    //DEPARTMENT URLS
+
+	  }, {
+	    key: 'getDepartmentTasks',
+	    value: function getDepartmentTasks(id) {
+	      return this.$http.get(this.urlBase + 'departments/' + id + '/tasks');
+	    }
+	  }, {
+	    key: 'getAllDepartments',
+	    value: function getAllDepartments() {
+	      return this.$http.get(this.urlBase + 'departments');
 	    }
 	  }]);
 

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Notifications\TaskProgressWasUpdated;
 use App\Notifications\TaskWasCreated;
 use App\Task;
 use App\User;
@@ -36,10 +37,14 @@ class TaskSubscription extends Model
      *
      * @param \App\Reply $reply
      */
-    public function notify($type_of_notification, $object=null) {
+    public function notify($type_of_notification, $object=null, $progress=null) {
     	if($type_of_notification == 'create') {
     		$this->user->notify(new TaskWasCreated($object) );	
     	}
+
+        if($type_of_notification == 'update_progress_status') {
+            $this->user->notify(new TaskProgressWasUpdated($object, $progress) );  
+        }
     	
     }
 }

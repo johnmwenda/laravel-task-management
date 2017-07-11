@@ -29,9 +29,7 @@ class CreateProgress extends ApiRequest
         return [
             'overall_status' => 'required',
             'message' => 'required|string|max:255',
-            'summary' => 'required',
-            'access_level' => 'required|string',
-            'progress_status_percent' => 'required|integer',
+            'progress_status_percent' => 'required',
             // 'progress_status' => 'required|integer',
             // 'due_date' => 'required|date',
             // 'assigned_user' => 'required',

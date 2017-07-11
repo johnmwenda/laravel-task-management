@@ -12,10 +12,10 @@ class CreateTaskController{
         let vm = this;
         this.data = {}
         this.access_level = ['private', 'public']; 
-        this.priority = [{name: 'Low',id: 0}, {name:'Normal', id: 5}, {name:'High', id:10}]; 
+        this.priority = ['Low', 'Normal', 'High']; 
 
         this.data.access_level = 'public';
-        this.data.priority = 5;
+        this.data.priority = 'Normal';
 
         this.userService.getTaskCategories().then(function(resp){
             console.log(resp);

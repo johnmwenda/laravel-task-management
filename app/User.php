@@ -51,10 +51,17 @@ class User extends Authenticatable
     //helper that creates tasks and add either department_members or specific users to the task_subscriptions table
     public function create_task($task, $departments_subscribe=null, $users_subscribe=null) {
         
-        // dd($users_subscribe);
-
-
         $task = $this->mytasks()->create($task);
+
+        //lets create the initial progress message
+        $progress = [
+            'user_id'                 => auth()->id(),
+            'overall_status'          => 'NOT STARTED',
+            'message'                 => '',
+            'progress_status_percent' => 0
+        ];
+
+        $task->addProgressStatus($progress);
 
         if($users_subscribe) {
             $task -> users_subscribe($users_subscribe);   
@@ -69,7 +76,7 @@ class User extends Authenticatable
         $task->notifyTaskCreatedToSubscribers();
         
         return $task;
-    }   
+    }
 
     /**
      * tasks that this user has created, which can be many

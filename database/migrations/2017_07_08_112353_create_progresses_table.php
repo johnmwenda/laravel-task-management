@@ -17,7 +17,7 @@ class CreateProgressesTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('task_id');
-            $table->enum('overall_status', ['ON-GOING', 'COMPLETED']);
+            $table->enum('overall_status', ['ON GOING','COMPLETED','NOT STARTED']);
             $table->string('message');
             $table->smallInteger('progress_status_percent'); //1%-100% always 0 when creating for first time
             $table->timestamps();

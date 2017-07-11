@@ -105,7 +105,9 @@ class TaskController extends ApiController
      */
     public function show(Task $task)
     {
-        //
+        $this->authorize('view', $task); // TaskPolicy::view
+
+        return $this->respondWithTransformer($task); 
     }
 
     /**
@@ -157,8 +159,10 @@ class TaskController extends ApiController
             'user_id' => auth()->id(),
             'overall_status' => $request->input('progress.overall_status'),
             'message' => $request->input('progress.message'),
-            'progress_status' => $request->input('progress.progress_status'),
+            'progress_status_percent' => $request->input('progress.progress_status_percent'),
         ]);
+
+        return $this->respondWithTransformer($task);
 
     }
 
@@ -178,6 +182,8 @@ class TaskController extends ApiController
 
         return $this->respondWithPagination($tasks);
     }
+
+
 
 
 }

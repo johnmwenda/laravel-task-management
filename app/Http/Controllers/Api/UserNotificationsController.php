@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\TaskManagement\Transformers\NotificationTransformer;
+
 // use Illuminate\Http\Request;
 // use App\Http\Controllers\Controller;
 
@@ -10,9 +12,11 @@ class UserNotificationsController extends ApiController
     /**
      * Create a new controller instance.
      */
-    public function __construct()
+    public function __construct(NotificationTransformer $transformer)
     {
         $this->middleware('auth.api');
+
+        $this->transformer = $transformer;
     }
 
     /**
@@ -23,7 +27,7 @@ class UserNotificationsController extends ApiController
     public function index()
     {
         // dd('called');
-        return auth()->user()->unreadNotifications; 
+        return $this->respondWithTransformer(auth()->user()->unreadNotifications); 
     }
 
     /**

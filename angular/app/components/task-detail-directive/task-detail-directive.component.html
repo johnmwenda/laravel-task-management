@@ -1,0 +1,213 @@
+<div class="pad margin no-print" ng-if = "vm.show_progress_created">
+  <div class="callout callout-success" style="margin-bottom: 0!important;">
+    <h4><i class="fa fa-fw fa-check"></i> Success:</h4>
+    Progress message was successfully updates
+  </div>
+</div>
+
+<div class="pad margin no-print" ng-if = "vm.show_progress_error">
+  <div class="callout callout-danger" style="margin-bottom: 0!important;">
+    <h4><i class="fa fa-fw fa-remove"></i> Error:</h4>
+    Progress message could not be added:
+  </div>
+</div> 
+<!-- {{vm.task | json}} -->
+<div class="box box-info" dw-loading = "loadingfilterDetail" dw-loading-options = "{text: '', spinner:false }"  show-loader loader-key = "'loadingfilterDetail'" is-true = "vm.loadingfilterDetail">
+          <div class="box-header with-border">
+            <h3 class="box-title" style="display: inline-block;">Task Description</h3>
+            <div class="pull-right" style="padding-top: -1px;">
+            <div style="float: left;"><small>Status</small> <span class="label label-primary">{{vm.task.progress[vm.task.progress.length-1]['overall_status']}}</span></div>
+            <div ng-click = "vm.goToDetailPage(vm.task.id)" style="cursor: pointer;margin-top: -1px;margin-left: 3px;display: inline-block;font-size: 19px;">
+              <i class="fa fa-fw fa-expand" style="padding-top: 3px;"></i>
+            </div>
+          </div>
+
+          </div>
+          <!-- /.box-header -->
+          <!-- form start -->
+
+
+
+          
+            <div class="box-body no-padding-top">
+              <div class="form-group no-margin-bottom">
+                <!-- <label style="padding: 0" for="name" class="col-sm-2 control-label">Title</label> -->
+
+                <div class="col-sm-12">
+                  <!-- <small>Title</small> -->
+                  <h4 ng-click = "vm.goToDetailPage(vm.task.id)" style="cursor: pointer;color: #1483c3;display: inline-block;"><i class="fa fa-fw fa-pencil-square-o"></i>
+                  {{vm.task.name}}
+
+                  </h4>
+                  <div class="pull-right" style="margin-top: 8px;margin-left: 28px"> 
+                  <span class="label label-danger">{{vm.task.progress[vm.task.progress.length-1]['progress_status_percent']}}% DONE</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0">
+                <!-- <label style="padding: 0" for="category" class="col-sm-2 control-label">Description</label> -->
+
+                <div class="col-sm-12">
+                  <table class="table" style="margin-bottom: 18px; font-size: 15px">
+                    <tr>
+                      <td style="">
+                        <small style="color: #9a9797;">Summary</small><br/>
+                        <span>
+                         {{vm.task.summary}}
+                       </span>
+                     </td>
+                   </tr>
+                 </table>
+
+               </div>
+             </div>
+
+             <table class="table">
+              <tr>
+                <td>Category</td>
+                <td>Access Level</td>
+                <td>Priority</td>
+                <td>Due date</td>
+                <td>Reporter</td>
+                <td>Assigned to</td>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>{{vm.task.category.name | lowercase}}</td>
+                  <TD>{{vm.task.access_level}}</TD>
+                  <td>{{vm.task.priority}}</td>
+                  <td>{{vm.task.due_date | date:'d/M/yyyy'}}</td>
+                  <td>{{vm.task.reporter.username}}</td>
+                  <td><span ng-if="vm.task.assignee.name == vm.userData.name">Me</span>
+                  <span ng-if="vm.task.assignee.name != vm.userData.name">{{vm.task.assignee.name}}</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h5 style="margin-top: 25px; margin-left: 5px; margin-bottom: 15px">Activity</h5>
+
+            <div class="nav-tabs-custom" style="margin-left: 7px">
+              <ul class="nav nav-tabs">
+                <li style="cursor: pointer;" class="active"><a data-target="#all" data-toggle="tab">All</a></li>
+                <li style="cursor: pointer;"><a data-target="#comments" data-toggle="tab">Comments</a></li>
+                <li style="cursor: pointer;"><a data-target="#addprogress" data-toggle="tab"><i class="fa fa-fw fa-plus"></i>Add progress</a></li>
+              </ul>
+              <div class="tab-content">
+                <!-- Font Awesome Icons -->
+
+                <div class="tab-pane active" id="all">
+                  <ul class="products-list product-list-in-box">
+              
+
+
+              <li ng-repeat = "item in vm.task.progress" class="item">
+                <span ng-if="item.overall_status == 'NOT STARTED'">
+                <a href="">{{item.owner.name}}</a> 
+                 <span><small>created</small> task on</span> {{item.created_at}}
+               </span>
+
+
+
+              <span ng-if="item.overall_status != 'NOT STARTED'">
+                <a href="">{{item.owner.name}}</a> 
+                <small>added</small> a progress message <span class="label label-default">{{item.progress_status_percent}}% DONE</span><br/>
+                <span>{{item.message}}</span>
+                </span>
+
+
+              </li>
+
+          </ul>
+                </div>
+
+                <div class="tab-pane" id="comments" ng-init = "vm.show_add_comment = false">
+                  <button ng-click = "vm.show_add_comment = true" class="btn btn-primary btn-sm" style="margin-bottom: 11px">Add comment</button>
+                  <div  ng-show = "vm.show_add_comment">
+                  <form name = "vm.add_comment_form" class="form" role="form">
+                    
+                  
+                    <div class="form-group">
+                      <textarea name="progress_message" id="progress_message" class="form-control" rows="3" required="required"></textarea>
+                    </div>
+                  
+                    
+                  
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                  </form>
+                  </div>
+                  <ul class="products-list product-list-in-box">
+
+
+
+                    <li ng-repeat = "item in vm.notifications" class="item">
+                      <span><a href="">{{item.data.reporter_name}}</a> 
+                      <span ng-if="item.data.type == 'create_task'"><small>wrote a comment</small> </span> on 12 May 2017
+                     </span> <br/>
+
+                     <div style="margin-left: 10px">"Comment of that user comes here, mostly the department head"</div>
+
+                     <span ng-if = "item.data.type == 'add_progress_message'"><small>added</small> a progress message on tasks</span>
+                   </li>
+                 </ul>
+                </div>
+
+                <div class="tab-pane" id="addprogress">
+                  <form ng-submit = "vm.addProgressMessage(vm.task.id)" name = "vm.add_progress_form" class="form-horizontal" role="form">
+                      <div class="form-group">
+                        <label for="input" class="col-sm-3 control-label">Current status:</label>
+                        <div class="col-sm-4">
+                        <select required="" ng-change="vm.changeCurrentStatus()" name="overall_status" required="" class="form-control" ng-model="vm.progress_data.overall_status" ng-options="item for item in vm.statuses" >
+                            <!-- <option value="">Select task category</option> -->
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="input" class="col-sm-3 control-label">Percentage complete:</label>
+                        <div class="col-sm-4">
+                          <input ng-model = "vm.progress_data.progress_status_percent" ng-disabled = "vm.progress_data.overall_status == 'NOT STARTED' || vm.progress_data.overall_status == 'COMPLETE' " type="number" name=""  class="form-control" ng-model = "vm.progress_data.progress_status_percent" value="" required="required"  title="">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="textareaProgress_message" class="col-sm-3 control-label">Progress message:</label>
+                        <div class="col-sm-4">
+                          <textarea ng-model = "vm.progress_data.message" ng-disabled = "vm.progress_data.overall_status == 'NOT STARTED'" name="progress_message" id="textareaProgress_message" class="form-control" rows="3" required="required"></textarea>
+                        </div>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="input" class="col-sm-3 control-label">Attachment:</label>
+                        <div class="col-sm-4">
+                          <input ng-disabled = "vm.progress_data.overall_status == 'NOT STARTED'" type="file" name="" id="input" class="form-control" value=""   title="">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-2">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                      </div>
+                  </form>
+                </div>
+
+
+
+
+
+              </div>
+              <!-- /.tab-content --> 
+            </div>
+
+
+          </div>
+          <!-- /.box-body -->
+            <!--   <div class="box-footer">
+                <button type="submit" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-info pull-right">Create</button>
+              </div> -->
+              <!-- /.box-footer -->
+           
+
+
+          </div>

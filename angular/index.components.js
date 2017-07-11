@@ -1,3 +1,4 @@
+import {TaskDetailDirectiveComponent} from './app/components/task-detail-directive/task-detail-directive.component';
 import {TaskComponent} from './app/components/task/task.component';
 import {TasksDisplayComponent} from './app/components/tasks-display/tasks-display.component';
 import { TablesSimpleComponent } from './app/components/tables-simple/tables-simple.component'
@@ -34,6 +35,7 @@ import {TasksComponent} from './app/components/tasks/tasks.component';
 import {DepartmentTasksComponent} from './app/components/department-tasks/department-tasks.component';
 
 angular.module('app.components')
+	.component('taskDetailDirective', TaskDetailDirectiveComponent)
 	.component('task', TaskComponent)
 	.component('tasksDisplay', TasksDisplayComponent)
   .component('tablesSimple', TablesSimpleComponent)

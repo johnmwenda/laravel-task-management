@@ -51,7 +51,7 @@ class Task extends Model
      * @return [type] [description]
      */
     public function reporter(){
-    	return $this->belongsTo(User::class);
+    	return $this->belongsTo(User::class, 'user_id');
     }
 
     /**
@@ -108,7 +108,9 @@ class Task extends Model
     public function addProgressStatus($progress) {
         
         // return $this->belongsTo(Department::class);
-        $this->progresses()->create($progress);
+        $progress = $this->progresses()->create($progress);
+
+        $this->notifyTaskProgressUpdatedToSubscribers($progress);
     }
 
     /**
@@ -140,7 +142,7 @@ class Task extends Model
         $filtered = User::whereIn('id', $users_array )->get();
 
         foreach ($filtered as $value) {
-            print_r($value->id);
+            $this->subscribe($value->id);
         }
     }
 
@@ -202,6 +204,13 @@ class Task extends Model
         ->where('user_id', '!=', $this->user_id)
         ->each
         ->notify('create', $this);
+    }
+
+    public function notifyTaskProgressUpdatedToSubscribers($progress) {
+        $this->subscriptions
+        ->where('user_id', '!=', $this->user_id)
+        ->each
+        ->notify('update_progress_status', $this, $progress);
     }
 
     

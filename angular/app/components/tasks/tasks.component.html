@@ -8,10 +8,10 @@
       <span class="caret"></span></button>
       <ul class="dropdown-menu">
         <li><a ng-click = "vm.changeFilter('all')" href=""><i ng-if ="vm.current_filter == 'all' " class="fa fa-fw fa-check"></i> All tasks</a></li>
-        <li><a ng-click = "vm.changeFilter('reported-by-me')" href=""><i ng-if ="vm.current_filter == 'reported-by-me' " class="fa fa-fw fa-check"></i>Reported by me</a></li>
-        <li><a ng-click = "vm.changeFilter('assigned-to-me')" href=""><i ng-if ="vm.current_filter == 'assigned-to-me' " class="fa fa-fw fa-check"></i>Assigned to me</a></li>
-        <li><a ng-click = "vm.changeFilter('private-tasks')" href=""><i ng-if ="vm.current_filter == 'private-tasks' " class="fa fa-fw fa-check"></i>Private tasks</a></li>
-        <li><a ng-click = "vm.changeFilter('public-tasks')" href=""><i ng-if ="vm.current_filter == 'public-tasks' " class="fa fa-fw fa-check"></i>Public tasks</a></li>
+        <li><a ng-click = "vm.changeFilter('reported_by_me')" href=""><i ng-if ="vm.current_filter == 'reported_by_me' " class="fa fa-fw fa-check"></i>Reported by me</a></li>
+        <li><a ng-click = "vm.changeFilter('assigned_to_me')" href=""><i ng-if ="vm.current_filter == 'assigned_to_me' " class="fa fa-fw fa-check"></i>Assigned to me</a></li>
+        <li><a ng-click = "vm.changeFilter('private_tasks')" href=""><i ng-if ="vm.current_filter == 'private_tasks' " class="fa fa-fw fa-check"></i>Private tasks</a></li>
+        <li><a ng-click = "vm.changeFilter('public_tasks')" href=""><i ng-if ="vm.current_filter == 'public_tasks' " class="fa fa-fw fa-check"></i>Public tasks</a></li>
         <li><a ng-click = "vm.changeFilter('following')" href=""><i ng-if ="vm.current_filter == 'following' " class="fa fa-fw fa-check"></i>Following</a></li>
 
       </ul>
@@ -28,7 +28,7 @@
 <section class="content">
 <div class="row">
 
-  <tasks-display></tasks-display>
+  <tasks-display tasks="vm.tasks" loadingfilter="vm.loadingFilter"></tasks-display>
         <!-- left column -->  
         <!--/.col (right) -->
       </div>

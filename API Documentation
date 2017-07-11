@@ -1,8 +1,18 @@
+Login
+POST /api/users/login
+
+{
+  "user": {
+    "email": 
+    "password": 
+  }
+}
+
+
 Create Tasks
 POST /api/tasks
 Constraints: Authenticated users
-
-
+This api will also subscribe the given users to a task
 {
   "tasks": {
   "id": 
@@ -15,9 +25,14 @@ Constraints: Authenticated users
   "access_level":  "public"
   "prority": "Normal"
   "due_date": "12/8/2017"
-  "progress_status": "0"
+  "progress_status": "0",
+  "notify": {
+      department_subscribers: [],
+      user_subscribers: []
+    }
   }
 }
+
 
 Post Progress message to a Task
 POST /api/task/{task}/progress
@@ -36,7 +51,6 @@ Authorized means you are either the owner(reporter) of the task, or task is assi
 Subscribe to a task
 POST /api/task/{task}/subscriptions
 Constraints: Authenticated
-
 {
   "subscribe": true
 }
@@ -47,3 +61,4 @@ Constraints: Auth
 {
   "subscribe": false
 }
+

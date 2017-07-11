@@ -23,7 +23,7 @@ class CreateTasksTable extends Migration
             $table->text('summary');
             $table->enum('access_level', ['private', 'public']);
             // $table->string('access_level');
-            $table->smallInteger('priority');
+            $table->enum('priority', ['Low', 'Normal', 'High']);
             $table->dateTime('due_date');
             $table->timestamps();
 

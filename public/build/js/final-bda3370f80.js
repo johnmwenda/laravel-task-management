@@ -99943,6 +99943,295 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/create-task/create-task.page.html',
+    '<create-task></create-task>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/department-tasks/department-tasks.page.html',
+    '<department-tasks></department-tasks>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/footer/footer.page.html',
+    '<footer class="main-footer">\n' +
+    '  <div class="pull-right hidden-xs">\n' +
+    '    <b>Version</b> 2.3.3\n' +
+    '  </div>\n' +
+    '  <strong>Copyright &copy; 2016-2017 <a>Cytonn Web App</a>.</strong> All rights reserved.\n' +
+    '</footer>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/forgot-password/forgot-password.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <h3>Forgot your password?</h3>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <forgot-password></forgot-password>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <br>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <a ui-sref="login">Back to Login Page</a>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/header/header.page.html',
+    '<nav-header></nav-header>\n' +
+    '<nav-sidebar></nav-sidebar>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/landing/landing.page.html',
+    '<section class="content-header">\n' +
+    '  <h1>\n' +
+    '    Home\n' +
+    '  </h1>\n' +
+    '  <ol class="breadcrumb">\n' +
+    '    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
+    '    <li class="active">Dashboard</li>\n' +
+    '  </ol>\n' +
+    '</section>\n' +
+    '<dashboard></dashboard>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/layout/layout.page.html',
+    '<div ui-view="header" id = "cytonn-app"></div>\n' +
+    '<div class="content-wrapper">\n' +
+    '    <div ui-view="main"></div>\n' +
+    '</div>\n' +
+    '<div ui-view="footer"></div>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/login/login.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>App</b>System</a> \n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <h3>Sign in</h3>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <login-form></login-form>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/login-loader/login-loader.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <login-loader></login-loader>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/register/register.page.html',
+    '<div class="register-box">\n' +
+    '  <div class="register-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="register-box-body">\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <h3>Create a new account</h3>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <register-form></register-form>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <br>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <a ui-sref="login">I already have an account</a>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <br>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        By signing up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Privacy Policy</a>.\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/reset-password/reset-password.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <div class="row-">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <h3>Reset Password</h3>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <reset-password></reset-password>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/tasks/tasks.page.html',
+    '<tasks></tasks>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/user-verification/user-verification.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <user-verification></user-verification>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/components/charts-chartjs/charts-chartjs.component.html',
     '<section class="content-header">\n' +
     '  <h1>ChartJS<small>Preview sample</small></h1>\n' +
@@ -100197,7 +100486,7 @@ module.run(['$templateCache', function($templateCache) {
     '                  <label for="priority" class="col-sm-2 control-label">Priority</label>\n' +
     '\n' +
     '                  <div class="col-sm-10">\n' +
-    '                  <select required="" name="priority" required="" class="form-control" ng-model="vm.data.priority" ng-options="item.id as item.name for item in vm.priority" >\n' +
+    '                  <select required="" name="priority" required="" class="form-control" ng-model="vm.data.priority" ng-options="item for item in vm.priority" >\n' +
     '                  		<!-- <option value="">Set priority for this task</option> -->\n' +
     '                  	</select>\n' +
     '                  </div>\n' +
@@ -101351,20 +101640,20 @@ module.run(['$templateCache', function($templateCache) {
     '              </div>\n' +
     '            </li>\n' +
     '          </ul> -->\n' +
-    '          <table class="table">\n' +
+    '          <table class="table table-striped table-hover">\n' +
     '                <tbody>\n' +
     '                <tr>\n' +
     '                  <th style="width: 10px">#</th>\n' +
     '                   <th>Task</th>\n' +
-    '                  <th style="width: 18%">Category</th>\n' +
+    '                  <th style="width: 28%">Category</th>\n' +
     '                 \n' +
     '                  \n' +
     '                  <th style="width: 40px">Progress</th>\n' +
     '                </tr>\n' +
-    '                <tr>\n' +
-    '                  <td>1.</td>\n' +
-    '                  <td>Update software</td>\n' +
-    '                  <td>Software Development</td>\n' +
+    '                <tr style="cursor: pointer" ng-click = "vm.goToDetail(task)" ng-repeat = "task in vm.tasks_assigned">\n' +
+    '                  <td>{{$index+1}}</td>\n' +
+    '                  <td>{{task.name}}</td>\n' +
+    '                  <td>{{task.category.name}}</td>\n' +
     '                  <td><span class="badge bg-red">55%</span></td>\n' +
     '                </tr>\n' +
     '                \n' +
@@ -101431,7 +101720,7 @@ module.run(['$templateCache', function($templateCache) {
     '      </div> -->\n' +
     '      <div class="box box-default">\n' +
     '        <div class="box-header with-border">\n' +
-    '          <h3 class="box-title">Notifications <span class="label label-danger">9</span> </h3>\n' +
+    '          <h3 class="box-title">Notifications <span class="label label-danger">{{vm.notifications.length}}</span> </h3>\n' +
     '          <div class="box-tools pull-right">\n' +
     '            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>\n' +
     '            </button>\n' +
@@ -101455,23 +101744,35 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '            .item > span {\n' +
     '              margin-bottom: 5px;\n' +
+    '              display: inline-block;\n' +
     '            }\n' +
     '          </style>\n' +
     '          <ul class="products-list product-list-in-box">\n' +
-    '              <li class="item"><span><a href="">Jonathan Butler</a> <small>created</small> a task</span>\n' +
-    '                <blockquote>\n' +
-    '                Update some stuff on the inventory database \n' +
-    '                      \n' +
-    '                   \n' +
+    '              \n' +
     '\n' +
-    '                  <a style="\n' +
-    '                  /* float: left; */\n' +
-    '                  "></a>\n' +
     '\n' +
+    '              <li ng-repeat = "item in vm.notifications" class="item">\n' +
+    '\n' +
+    '                <span ng-if="item.data.type == \'create_task\'"><a href="">{{item.data.reporter_name}}</a> \n' +
+    '                 <span><small>created</small> a task</span>\n' +
+    '               </span>\n' +
+    '\n' +
+    '               <span ng-if="item.data.type == \'update_progress_status\' ">\n' +
+    '                  <a href="">{{item.data.progress.owner.name}}</a>  \n' +
+    '                 <span><small>added</small> a progress message on <a ui-sref="app.single-task({id: item.data.task_id})">task-{{item.data.task_id}}</a></span>\n' +
+    '               </span><br/>\n' +
+    '\n' +
+    '                <blockquote ng-if = "item.data.type == \'create_task\'">\n' +
+    '                <a ui-sref="app.single-task({id: item.data.task_id})">{{item.data.task_name}}</a>\n' +
     '                </blockquote>\n' +
+    '\n' +
+    '                <span ng-if = "item.data.type == \'update_progress_status\'">\n' +
+    '                  <a ui-sref="app.single-task({id: item.data.task_id})">-{{item.data.progress.message}} </a>\n' +
+    '                  \n' +
+    '                </span>\n' +
     '              </li>\n' +
     '\n' +
-    '              <li class="item"><span><a href="">Jonathan Butler</a> <small>added</small> a progress message on tasks</span>\n' +
+    '              <!-- <li class="item"><span><a href="">Jonathan Butler</a> <span><small>added</small> a progress message on tasks</span></span>\n' +
     '                <blockquote>\n' +
     '                Update some stuff on the inventory database \n' +
     '                    \n' +
@@ -101502,7 +101803,7 @@ module.run(['$templateCache', function($templateCache) {
     '        \n' +
     '\n' +
     '                </blockquote>\n' +
-    '              </li>\n' +
+    '              </li> -->\n' +
     '          </ul>\n' +
     '        </div>\n' +
     '      <!--   <div class="box-body">\n' +
@@ -101640,7 +101941,7 @@ module.run(['$templateCache', function($templateCache) {
     '		Departments \n' +
     '		<!-- <small>Preview</small> -->\n' +
     '	</h1>\n' +
-    '  <div class="dropdown" style="margin-left: 10px; float: left">\n' +
+    '  <!-- <div class="dropdown" style="margin-left: 10px; float: left">\n' +
     '    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Administration Department\n' +
     '      <span class="caret"></span></button>\n' +
     '      <ul class="dropdown-menu">\n' +
@@ -101650,7 +101951,27 @@ module.run(['$templateCache', function($templateCache) {
     '        <li><a href="">Operations department</a></li>\n' +
     '        \n' +
     '      </ul>\n' +
+    '    </div> -->\n' +
+    '\n' +
+    '    <div class="dropdown" style="margin-left: 10px; float: left">\n' +
+    '    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Switch filter\n' +
+    '      <span class="caret"></span></button>\n' +
+    '      <ul class="dropdown-menu">\n' +
+    '        \n' +
+    '        <li ng-repeat = "department in vm.departments">\n' +
+    '        <a ng-click = "vm.changeFilter(department)"><i ng-if ="vm.current_id == department.dep_id " class="fa fa-fw fa-check"></i> {{department.name}}</a>\n' +
+    '        </li>\n' +
+    '        \n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '       <!--  <li><a ng-click = "vm.changeFilter(\'finance\')" href=""><i ng-if ="vm.current_filter == \'finance\' " class="fa fa-fw fa-check"></i>Finance</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'stores_and_supplies\')" href=""><i ng-if ="vm.current_filter == \'stores_and_supplies\' " class="fa fa-fw fa-check"></i>Stores and supplies</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'operations\')" href=""><i ng-if ="vm.current_filter == \'operations\' " class="fa fa-fw fa-check"></i>Operations department</a></li> -->\n' +
+    '\n' +
+    '      </ul>\n' +
     '    </div>\n' +
+    '    <!-- <div class="clearfix"></div> -->\n' +
     '    <div>\n' +
     '    <button style="margin-left: 10px" type="button" class="btn btn-default">Public</button>\n' +
     '\n' +
@@ -101664,7 +101985,7 @@ module.run(['$templateCache', function($templateCache) {
     '      </ul>\n' +
     '    </div> -->\n' +
     '    <div class="clearfix"></div>\n' +
-    '    <h4>Administration Department</h4>\n' +
+    '    <h4>{{vm.current_department.name}}</h4>\n' +
     '     <!--  <ol class="breadcrumb">\n' +
     '        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
     '        <li><a href="#">Forms</a></li>\n' +
@@ -101675,7 +101996,7 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '<section class="content">\n' +
     '<div class="row">\n' +
-    '      <tasks-display></tasks-display>\n' +
+    '      <tasks-display tasks="vm.tasks"></tasks-display>\n' +
     '      \n' +
     '      </div>\n' +
     '</section>');
@@ -102633,7 +102954,7 @@ module.run(['$templateCache', function($templateCache) {
     '      </li>\n' +
     '\n' +
     '      <li ui-sref-active = "active">\n' +
-    '        <a ui-sref=\'app.department-tasks\'>\n' +
+    '        <a ui-sref=\'app.department-tasks({department_name: vm.userData.department.name})\'>\n' +
     '          <i class="fa fa-book"></i> <span>Departments</span>\n' +
     '        </a>\n' +
     '      </li>\n' +
@@ -103239,28 +103560,70 @@ module.run(['$templateCache', function($templateCache) {
     '<div class="row">\n' +
     '  <div class="col-md-12" dw-loading = "loadingFilter" dw-loading-options = "{text: \'\', spinner:false }"  show-loader loader-key = "\'loadingFilter\'" is-true = "vm.loadingFilter">\n' +
     '        <!-- Horizontal Form -->\n' +
-    '        <div class="box box-info">\n' +
+    '        <task-detail-directive taskid = "vm.taskid"></task-detail-directive>\n' +
+    '          <!-- /.box -->\n' +
+    '          <!-- general form elements disabled -->\n' +
+    '\n' +
+    '          <!-- /.box -->\n' +
+    '        </div>\n' +
+    '        <!-- left column -->  \n' +
+    '        <!--/.col (right) -->\n' +
+    '      </div>\n' +
+    '</section>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/components/task-detail-directive/task-detail-directive.component.html',
+    '<div class="pad margin no-print" ng-if = "vm.show_progress_created">\n' +
+    '  <div class="callout callout-success" style="margin-bottom: 0!important;">\n' +
+    '    <h4><i class="fa fa-fw fa-check"></i> Success:</h4>\n' +
+    '    Progress message was successfully updates\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '\n' +
+    '<div class="pad margin no-print" ng-if = "vm.show_progress_error">\n' +
+    '  <div class="callout callout-danger" style="margin-bottom: 0!important;">\n' +
+    '    <h4><i class="fa fa-fw fa-remove"></i> Error:</h4>\n' +
+    '    Progress message could not be added:\n' +
+    '  </div>\n' +
+    '</div> \n' +
+    '<!-- {{vm.task | json}} -->\n' +
+    '<div class="box box-info" dw-loading = "loadingfilterDetail" dw-loading-options = "{text: \'\', spinner:false }"  show-loader loader-key = "\'loadingfilterDetail\'" is-true = "vm.loadingfilterDetail">\n' +
     '          <div class="box-header with-border">\n' +
     '            <h3 class="box-title" style="display: inline-block;">Task Description</h3>\n' +
-    '            <div class="pull-right">\n' +
-    '              <small>Status</small> <span class="label label-primary">IN PROGRESS</span>\n' +
+    '            <div class="pull-right" style="padding-top: -1px;">\n' +
+    '            <div style="float: left;"><small>Status</small> <span class="label label-primary">{{vm.task.progress[vm.task.progress.length-1][\'overall_status\']}}</span></div>\n' +
+    '            <div ng-click = "vm.goToDetailPage(vm.task.id)" style="cursor: pointer;margin-top: -1px;margin-left: 3px;display: inline-block;font-size: 19px;">\n' +
+    '              <i class="fa fa-fw fa-expand" style="padding-top: 3px;"></i>\n' +
     '            </div>\n' +
+    '          </div>\n' +
+    '\n' +
     '          </div>\n' +
     '          <!-- /.box-header -->\n' +
     '          <!-- form start -->\n' +
     '\n' +
     '\n' +
     '\n' +
-    '          <form class="form-horizontal">\n' +
+    '          \n' +
     '            <div class="box-body no-padding-top">\n' +
     '              <div class="form-group no-margin-bottom">\n' +
     '                <!-- <label style="padding: 0" for="name" class="col-sm-2 control-label">Title</label> -->\n' +
     '\n' +
     '                <div class="col-sm-12">\n' +
     '                  <!-- <small>Title</small> -->\n' +
-    '                  <h4 style="color: #1483c3;display: inline-block;"><i class="fa fa-fw fa-pencil-square-o"></i>Create admin backend for Cytonn web application - task management </h4>\n' +
+    '                  <h4 ng-click = "vm.goToDetailPage(vm.task.id)" style="cursor: pointer;color: #1483c3;display: inline-block;"><i class="fa fa-fw fa-pencil-square-o"></i>\n' +
+    '                  {{vm.task.name}}\n' +
+    '\n' +
+    '                  </h4>\n' +
     '                  <div class="pull-right" style="margin-top: 8px;margin-left: 28px"> \n' +
-    '                  <span class="label label-danger">0% DONE</span>\n' +
+    '                  <span class="label label-danger">{{vm.task.progress[vm.task.progress.length-1][\'progress_status_percent\']}}% DONE</span>\n' +
     '                  </div>\n' +
     '                </div>\n' +
     '              </div>\n' +
@@ -103273,7 +103636,7 @@ module.run(['$templateCache', function($templateCache) {
     '                      <td style="">\n' +
     '                        <small style="color: #9a9797;">Summary</small><br/>\n' +
     '                        <span>\n' +
-    '                         Description of this task comes here... mostly longer text than the title bla bla bla bla bla bla\n' +
+    '                         {{vm.task.summary}}\n' +
     '                       </span>\n' +
     '                     </td>\n' +
     '                   </tr>\n' +
@@ -103288,18 +103651,136 @@ module.run(['$templateCache', function($templateCache) {
     '                <td>Access Level</td>\n' +
     '                <td>Priority</td>\n' +
     '                <td>Due date</td>\n' +
+    '                <td>Reporter</td>\n' +
     '                <td>Assigned to</td>\n' +
     '              </tr>\n' +
     '              <tbody>\n' +
     '                <tr>\n' +
-    '                  <td>EMPLOYEE ONBOARDING</td>\n' +
-    '                  <TD>Public</TD>\n' +
-    '                  <td>High</td>\n' +
-    '                  <td>31 July 2016</td>\n' +
-    '                  <td>John Mwenda Kiara</td>\n' +
+    '                  <td>{{vm.task.category.name | lowercase}}</td>\n' +
+    '                  <TD>{{vm.task.access_level}}</TD>\n' +
+    '                  <td>{{vm.task.priority}}</td>\n' +
+    '                  <td>{{vm.task.due_date | date:\'d/M/yyyy\'}}</td>\n' +
+    '                  <td>{{vm.task.reporter.username}}</td>\n' +
+    '                  <td><span ng-if="vm.task.assignee.name == vm.userData.name">Me</span>\n' +
+    '                  <span ng-if="vm.task.assignee.name != vm.userData.name">{{vm.task.assignee.name}}</span>\n' +
+    '                  </td>\n' +
     '                </tr>\n' +
     '              </tbody>\n' +
     '            </table>\n' +
+    '\n' +
+    '            <h5 style="margin-top: 25px; margin-left: 5px; margin-bottom: 15px">Activity</h5>\n' +
+    '\n' +
+    '            <div class="nav-tabs-custom" style="margin-left: 7px">\n' +
+    '              <ul class="nav nav-tabs">\n' +
+    '                <li style="cursor: pointer;" class="active"><a data-target="#all" data-toggle="tab">All</a></li>\n' +
+    '                <li style="cursor: pointer;"><a data-target="#comments" data-toggle="tab">Comments</a></li>\n' +
+    '                <li style="cursor: pointer;"><a data-target="#addprogress" data-toggle="tab"><i class="fa fa-fw fa-plus"></i>Add progress</a></li>\n' +
+    '              </ul>\n' +
+    '              <div class="tab-content">\n' +
+    '                <!-- Font Awesome Icons -->\n' +
+    '\n' +
+    '                <div class="tab-pane active" id="all">\n' +
+    '                  <ul class="products-list product-list-in-box">\n' +
+    '              \n' +
+    '\n' +
+    '\n' +
+    '              <li ng-repeat = "item in vm.task.progress" class="item">\n' +
+    '                <span ng-if="item.overall_status == \'NOT STARTED\'">\n' +
+    '                <a href="">{{item.owner.name}}</a> \n' +
+    '                 <span><small>created</small> task on</span> {{item.created_at}}\n' +
+    '               </span>\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '              <span ng-if="item.overall_status != \'NOT STARTED\'">\n' +
+    '                <a href="">{{item.owner.name}}</a> \n' +
+    '                <small>added</small> a progress message <span class="label label-default">{{item.progress_status_percent}}% DONE</span><br/>\n' +
+    '                <span>{{item.message}}</span>\n' +
+    '                </span>\n' +
+    '\n' +
+    '\n' +
+    '              </li>\n' +
+    '\n' +
+    '          </ul>\n' +
+    '                </div>\n' +
+    '\n' +
+    '                <div class="tab-pane" id="comments" ng-init = "vm.show_add_comment = false">\n' +
+    '                  <button ng-click = "vm.show_add_comment = true" class="btn btn-primary btn-sm" style="margin-bottom: 11px">Add comment</button>\n' +
+    '                  <div  ng-show = "vm.show_add_comment">\n' +
+    '                  <form name = "vm.add_comment_form" class="form" role="form">\n' +
+    '                    \n' +
+    '                  \n' +
+    '                    <div class="form-group">\n' +
+    '                      <textarea name="progress_message" id="progress_message" class="form-control" rows="3" required="required"></textarea>\n' +
+    '                    </div>\n' +
+    '                  \n' +
+    '                    \n' +
+    '                  \n' +
+    '                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>\n' +
+    '                  </form>\n' +
+    '                  </div>\n' +
+    '                  <ul class="products-list product-list-in-box">\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '                    <li ng-repeat = "item in vm.notifications" class="item">\n' +
+    '                      <span><a href="">{{item.data.reporter_name}}</a> \n' +
+    '                      <span ng-if="item.data.type == \'create_task\'"><small>wrote a comment</small> </span> on 12 May 2017\n' +
+    '                     </span> <br/>\n' +
+    '\n' +
+    '                     <div style="margin-left: 10px">"Comment of that user comes here, mostly the department head"</div>\n' +
+    '\n' +
+    '                     <span ng-if = "item.data.type == \'add_progress_message\'"><small>added</small> a progress message on tasks</span>\n' +
+    '                   </li>\n' +
+    '                 </ul>\n' +
+    '                </div>\n' +
+    '\n' +
+    '                <div class="tab-pane" id="addprogress">\n' +
+    '                  <form ng-submit = "vm.addProgressMessage(vm.task.id)" name = "vm.add_progress_form" class="form-horizontal" role="form">\n' +
+    '                      <div class="form-group">\n' +
+    '                        <label for="input" class="col-sm-3 control-label">Current status:</label>\n' +
+    '                        <div class="col-sm-4">\n' +
+    '                        <select required="" ng-change="vm.changeCurrentStatus()" name="overall_status" required="" class="form-control" ng-model="vm.progress_data.overall_status" ng-options="item for item in vm.statuses" >\n' +
+    '                            <!-- <option value="">Select task category</option> -->\n' +
+    '                          </select>\n' +
+    '                        </div>\n' +
+    '                      </div>\n' +
+    '\n' +
+    '                      <div class="form-group">\n' +
+    '                        <label for="input" class="col-sm-3 control-label">Percentage complete:</label>\n' +
+    '                        <div class="col-sm-4">\n' +
+    '                          <input ng-model = "vm.progress_data.progress_status_percent" ng-disabled = "vm.progress_data.overall_status == \'NOT STARTED\' || vm.progress_data.overall_status == \'COMPLETE\' " type="number" name=""  class="form-control" ng-model = "vm.progress_data.progress_status_percent" value="" required="required"  title="">\n' +
+    '                        </div>\n' +
+    '                      </div>\n' +
+    '\n' +
+    '                      <div class="form-group">\n' +
+    '                        <label for="textareaProgress_message" class="col-sm-3 control-label">Progress message:</label>\n' +
+    '                        <div class="col-sm-4">\n' +
+    '                          <textarea ng-model = "vm.progress_data.message" ng-disabled = "vm.progress_data.overall_status == \'NOT STARTED\'" name="progress_message" id="textareaProgress_message" class="form-control" rows="3" required="required"></textarea>\n' +
+    '                        </div>\n' +
+    '                      </div>\n' +
+    '                      \n' +
+    '                      <div class="form-group">\n' +
+    '                        <label for="input" class="col-sm-3 control-label">Attachment:</label>\n' +
+    '                        <div class="col-sm-4">\n' +
+    '                          <input ng-disabled = "vm.progress_data.overall_status == \'NOT STARTED\'" type="file" name="" id="input" class="form-control" value=""   title="">\n' +
+    '                        </div>\n' +
+    '                      </div>\n' +
+    '                      <div class="form-group">\n' +
+    '                        <div class="col-sm-10 col-sm-offset-2">\n' +
+    '                          <button type="submit" class="btn btn-primary">Submit</button>\n' +
+    '                        </div>\n' +
+    '                      </div>\n' +
+    '                  </form>\n' +
+    '                </div>\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '              </div>\n' +
+    '              <!-- /.tab-content --> \n' +
+    '            </div>\n' +
     '\n' +
     '\n' +
     '          </div>\n' +
@@ -103309,19 +103790,10 @@ module.run(['$templateCache', function($templateCache) {
     '                <button type="submit" class="btn btn-info pull-right">Create</button>\n' +
     '              </div> -->\n' +
     '              <!-- /.box-footer -->\n' +
-    '            </form>\n' +
+    '           \n' +
     '\n' +
     '\n' +
-    '          </div>\n' +
-    '          <!-- /.box -->\n' +
-    '          <!-- general form elements disabled -->\n' +
-    '\n' +
-    '          <!-- /.box -->\n' +
-    '        </div>\n' +
-    '        <!-- left column -->  \n' +
-    '        <!--/.col (right) -->\n' +
-    '      </div>\n' +
-    '</section>');
+    '          </div>');
 }]);
 })();
 
@@ -103343,10 +103815,10 @@ module.run(['$templateCache', function($templateCache) {
     '      <span class="caret"></span></button>\n' +
     '      <ul class="dropdown-menu">\n' +
     '        <li><a ng-click = "vm.changeFilter(\'all\')" href=""><i ng-if ="vm.current_filter == \'all\' " class="fa fa-fw fa-check"></i> All tasks</a></li>\n' +
-    '        <li><a ng-click = "vm.changeFilter(\'reported-by-me\')" href=""><i ng-if ="vm.current_filter == \'reported-by-me\' " class="fa fa-fw fa-check"></i>Reported by me</a></li>\n' +
-    '        <li><a ng-click = "vm.changeFilter(\'assigned-to-me\')" href=""><i ng-if ="vm.current_filter == \'assigned-to-me\' " class="fa fa-fw fa-check"></i>Assigned to me</a></li>\n' +
-    '        <li><a ng-click = "vm.changeFilter(\'private-tasks\')" href=""><i ng-if ="vm.current_filter == \'private-tasks\' " class="fa fa-fw fa-check"></i>Private tasks</a></li>\n' +
-    '        <li><a ng-click = "vm.changeFilter(\'public-tasks\')" href=""><i ng-if ="vm.current_filter == \'public-tasks\' " class="fa fa-fw fa-check"></i>Public tasks</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'reported_by_me\')" href=""><i ng-if ="vm.current_filter == \'reported_by_me\' " class="fa fa-fw fa-check"></i>Reported by me</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'assigned_to_me\')" href=""><i ng-if ="vm.current_filter == \'assigned_to_me\' " class="fa fa-fw fa-check"></i>Assigned to me</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'private_tasks\')" href=""><i ng-if ="vm.current_filter == \'private_tasks\' " class="fa fa-fw fa-check"></i>Private tasks</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'public_tasks\')" href=""><i ng-if ="vm.current_filter == \'public_tasks\' " class="fa fa-fw fa-check"></i>Public tasks</a></li>\n' +
     '        <li><a ng-click = "vm.changeFilter(\'following\')" href=""><i ng-if ="vm.current_filter == \'following\' " class="fa fa-fw fa-check"></i>Following</a></li>\n' +
     '\n' +
     '      </ul>\n' +
@@ -103363,7 +103835,7 @@ module.run(['$templateCache', function($templateCache) {
     '<section class="content">\n' +
     '<div class="row">\n' +
     '\n' +
-    '  <tasks-display></tasks-display>\n' +
+    '  <tasks-display tasks="vm.tasks" loadingfilter="vm.loadingFilter"></tasks-display>\n' +
     '        <!-- left column -->  \n' +
     '        <!--/.col (right) -->\n' +
     '      </div>\n' +
@@ -103379,88 +103851,28 @@ try {
 }
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/components/tasks-display/tasks-display.component.html',
-    '<div class="col-md-4 no-padding-right" dw-loading = "loadingFilter" dw-loading-options = "{text: \'\', spinner:false }"  show-loader loader-key = "\'loadingFilter\'" is-true = "vm.loadingFilter">\n' +
+    '<div class="col-md-4 no-padding-right" dw-loading = "loadingfilter" dw-loading-options = "{text: \'\', spinner:false }"  show-loader loader-key = "\'loadingfilter\'" is-true = "vm.loadingfilter">\n' +
     '  <div class="box box-info">\n' +
     '            <!-- <div class="box-header with-border">\n' +
     '              <h3 class="box-title">Task list</h3>\n' +
     '            </div> -->\n' +
     '            <!-- {max-height: 100px;overflow-y: scroll;} -->\n' +
-    '            <div class="box-body" ng-style = "{\'max-height\':vm.hgt,\'overflow-y\': \'scroll\' }">Tasks lists\n' +
-    '              <table class="table">\n' +
-    '                <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
+    '            <style type="text/css">\n' +
+    '              .task-active {\n' +
+    '                background: #ecf0f5;\n' +
+    '              }\n' +
+    '            </style>\n' +
+    '            <div class="box-body"  ng-style = "{\'max-height\':vm.hgt,\'overflow-y\': \'scroll\' }">Tasks lists\n' +
+    '              <table class="table table-hover">\n' +
+    '                <tr style="cursor: pointer" ng-class = "{\'task-active\': vm.taskid == task.id}" ng-click="vm.taskid=task.id" ng-repeat = "task in vm.tasks"><td style="color: #1483c3">\n' +
+    '                 <span class="label label-primary">{{task.category.name}}</span><span style="margin-left:10px; font-size: 14px">{{task.name}}</span>\n' +
     '\n' +
     '               </td></tr>\n' +
     '\n' +
-    '               <tr><td style="color: #1483c3">\n' +
+    '               <!-- <tr><td style="color: #1483c3">\n' +
     '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
     '\n' +
-    '               </td></tr>\n' +
-    '\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
-    '               <tr><td style="color: #1483c3">\n' +
-    '                 <span class="label label-primary">Employee onboarding</span><span style="margin-left:10px; font-size: 14px">Create admin backend for Cytonn web application - task management</span>\n' +
-    '\n' +
-    '               </td></tr>\n' +
+    '               </td></tr> -->\n' +
     '             </table>\n' +
     '\n' +
     '           </div>\n' +
@@ -103469,82 +103881,9 @@ module.run(['$templateCache', function($templateCache) {
     '       </div>\n' +
     '       <!--/.col (left) -->\n' +
     '       <!-- right column -->\n' +
-    '       <div class="col-md-8" dw-loading = "loadingFilter" dw-loading-options = "{text: \'\', spinner:false }"  show-loader loader-key = "\'loadingFilter\'" is-true = "vm.loadingFilter">\n' +
+    '       <div class="col-md-8" dw-loading = "loadingfilter" dw-loading-options = "{text: \'\', spinner:false }"  show-loader loader-key = "\'loadingfilter\'" is-true = "vm.loadingfilter">\n' +
     '        <!-- Horizontal Form -->\n' +
-    '        <div class="box box-info">\n' +
-    '          <div class="box-header with-border">\n' +
-    '            <h3 class="box-title" style="display: inline-block;">Task Description</h3>\n' +
-    '            <div class="pull-right">\n' +
-    '              <small>Status</small> <span class="label label-primary">IN PROGRESS</span>\n' +
-    '            </div>\n' +
-    '          </div>\n' +
-    '          <!-- /.box-header -->\n' +
-    '          <!-- form start -->\n' +
-    '\n' +
-    '\n' +
-    '\n' +
-    '          <form class="form-horizontal">\n' +
-    '            <div class="box-body no-padding-top">\n' +
-    '              <div class="form-group no-margin-bottom">\n' +
-    '                <!-- <label style="padding: 0" for="name" class="col-sm-2 control-label">Title</label> -->\n' +
-    '\n' +
-    '                <div class="col-sm-12">\n' +
-    '                  <!-- <small>Title</small> -->\n' +
-    '                  <h4 style="color: #1483c3;display: inline-block;"><i class="fa fa-fw fa-pencil-square-o"></i>Create admin backend for Cytonn web application - task management </h4>\n' +
-    '                  <div class="pull-right" style="margin-top: 8px;margin-left: 28px"> \n' +
-    '                  <span class="label label-danger">0% DONE</span>\n' +
-    '                  </div>\n' +
-    '                </div>\n' +
-    '              </div>\n' +
-    '              <div class="form-group" style="margin-bottom: 0">\n' +
-    '                <!-- <label style="padding: 0" for="category" class="col-sm-2 control-label">Description</label> -->\n' +
-    '\n' +
-    '                <div class="col-sm-12">\n' +
-    '                  <table class="table" style="margin-bottom: 18px; font-size: 15px">\n' +
-    '                    <tr>\n' +
-    '                      <td style="">\n' +
-    '                        <small style="color: #9a9797;">Summary</small><br/>\n' +
-    '                        <span>\n' +
-    '                         Description of this task comes here... mostly longer text than the title bla bla bla bla bla bla\n' +
-    '                       </span>\n' +
-    '                     </td>\n' +
-    '                   </tr>\n' +
-    '                 </table>\n' +
-    '\n' +
-    '               </div>\n' +
-    '             </div>\n' +
-    '\n' +
-    '             <table class="table">\n' +
-    '              <tr>\n' +
-    '                <td>Category</td>\n' +
-    '                <td>Access Level</td>\n' +
-    '                <td>Priority</td>\n' +
-    '                <td>Due date</td>\n' +
-    '                <td>Assigned to</td>\n' +
-    '              </tr>\n' +
-    '              <tbody>\n' +
-    '                <tr>\n' +
-    '                  <td>EMPLOYEE ONBOARDING</td>\n' +
-    '                  <TD>Public</TD>\n' +
-    '                  <td>High</td>\n' +
-    '                  <td>31 July 2016</td>\n' +
-    '                  <td>John Mwenda Kiara</td>\n' +
-    '                </tr>\n' +
-    '              </tbody>\n' +
-    '            </table>\n' +
-    '\n' +
-    '\n' +
-    '          </div>\n' +
-    '          <!-- /.box-body -->\n' +
-    '            <!--   <div class="box-footer">\n' +
-    '                <button type="submit" class="btn btn-default">Cancel</button>\n' +
-    '                <button type="submit" class="btn btn-info pull-right">Create</button>\n' +
-    '              </div> -->\n' +
-    '              <!-- /.box-footer -->\n' +
-    '            </form>\n' +
-    '\n' +
-    '\n' +
-    '          </div>\n' +
+    '        <task-detail-directive taskid = "vm.taskid"></task-detail-directive>\n' +
     '          <!-- /.box -->\n' +
     '          <!-- general form elements disabled -->\n' +
     '\n' +
@@ -107586,6 +107925,41 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/components/user-roles/user-roles.component.html',
+    '<section class="content-header">\n' +
+    '  <h1>User Roles <small>Module description here</small></h1>\n' +
+    '  <ol class="breadcrumb">\n' +
+    '    <li><a ui-sref="app.landing"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
+    '    <li class="active">Role List</li>\n' +
+    '  </ol>\n' +
+    '</section>\n' +
+    '<section class="content">\n' +
+    '  <div class="box">\n' +
+    '    <div class="box-header with-border">\n' +
+    '      <h3 class="box-title">Role List</h3>\n' +
+    '      <div class="box-tools pull-right">\n' +
+    '        <a ui-sref="app.userrolesadd" class="btn btn-block btn-success btn-xs"><i class="fa fa-plus"></i> Add New</a>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="box-body">\n' +
+    '      <table datatable="" width="100%" class="table table-striped table-bordered" ng-if="vm.displayTable" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"></table>\n' +
+    '    </div>\n' +
+    '    <div class="box-footer">\n' +
+    '      Footer\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</section>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/components/user-profile/user-profile.component.html',
     '<section class="content-header">\n' +
     '  <h1>Users <small>Module description here</small></h1>\n' +
@@ -107690,27 +108064,65 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/components/user-roles/user-roles.component.html',
+  $templateCache.put('./views/app/components/user-roles-edit/user-roles-edit.component.html',
     '<section class="content-header">\n' +
-    '  <h1>User Roles <small>Module description here</small></h1>\n' +
+    '  <h1>Users Roles<small>Module description here</small></h1>\n' +
     '  <ol class="breadcrumb">\n' +
     '    <li><a ui-sref="app.landing"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
-    '    <li class="active">Role List</li>\n' +
+    '    <li><a ui-sref="app.userroles">Role Lists</a></li>\n' +
+    '    <li class="active">Edit User Role</li>\n' +
     '  </ol>\n' +
     '</section>\n' +
     '<section class="content">\n' +
-    '  <div class="box">\n' +
-    '    <div class="box-header with-border">\n' +
-    '      <h3 class="box-title">Role List</h3>\n' +
-    '      <div class="box-tools pull-right">\n' +
-    '        <a ui-sref="app.userrolesadd" class="btn btn-block btn-success btn-xs"><i class="fa fa-plus"></i> Add New</a>\n' +
+    '  <div class="row">\n' +
+    '    <div class="col-sm-12 col-md-7">\n' +
+    '      <div class="box box-primary">\n' +
+    '        <div class="box-header with-border">\n' +
+    '          <h3 class="box-title">Edit User Role</h3>\n' +
+    '        </div>\n' +
+    '        <form class="form-horizontal" name="roleForm" ng-submit="vm.save(roleForm.$valid)" novalidate>\n' +
+    '          <div class="box-body">\n' +
+    '            <div ng-if="vm.alerts" class="alert alert-{{alert.type}}" ng-repeat="alert in vm.alerts">\n' +
+    '              <h4>{{alert.title}}</h4>\n' +
+    '              <p>{{alert.msg}}</p>\n' +
+    '            </div>\n' +
+    '            <div class="form-group" ng-class="{ \'has-error\': roleForm.role.$invalid && ( vm.formSubmitted || roleForm.role.$touched) }">\n' +
+    '              <label for="inputEmail3" class="col-sm-2 control-label">Role</label>\n' +
+    '              <div class="col-sm-10">\n' +
+    '                <input type="text" class="form-control" ng-model="vm.role.data.name" name="role" placeholder="Role" required>\n' +
+    '                <p ng-show="roleForm.role.$error.required && ( vm.formSubmitted || roleForm.role.$touched)" class="help-block">Role is required.</p>\n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '            <div class="form-group" ng-class="{ \'has-error\': roleForm.slug.$invalid && ( vm.formSubmitted || roleForm.slug.$touched) }">\n' +
+    '              <label for="inputPassword3" class="col-sm-2 control-label">Slug</label>\n' +
+    '              <div class="col-sm-10">\n' +
+    '                <input type="text" class="form-control" ng-model="vm.role.data.slug" name="slug" placeholder="Slug" required>\n' +
+    '                <p ng-show="roleForm.slug.$error.required && ( vm.formSubmitted || roleForm.slug.$touched)" class="help-block">Slug is required.</p>\n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '            <div class="form-group">\n' +
+    '              <label for="inputPassword3" class="col-sm-2 control-label">Description</label>\n' +
+    '              <div class="col-sm-10">\n' +
+    '                <textarea class="form-control" rows="3" ng-model="vm.role.data.description" name="description" placeholder="Description"></textarea>\n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '            <div class="form-group">\n' +
+    '              <label for="inputEmail3" class="col-sm-2 control-label">Permission</label>\n' +
+    '              <div class="col-sm-10">\n' +
+    '                <div class="checkbox" ng-repeat="permission in vm.systemPermissions">\n' +
+    '                  <label>\n' +
+    '                    <input type="checkbox" checklist-model="vm.role.data.permissions" checklist-value="permission.id"> {{permission.name}}\n' +
+    '                  </label>\n' +
+    '                </div>\n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '          </div>\n' +
+    '          <div class="box-footer">\n' +
+    '            <a ui-sref="app.userroles" class="btn btn-default"><i class="fa fa-angle-double-left"></i> Back</a>\n' +
+    '            <button type="submit" class="btn btn-primary pull-right">Update</button>\n' +
+    '          </div>\n' +
+    '        </form>\n' +
     '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="box-body">\n' +
-    '      <table datatable="" width="100%" class="table table-striped table-bordered" ng-if="vm.displayTable" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"></table>\n' +
-    '    </div>\n' +
-    '    <div class="box-footer">\n' +
-    '      Footer\n' +
     '    </div>\n' +
     '  </div>\n' +
     '</section>\n' +
@@ -107771,79 +108183,6 @@ module.run(['$templateCache', function($templateCache) {
     '          <div class="box-footer">\n' +
     '            <a ui-sref="app.userroles" class="btn btn-default"><i class="fa fa-angle-double-left"></i> Back</a>\n' +
     '            <button type="submit" class="btn btn-primary pull-right">Add New</button>\n' +
-    '          </div>\n' +
-    '        </form>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</section>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/components/user-roles-edit/user-roles-edit.component.html',
-    '<section class="content-header">\n' +
-    '  <h1>Users Roles<small>Module description here</small></h1>\n' +
-    '  <ol class="breadcrumb">\n' +
-    '    <li><a ui-sref="app.landing"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
-    '    <li><a ui-sref="app.userroles">Role Lists</a></li>\n' +
-    '    <li class="active">Edit User Role</li>\n' +
-    '  </ol>\n' +
-    '</section>\n' +
-    '<section class="content">\n' +
-    '  <div class="row">\n' +
-    '    <div class="col-sm-12 col-md-7">\n' +
-    '      <div class="box box-primary">\n' +
-    '        <div class="box-header with-border">\n' +
-    '          <h3 class="box-title">Edit User Role</h3>\n' +
-    '        </div>\n' +
-    '        <form class="form-horizontal" name="roleForm" ng-submit="vm.save(roleForm.$valid)" novalidate>\n' +
-    '          <div class="box-body">\n' +
-    '            <div ng-if="vm.alerts" class="alert alert-{{alert.type}}" ng-repeat="alert in vm.alerts">\n' +
-    '              <h4>{{alert.title}}</h4>\n' +
-    '              <p>{{alert.msg}}</p>\n' +
-    '            </div>\n' +
-    '            <div class="form-group" ng-class="{ \'has-error\': roleForm.role.$invalid && ( vm.formSubmitted || roleForm.role.$touched) }">\n' +
-    '              <label for="inputEmail3" class="col-sm-2 control-label">Role</label>\n' +
-    '              <div class="col-sm-10">\n' +
-    '                <input type="text" class="form-control" ng-model="vm.role.data.name" name="role" placeholder="Role" required>\n' +
-    '                <p ng-show="roleForm.role.$error.required && ( vm.formSubmitted || roleForm.role.$touched)" class="help-block">Role is required.</p>\n' +
-    '              </div>\n' +
-    '            </div>\n' +
-    '            <div class="form-group" ng-class="{ \'has-error\': roleForm.slug.$invalid && ( vm.formSubmitted || roleForm.slug.$touched) }">\n' +
-    '              <label for="inputPassword3" class="col-sm-2 control-label">Slug</label>\n' +
-    '              <div class="col-sm-10">\n' +
-    '                <input type="text" class="form-control" ng-model="vm.role.data.slug" name="slug" placeholder="Slug" required>\n' +
-    '                <p ng-show="roleForm.slug.$error.required && ( vm.formSubmitted || roleForm.slug.$touched)" class="help-block">Slug is required.</p>\n' +
-    '              </div>\n' +
-    '            </div>\n' +
-    '            <div class="form-group">\n' +
-    '              <label for="inputPassword3" class="col-sm-2 control-label">Description</label>\n' +
-    '              <div class="col-sm-10">\n' +
-    '                <textarea class="form-control" rows="3" ng-model="vm.role.data.description" name="description" placeholder="Description"></textarea>\n' +
-    '              </div>\n' +
-    '            </div>\n' +
-    '            <div class="form-group">\n' +
-    '              <label for="inputEmail3" class="col-sm-2 control-label">Permission</label>\n' +
-    '              <div class="col-sm-10">\n' +
-    '                <div class="checkbox" ng-repeat="permission in vm.systemPermissions">\n' +
-    '                  <label>\n' +
-    '                    <input type="checkbox" checklist-model="vm.role.data.permissions" checklist-value="permission.id"> {{permission.name}}\n' +
-    '                  </label>\n' +
-    '                </div>\n' +
-    '              </div>\n' +
-    '            </div>\n' +
-    '          </div>\n' +
-    '          <div class="box-footer">\n' +
-    '            <a ui-sref="app.userroles" class="btn btn-default"><i class="fa fa-angle-double-left"></i> Back</a>\n' +
-    '            <button type="submit" class="btn btn-primary pull-right">Update</button>\n' +
     '          </div>\n' +
     '        </form>\n' +
     '      </div>\n' +
@@ -108631,295 +108970,6 @@ module.run(['$templateCache', function($templateCache) {
 }]);
 })();
 
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/create-task/create-task.page.html',
-    '<create-task></create-task>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/department-tasks/department-tasks.page.html',
-    '<department-tasks></department-tasks>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/footer/footer.page.html',
-    '<footer class="main-footer">\n' +
-    '  <div class="pull-right hidden-xs">\n' +
-    '    <b>Version</b> 2.3.3\n' +
-    '  </div>\n' +
-    '  <strong>Copyright &copy; 2016-2017 <a>Cytonn Web App</a>.</strong> All rights reserved.\n' +
-    '</footer>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/forgot-password/forgot-password.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <h3>Forgot your password?</h3>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <forgot-password></forgot-password>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <br>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <a ui-sref="login">Back to Login Page</a>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/header/header.page.html',
-    '<nav-header></nav-header>\n' +
-    '<nav-sidebar></nav-sidebar>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/landing/landing.page.html',
-    '<section class="content-header">\n' +
-    '  <h1>\n' +
-    '    Home\n' +
-    '  </h1>\n' +
-    '  <ol class="breadcrumb">\n' +
-    '    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
-    '    <li class="active">Dashboard</li>\n' +
-    '  </ol>\n' +
-    '</section>\n' +
-    '<dashboard></dashboard>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/layout/layout.page.html',
-    '<div ui-view="header" id = "cytonn-app"></div>\n' +
-    '<div class="content-wrapper">\n' +
-    '    <div ui-view="main"></div>\n' +
-    '</div>\n' +
-    '<div ui-view="footer"></div>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/login/login.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>App</b>System</a> \n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <h3>Sign in</h3>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <login-form></login-form>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/login-loader/login-loader.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <login-loader></login-loader>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/register/register.page.html',
-    '<div class="register-box">\n' +
-    '  <div class="register-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="register-box-body">\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <h3>Create a new account</h3>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <register-form></register-form>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <br>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <a ui-sref="login">I already have an account</a>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <br>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        By signing up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Privacy Policy</a>.\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/reset-password/reset-password.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <div class="row-">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <h3>Reset Password</h3>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <reset-password></reset-password>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/tasks/tasks.page.html',
-    '<tasks></tasks>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/user-verification/user-verification.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <user-verification></user-verification>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -108978,9 +109028,9 @@ module.run(['$templateCache', function($templateCache) {
 
 	__webpack_require__(17);
 
-	__webpack_require__(51);
+	__webpack_require__(52);
 
-	__webpack_require__(55);
+	__webpack_require__(56);
 
 /***/ }),
 /* 1 */
@@ -109177,6 +109227,19 @@ module.run(['$templateCache', function($templateCache) {
 	        template: '<tasks></tasks>'
 	      }
 	    }
+	  }).state('app.single-task', {
+	    url: '/singletask/:id',
+	    data: {
+	      // auth: true
+	    },
+	    params: {
+	      id: null //retrieve all tasks whether reportedBy or assignedTo
+	    },
+	    views: {
+	      'main@app': {
+	        template: '<task></task>'
+	      }
+	    }
 	  }).state('app.tasks.single-task', {
 	    url: '/:id',
 	    data: {
@@ -109205,10 +109268,14 @@ module.run(['$templateCache', function($templateCache) {
 	  // })
 
 	  ).state('app.department-tasks', {
-	    url: '/department-tasks',
+	    url: '/department-tasks/:department_name',
 	    data: {
 	      // auth: true
 	    },
+	    params: {
+	      department_name: null
+	    },
+
 	    views: {
 	      'main@app': {
 	        templateUrl: getView('department-tasks')
@@ -109761,73 +109828,75 @@ module.run(['$templateCache', function($templateCache) {
 
 	'use strict';
 
-	var _task = __webpack_require__(18);
+	var _taskDetailDirective = __webpack_require__(18);
 
-	var _tasksDisplay = __webpack_require__(19);
+	var _task = __webpack_require__(19);
 
-	var _tablesSimple = __webpack_require__(20);
+	var _tasksDisplay = __webpack_require__(20);
 
-	var _uiModal = __webpack_require__(21);
+	var _tablesSimple = __webpack_require__(21);
 
-	var _uiTimeline = __webpack_require__(22);
+	var _uiModal = __webpack_require__(22);
 
-	var _uiButtons = __webpack_require__(23);
+	var _uiTimeline = __webpack_require__(23);
 
-	var _uiIcons = __webpack_require__(24);
+	var _uiButtons = __webpack_require__(24);
 
-	var _uiGeneral = __webpack_require__(25);
+	var _uiIcons = __webpack_require__(25);
 
-	var _formsGeneral = __webpack_require__(26);
+	var _uiGeneral = __webpack_require__(26);
 
-	var _chartsChartjs = __webpack_require__(27);
+	var _formsGeneral = __webpack_require__(27);
 
-	var _widgets = __webpack_require__(28);
+	var _chartsChartjs = __webpack_require__(28);
 
-	var _userProfile = __webpack_require__(29);
+	var _widgets = __webpack_require__(29);
 
-	var _userVerification = __webpack_require__(30);
+	var _userProfile = __webpack_require__(30);
 
-	var _comingSoon = __webpack_require__(31);
+	var _userVerification = __webpack_require__(31);
 
-	var _userEdit = __webpack_require__(32);
+	var _comingSoon = __webpack_require__(32);
 
-	var _userPermissionsEdit = __webpack_require__(33);
+	var _userEdit = __webpack_require__(33);
 
-	var _userPermissionsAdd = __webpack_require__(34);
+	var _userPermissionsEdit = __webpack_require__(34);
 
-	var _userPermissions = __webpack_require__(35);
+	var _userPermissionsAdd = __webpack_require__(35);
 
-	var _userRolesEdit = __webpack_require__(36);
+	var _userPermissions = __webpack_require__(36);
 
-	var _userRolesAdd = __webpack_require__(37);
+	var _userRolesEdit = __webpack_require__(37);
 
-	var _userRoles = __webpack_require__(38);
+	var _userRolesAdd = __webpack_require__(38);
 
-	var _userLists = __webpack_require__(39);
+	var _userRoles = __webpack_require__(39);
 
-	var _dashboard = __webpack_require__(40);
+	var _userLists = __webpack_require__(40);
 
-	var _navSidebar = __webpack_require__(41);
+	var _dashboard = __webpack_require__(41);
 
-	var _navHeader = __webpack_require__(42);
+	var _navSidebar = __webpack_require__(42);
 
-	var _loginLoader = __webpack_require__(43);
+	var _navHeader = __webpack_require__(43);
 
-	var _resetPassword = __webpack_require__(44);
+	var _loginLoader = __webpack_require__(44);
 
-	var _forgotPassword = __webpack_require__(45);
+	var _resetPassword = __webpack_require__(45);
 
-	var _loginForm = __webpack_require__(46);
+	var _forgotPassword = __webpack_require__(46);
 
-	var _registerForm = __webpack_require__(47);
+	var _loginForm = __webpack_require__(47);
 
-	var _create_task = __webpack_require__(48);
+	var _registerForm = __webpack_require__(48);
 
-	var _tasks = __webpack_require__(49);
+	var _create_task = __webpack_require__(49);
 
-	var _departmentTasks = __webpack_require__(50);
+	var _tasks = __webpack_require__(50);
 
-	angular.module('app.components').component('task', _task.TaskComponent).component('tasksDisplay', _tasksDisplay.TasksDisplayComponent).component('tablesSimple', _tablesSimple.TablesSimpleComponent).component('uiModal', _uiModal.UiModalComponent).component('uiTimeline', _uiTimeline.UiTimelineComponent).component('uiButtons', _uiButtons.UiButtonsComponent).component('uiIcons', _uiIcons.UiIconsComponent).component('uiGeneral', _uiGeneral.UiGeneralComponent).component('formsGeneral', _formsGeneral.FormsGeneralComponent).component('chartsChartjs', _chartsChartjs.ChartsChartjsComponent).component('widgets', _widgets.WidgetsComponent).component('userProfile', _userProfile.UserProfileComponent).component('userVerification', _userVerification.UserVerificationComponent).component('comingSoon', _comingSoon.ComingSoonComponent).component('userEdit', _userEdit.UserEditComponent).component('userPermissionsEdit', _userPermissionsEdit.UserPermissionsEditComponent).component('userPermissionsAdd', _userPermissionsAdd.UserPermissionsAddComponent).component('userPermissions', _userPermissions.UserPermissionsComponent).component('userRolesEdit', _userRolesEdit.UserRolesEditComponent).component('userRolesAdd', _userRolesAdd.UserRolesAddComponent).component('userRoles', _userRoles.UserRolesComponent).component('userLists', _userLists.UserListsComponent).component('dashboard', _dashboard.DashboardComponent).component('navSidebar', _navSidebar.NavSidebarComponent).component('navHeader', _navHeader.NavHeaderComponent).component('loginLoader', _loginLoader.LoginLoaderComponent).component('resetPassword', _resetPassword.ResetPasswordComponent).component('forgotPassword', _forgotPassword.ForgotPasswordComponent).component('loginForm', _loginForm.LoginFormComponent).component('registerForm', _registerForm.RegisterFormComponent).component('createTask', _create_task.CreateTaskComponent).component('tasks', _tasks.TasksComponent
+	var _departmentTasks = __webpack_require__(51);
+
+	angular.module('app.components').component('taskDetailDirective', _taskDetailDirective.TaskDetailDirectiveComponent).component('task', _task.TaskComponent).component('tasksDisplay', _tasksDisplay.TasksDisplayComponent).component('tablesSimple', _tablesSimple.TablesSimpleComponent).component('uiModal', _uiModal.UiModalComponent).component('uiTimeline', _uiTimeline.UiTimelineComponent).component('uiButtons', _uiButtons.UiButtonsComponent).component('uiIcons', _uiIcons.UiIconsComponent).component('uiGeneral', _uiGeneral.UiGeneralComponent).component('formsGeneral', _formsGeneral.FormsGeneralComponent).component('chartsChartjs', _chartsChartjs.ChartsChartjsComponent).component('widgets', _widgets.WidgetsComponent).component('userProfile', _userProfile.UserProfileComponent).component('userVerification', _userVerification.UserVerificationComponent).component('comingSoon', _comingSoon.ComingSoonComponent).component('userEdit', _userEdit.UserEditComponent).component('userPermissionsEdit', _userPermissionsEdit.UserPermissionsEditComponent).component('userPermissionsAdd', _userPermissionsAdd.UserPermissionsAddComponent).component('userPermissions', _userPermissions.UserPermissionsComponent).component('userRolesEdit', _userRolesEdit.UserRolesEditComponent).component('userRolesAdd', _userRolesAdd.UserRolesAddComponent).component('userRoles', _userRoles.UserRolesComponent).component('userLists', _userLists.UserListsComponent).component('dashboard', _dashboard.DashboardComponent).component('navSidebar', _navSidebar.NavSidebarComponent).component('navHeader', _navHeader.NavHeaderComponent).component('loginLoader', _loginLoader.LoginLoaderComponent).component('resetPassword', _resetPassword.ResetPasswordComponent).component('forgotPassword', _forgotPassword.ForgotPasswordComponent).component('loginForm', _loginForm.LoginFormComponent).component('registerForm', _registerForm.RegisterFormComponent).component('createTask', _create_task.CreateTaskComponent).component('tasks', _tasks.TasksComponent
 	// .component('departments', DepartmentsComponent)
 	).component('departmentTasks', _departmentTasks.DepartmentTasksComponent);
 	// import {DepartmentsComponent} from './app/components/departments/departments.component';
@@ -109846,18 +109915,169 @@ module.run(['$templateCache', function($templateCache) {
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var TaskController = function () {
-	    function TaskController() {
+	var TaskDetailDirectiveController = function () {
+	    TaskDetailDirectiveController.$inject = ["userService", "$state", "ContextService", "$location", "$anchorScroll"];
+	    function TaskDetailDirectiveController(userService, $state, ContextService, $location, $anchorScroll) {
 	        'ngInject';
 
-	        //
+	        _classCallCheck(this, TaskDetailDirectiveController);
+
+	        var vm = this;
+	        this.userService = userService;
+	        this.$state = $state;
+	        this.$location = $location;
+	        this.$anchorScroll = $anchorScroll;
+
+	        ContextService.me(function (data) {
+	            console.log(data);
+	            vm.userData = data;
+	        });
+	    }
+
+	    _createClass(TaskDetailDirectiveController, [{
+	        key: '$onInit',
+	        value: function $onInit() {
+	            this.progress_data = {};
+	            this.statuses = ['ON GOING', 'COMPLETE', 'NOT STARTED'];
+	            this.progress_data.overall_status = 'NOT STARTED';
+
+	            this.notifications = [{
+	                "id": "ecfb468e-32b9-49d3-87c7-8477c4b79ba0",
+	                "data": {
+	                    "type": "create_task",
+	                    "reporter_name": "Alice Department Head",
+	                    "task_name": "asd"
+	                },
+	                "notifiable_type": 'App\\User',
+	                "read_at": null,
+	                "task_id": null,
+	                "$$hashKey": "object:59"
+	            }, {
+	                "id": "96d1ba05-5a76-4892-9566-8247420fc793",
+	                "data": {
+	                    "message": "Temporary placeholder"
+	                },
+	                "notifiable_type": 'App\\User',
+	                "read_at": null,
+	                "task_id": null,
+	                "$$hashKey": "object:60"
+	            }];
+	        }
+	    }, {
+	        key: '$onChanges',
+	        value: function $onChanges(changes) {
+	            var vm = this;
+	            // console.log('called onChanges',changes);
+	            if (angular.isDefined(changes.taskid.currentValue)) {
+	                vm.taskid = changes.taskid.currentValue;
+	                vm.loadingfilterDetail = true;
+	                console.log(vm.taskid);
+	                vm.userService.getSingleTask(vm.taskid).then(function (resp) {
+	                    vm.loadingfilterDetail = false;
+	                    // console.log(resp);
+	                    vm.task = resp.data.task;
+	                }, function (error) {
+	                    vm.loadingfilterDetail = false;
+	                    // console.log(error);
+	                });
+	            }
+	        }
+	    }, {
+	        key: 'changeCurrentStatus',
+	        value: function changeCurrentStatus() {
+	            if (this.progress_data.overall_status == 'NOT STARTED') {
+	                this.progress_data.progress_status_percent = "0";
+	            } else if (this.progress_data.overall_status == 'COMPLETE') {
+	                this.progress_data.progress_status_percent = "100";
+	            } else {
+	                this.progress_data.progress_status_percent = null;
+	            }
+	        }
+	    }, {
+	        key: 'goToDetailPage',
+	        value: function goToDetailPage(id) {
+	            if (this.$state.current.name == 'app.single-task' || this.$state.current.name == 'app.tasks.single-task') {
+	                return;
+	            }
+
+	            this.$state.go('app.tasks.single-task', { id: id });
+	        }
+	    }, {
+	        key: 'addProgressMessage',
+	        value: function addProgressMessage(id) {
+	            var vm = this;
+	            this.show_progress_created = false;
+	            this.show_progress_error = false;
+
+	            console.log(this.progress_data);
+
+	            this.loadingfilterDetail = true;
+	            this.userService.addProgressMessage(id, { progress: this.progress_data }).then(function (resp) {
+	                vm.loadingfilterDetail = false;
+	                vm.$location.hash('cytonn-app');
+	                vm.$anchorScroll();
+	                console.log(resp);
+	                vm.show_progress_created = true;
+	                vm.task = resp.data.task;
+	                vm.progress_data = {};
+	            }, function (error) {
+	                vm.loadingfilterDetail = false;
+	                vm.$location.hash('cytonn-app');
+	                vm.$anchorScroll();
+	                console.log(error);
+	                vm.show_progress_error = true;
+	            });
+	        }
+	    }]);
+
+	    return TaskDetailDirectiveController;
+	}();
+
+	var TaskDetailDirectiveComponent = exports.TaskDetailDirectiveComponent = {
+	    templateUrl: './views/app/components/task-detail-directive/task-detail-directive.component.html',
+	    controller: TaskDetailDirectiveController,
+	    controllerAs: 'vm',
+	    bindings: {
+	        taskid: '<'
+	    }
+	};
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var TaskController = function () {
+	    TaskController.$inject = ["userService", "$stateParams"];
+	    function TaskController(userService, $stateParams) {
+	        'ngInject';
 
 	        _classCallCheck(this, TaskController);
+
+	        this.userService = userService;
+	        this.$stateParams = $stateParams;
+
+	        var vm = this;
+
+	        //
 	    }
 
 	    _createClass(TaskController, [{
 	        key: '$onInit',
-	        value: function $onInit() {}
+	        value: function $onInit() {
+	            var vm = this;
+
+	            vm.taskid = this.$stateParams.id;
+	        }
 	    }]);
 
 	    return TaskController;
@@ -109871,7 +110091,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -109891,12 +110111,30 @@ module.run(['$templateCache', function($templateCache) {
 	        _classCallCheck(this, TasksDisplayController);
 
 	        this.hgt = window.innerHeight - 135;
-	        console.log(this.hgt);
 	    }
 
 	    _createClass(TasksDisplayController, [{
 	        key: '$onInit',
 	        value: function $onInit() {}
+	    }, {
+	        key: '$onChanges',
+	        value: function $onChanges(changes) {
+	            var vm = this;
+	            vm.taskid = undefined;
+	            console.log('called onChanges', changes);
+	            if (angular.isDefined(changes.tasks.currentValue)) {
+	                if (changes.tasks.currentValue.length == 0) {
+	                    vm.taskid = undefined;
+	                } else {
+	                    vm.taskid = changes.tasks.currentValue[0]['id'];
+	                }
+
+	                console.log('task id in parent', vm.taskid);
+	            }
+	        }
+	    }, {
+	        key: 'displayOnSide',
+	        value: function displayOnSide() {}
 	    }]);
 
 	    return TasksDisplayController;
@@ -109906,11 +110144,14 @@ module.run(['$templateCache', function($templateCache) {
 	    templateUrl: './views/app/components/tasks-display/tasks-display.component.html',
 	    controller: TasksDisplayController,
 	    controllerAs: 'vm',
-	    bindings: {}
+	    bindings: {
+	        tasks: '<',
+	        loadingfilter: '<'
+	    }
 	};
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -109948,7 +110189,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110155,7 +110396,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110193,7 +110434,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110231,7 +110472,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110269,7 +110510,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110307,7 +110548,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110345,7 +110586,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110428,7 +110669,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110466,7 +110707,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110554,7 +110795,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110599,7 +110840,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110637,7 +110878,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110728,7 +110969,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110797,7 +111038,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110866,7 +111107,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110958,7 +111199,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111048,7 +111289,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111117,7 +111358,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111209,7 +111450,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111301,7 +111542,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111315,18 +111556,20 @@ module.run(['$templateCache', function($templateCache) {
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var DashboardController = function () {
-	  DashboardController.$inject = ["$scope", "userService"];
-	  function DashboardController($scope, userService) {
+	  DashboardController.$inject = ["$scope", "userService", "$state"];
+	  function DashboardController($scope, userService, $state) {
 	    'ngInject';
 
 	    _classCallCheck(this, DashboardController);
 
 	    this.userService = userService;
+	    this.$state = $state;
 	  }
 
 	  _createClass(DashboardController, [{
 	    key: '$onInit',
 	    value: function $onInit() {
+	      var vm = this;
 	      this.fetchTasksAssignedToMe();
 	      this.getMyNotifications();
 	    }
@@ -111335,8 +111578,10 @@ module.run(['$templateCache', function($templateCache) {
 	  }, {
 	    key: 'fetchTasksAssignedToMe',
 	    value: function fetchTasksAssignedToMe() {
+	      var vm = this;
 	      this.userService.getMyTasks('assigned_to_me').then(function (resp) {
 	        console.log(resp);
+	        vm.tasks_assigned = resp.data.tasks;
 	      }, function (error) {
 	        console.log(error);
 	      });
@@ -111344,8 +111589,10 @@ module.run(['$templateCache', function($templateCache) {
 	  }, {
 	    key: 'getMyNotifications',
 	    value: function getMyNotifications() {
+	      var vm = this;
 	      this.userService.getMyNotifications().then(function (resp) {
 	        console.log(resp);
+	        vm.notifications = resp.data.notifications;
 	      }, function (error) {
 	        console.log(error);
 	      });
@@ -111353,11 +111600,17 @@ module.run(['$templateCache', function($templateCache) {
 	  }, {
 	    key: 'markNotificationAsRead',
 	    value: function markNotificationAsRead(notificationId) {
+	      var vm = this;
 	      this.userService.markNotificationAsRead().then(function (resp) {
 	        console.log(resp);
 	      }, function (error) {
 	        console.log(error);
 	      });
+	    }
+	  }, {
+	    key: 'goToDetail',
+	    value: function goToDetail(task) {
+	      this.$state.go('app.single-task', { id: task.id });
 	    }
 	  }]);
 
@@ -111372,7 +111625,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111417,7 +111670,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111461,7 +111714,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111503,7 +111756,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111595,7 +111848,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111657,7 +111910,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111757,7 +112010,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111838,7 +112091,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111871,10 +112124,10 @@ module.run(['$templateCache', function($templateCache) {
 	            var vm = this;
 	            this.data = {};
 	            this.access_level = ['private', 'public'];
-	            this.priority = [{ name: 'Low', id: 0 }, { name: 'Normal', id: 5 }, { name: 'High', id: 10 }];
+	            this.priority = ['Low', 'Normal', 'High'];
 
 	            this.data.access_level = 'public';
-	            this.data.priority = 5;
+	            this.data.priority = 'Normal';
 
 	            this.userService.getTaskCategories().then(function (resp) {
 	                console.log(resp);
@@ -111996,7 +112249,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112031,9 +112284,11 @@ module.run(['$templateCache', function($templateCache) {
 	            this.current_filter = this.$stateParams.filter || 'all';
 	            this.current_filter_name = 'All Tasks';
 
-	            this.userService.getTasks(this.current_filter).then(function (resp) {
+	            this.userService.getMyTasks(this.current_filter).then(function (resp) {
 	                // console.log(resp);
 	                vm.loadingFilter = false;
+
+	                vm.tasks = resp.data.tasks;
 	            }, function (error) {
 	                // console.log(error);
 	                vm.loadingFilter = false;
@@ -112043,22 +112298,25 @@ module.run(['$templateCache', function($templateCache) {
 	        key: 'changeFilter',
 	        value: function changeFilter(filter) {
 	            var vm = this;
+	            vm.tasks = [];
 	            this.loadingFilter = true;
 
 	            this.current_filter = filter;
 	            var obj = {
 	                "all": "All Tasks",
-	                "reported-by-me": "Reported by me",
-	                "assigned-to-me": "Assigned to me",
-	                "private-tasks": "Private tasks",
-	                "public-tasks": "Public tasks",
+	                "reported_by_me": "Reported by me",
+	                "assigned_to_me": "Assigned to me",
+	                "private_tasks": "Private tasks",
+	                "public_tasks": "Public tasks",
 	                "following": "Tasks that I am following"
 	            };
 	            this.current_filter_name = obj[filter];
 
-	            this.userService.getTasks(this.current_filter).then(function (resp) {
+	            this.userService.getMyTasks(this.current_filter).then(function (resp) {
 	                // console.log(resp);
 	                vm.loadingFilter = false;
+
+	                vm.tasks = resp.data.tasks;
 	            }, function (error) {
 	                // console.log(error);
 	                vm.loadingFilter = false;
@@ -112077,7 +112335,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112091,17 +112349,77 @@ module.run(['$templateCache', function($templateCache) {
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var DepartmentTasksController = function () {
-	    function DepartmentTasksController() {
+	    DepartmentTasksController.$inject = ["$stateParams", "ContextService", "userService"];
+	    function DepartmentTasksController($stateParams, ContextService, userService) {
 	        'ngInject';
 
-	        //
-
 	        _classCallCheck(this, DepartmentTasksController);
+
+	        var vm = this;
+	        this.$stateParams = $stateParams;
+	        this.userService = userService;
+
+	        ContextService.me(function (data) {
+	            console.log(data);
+	            vm.userData = data;
+	            vm.current_department = vm.userData.department;
+	            vm.loadingFilter = true;
+	            vm.getInitialDepartmentTasks();
+	        });
 	    }
 
 	    _createClass(DepartmentTasksController, [{
 	        key: '$onInit',
-	        value: function $onInit() {}
+	        value: function $onInit() {
+	            var vm = this;
+
+	            this.userService.getAllDepartments().then(function (resp) {
+	                // console.log(resp);
+	                vm.departments = resp.data;
+	            }, function (error) {
+	                // console.log(error);
+	            });
+	        }
+	    }, {
+	        key: 'getInitialDepartmentTasks',
+	        value: function getInitialDepartmentTasks() {
+	            var vm = this;
+
+	            // console.log(this.current_filter);
+
+
+	            vm.userService.getDepartmentTasks(vm.userData.department.id).then(function (resp) {
+	                // console.log(resp);
+	                vm.loadingFilter = false;
+
+	                vm.tasks = resp.data.tasks;
+	            }, function (error) {
+	                // console.log(error);
+	                vm.loadingFilter = false;
+	            });
+	        }
+	    }, {
+	        key: 'changeFilter',
+	        value: function changeFilter(department) {
+	            var vm = this;
+
+	            vm.current_department = department;
+
+	            vm.tasks = [];
+	            this.loadingFilter = true;
+
+	            this.dep_id = vm.current_department.id;
+
+	            this.userService.getMyTasks(this.dep_id).then(function (resp) {
+	                // console.log(resp);
+	                vm.loadingFilter = false;
+
+	                vm.tasks = resp.data.tasks;
+	            }, function (error) {
+	                // console.log(error);
+	                vm.loadingFilter = false;
+	            });
+	        }
 	    }]);
 
 	    return DepartmentTasksController;
@@ -112115,21 +112433,21 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _showLoader = __webpack_require__(52);
+	var _showLoader = __webpack_require__(53);
 
-	var _routeBodyclass = __webpack_require__(53);
+	var _routeBodyclass = __webpack_require__(54);
 
-	var _passwordVerify = __webpack_require__(54);
+	var _passwordVerify = __webpack_require__(55);
 
 	angular.module('app.components').directive('routeBodyclass', _routeBodyclass.RouteBodyClassComponent).directive('passwordVerify', _passwordVerify.PasswordVerifyClassComponent).directive('showLoader', _showLoader.ShowLoaderDirective);
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112178,7 +112496,7 @@ module.run(['$templateCache', function($templateCache) {
 	var ShowLoaderDirective = exports.ShowLoaderDirective = ShowLoader;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112214,7 +112532,7 @@ module.run(['$templateCache', function($templateCache) {
 	var RouteBodyClassComponent = exports.RouteBodyClassComponent = routeBodyClass;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112259,21 +112577,21 @@ module.run(['$templateCache', function($templateCache) {
 	var PasswordVerifyClassComponent = exports.PasswordVerifyClassComponent = passwordVerifyClass;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _context = __webpack_require__(56);
+	var _context = __webpack_require__(57);
 
-	var _API = __webpack_require__(57);
+	var _API = __webpack_require__(58);
 
-	var _userService = __webpack_require__(58);
+	var _userService = __webpack_require__(59);
 
 	angular.module('app.services').service('ContextService', _context.ContextService).service('API', _API.APIService).service('userService', _userService.userService);
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112325,7 +112643,7 @@ module.run(['$templateCache', function($templateCache) {
 	}();
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112376,7 +112694,7 @@ module.run(['$templateCache', function($templateCache) {
 	}];
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112464,7 +112782,11 @@ module.run(['$templateCache', function($templateCache) {
 	  }, {
 	    key: 'getMyTasks',
 	    value: function getMyTasks(filter) {
-	      return this.$http.get(this.urlBase + 'users/me/tasks/?' + filter + '=true');
+	      if (filter == 'all') {
+	        return this.$http.get(this.urlBase + 'users/me/tasks');
+	      } else {
+	        return this.$http.get(this.urlBase + 'users/me/tasks/?' + filter + '=true');
+	      }
 	    }
 	  }, {
 	    key: 'getMyNotifications',
@@ -112472,9 +112794,40 @@ module.run(['$templateCache', function($templateCache) {
 	      return this.$http.get(this.urlBase + 'users/me/notifications');
 	    }
 	  }, {
+	    key: 'markNotificationAsRead',
+	    value: function markNotificationAsRead(id) {
+	      return this.$http.delete(this.urlBase + 'users/me/notifications/' + id);
+	    }
+	  }, {
 	    key: 'createTask',
 	    value: function createTask(data) {
 	      return this.$http.post(this.urlBase + 'tasks', data);
+	    }
+	  }, {
+	    key: 'getSingleTask',
+	    value: function getSingleTask(id) {
+	      if (id == null) {
+	        return;
+	      }
+	      return this.$http.get(this.urlBase + 'tasks/' + id);
+	    }
+	  }, {
+	    key: 'addProgressMessage',
+	    value: function addProgressMessage(id, progress) {
+	      return this.$http.post(this.urlBase + 'tasks/' + id + '/progress', progress);
+	    }
+
+	    //DEPARTMENT URLS
+
+	  }, {
+	    key: 'getDepartmentTasks',
+	    value: function getDepartmentTasks(id) {
+	      return this.$http.get(this.urlBase + 'departments/' + id + '/tasks');
+	    }
+	  }, {
+	    key: 'getAllDepartments',
+	    value: function getAllDepartments() {
+	      return this.$http.get(this.urlBase + 'departments');
 	    }
 	  }]);
 

@@ -62,8 +62,13 @@ export class userService {
     });
   }
 
-  getMyTasks(filter) { 
-    return this.$http.get(this.urlBase + 'users/me/tasks/?'+filter+'=true');
+  getMyTasks(filter) {
+    if(filter=='all'){
+      return this.$http.get(this.urlBase + 'users/me/tasks');
+    }else {
+      return this.$http.get(this.urlBase + 'users/me/tasks/?'+filter+'=true');  
+    }
+    
   }
 
   getMyNotifications() {
@@ -76,6 +81,26 @@ export class userService {
 
   createTask(data) {
     return this.$http.post(this.urlBase + 'tasks', data);
+  }
+
+  getSingleTask(id) {
+    if(id == null){
+      return
+    }
+    return this.$http.get(this.urlBase + 'tasks/' +id); 
+  }
+
+  addProgressMessage(id, progress) {
+    return this.$http.post(this.urlBase + 'tasks/' +id +'/progress', progress);
+  }
+
+  //DEPARTMENT URLS
+  getDepartmentTasks(id) {
+    return this.$http.get(this.urlBase + 'departments/' + id +'/tasks');
+  }
+
+  getAllDepartments() {
+    return this.$http.get(this.urlBase + 'departments'); 
   }
 
 }

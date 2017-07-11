@@ -5,22 +5,24 @@ namespace App\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
-// use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Messages\MailMessage;
 
-class TaskWasCreated extends Notification
+class TaskProgressWasUpdated extends Notification
 {
     use Queueable;
 
     protected $task;
+    protected $progress;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($task)
-    {  
-       $this->task = $task; 
+    public function __construct($task, $progress)
+    {
+        $this->task = $task;
+        $this->progress = $progress;
     }
 
     /**
@@ -56,12 +58,18 @@ class TaskWasCreated extends Notification
      */
     public function toArray($notifiable)
     {
+        $progress_owner = [
+            'name' => $this->progress->owner->name,
+            'id' => $this->progress->owner->id
+        ];
+
         return [
-            // 'message' => 'Temporary asdasd',
-            'type' => 'create_task',
-            'reporter_name' => $this->task->reporter->name,
-            'task_name' => $this->task->name,
-            'task_id' => $this->task->id,
+        'progress_owner' => $progress_owner,
+        'progress' => $this->progress,
+        'type' => 'update_progress_status',
+        'reporter_name' => $this->task->reporter->name,
+        'task_name' => $this->task->name,
+        'task_id' => $this->task->id,
         ];
     }
 }
