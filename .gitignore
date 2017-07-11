@@ -1,3 +1,4 @@
+.env
 /node_modules
 /public/hot
 /public/storage
@@ -8,7 +9,6 @@
 Homestead.json
 Homestead.yaml
 npm-debug.log
-.env
 
 
 /bower_components
@@ -17,5 +17,3 @@ public/views
 public/js
 public/fonts
 public/css
-
-
