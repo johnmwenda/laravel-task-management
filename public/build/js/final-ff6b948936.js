@@ -109038,7 +109038,15 @@ module.run(['$templateCache', function($templateCache) {
 
 	'use strict';
 
-	angular.module('app', ['app.run', 'app.filters', 'app.services', 'app.components', 'app.routes', 'app.config', 'app.partials']);
+	var env = {};
+
+	// Import variables if present (from env.js)
+	if (window) {
+	  Object.assign(env, window.__env);
+	}
+	console.log('__env', env);
+
+	angular.module('app', ['app.run', 'app.filters', 'app.services', 'app.components', 'app.routes', 'app.config', 'app.partials']).constant('__env', env);
 
 	angular.module('app.run', []);
 	angular.module('app.routes', []);
@@ -109631,8 +109639,8 @@ module.run(['$templateCache', function($templateCache) {
 	    return true;
 	  };
 
-	  $authProvider.loginUrl = 'http://cytonn.local.app/api/users/login';
-	  $authProvider.signupUrl = 'http://cytonn.local.app/api/auth/register';
+	  $authProvider.loginUrl = window.__env.baseUrl + 'users/login';
+	  $authProvider.signupUrl = window.__env.baseUrl + 'auth/register';
 	  $authProvider.tokenRoot = 'data'; // compensates success response macro
 	  $authProvider.tokenHeader = 'Authorization';
 	  $authProvider.authToken = 'Token';
@@ -112708,15 +112716,16 @@ module.run(['$templateCache', function($templateCache) {
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var userService = exports.userService = function () {
-	  userService.$inject = ["$http", "$window"];
-	  function userService($http, $window) {
+	  userService.$inject = ["$http", "$window", "__env"];
+	  function userService($http, $window, __env) {
 	    'ngInject';
 
 	    _classCallCheck(this, userService);
 
 	    this.$http = $http;
-	    this.urlBase = "http://cytonn.local.app/api/";
 	    this.$window = $window;
+	    this.__env = __env;
+	    this.urlBase = this.__env.baseUrl;
 
 	    this.token = this.$window.localStorage.satellizer_token;
 	  }

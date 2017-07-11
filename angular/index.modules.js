@@ -1,3 +1,11 @@
+var env = {};
+
+// Import variables if present (from env.js)
+if(window){  
+  Object.assign(env, window.__env);
+}
+console.log('__env',env) 
+
 angular.module('app', [
   'app.run',
   'app.filters',
@@ -6,7 +14,11 @@ angular.module('app', [
   'app.routes',
   'app.config',
   'app.partials'
-])
+]).constant('__env', env)
+
+
+  
+
 
 angular.module('app.run', [])
 angular.module('app.routes', [])

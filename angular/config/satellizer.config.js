@@ -5,8 +5,8 @@ export function SatellizerConfig ($authProvider) {
     return true
   }
 
-  $authProvider.loginUrl = 'http://cytonn.local.app/api/users/login'
-  $authProvider.signupUrl = 'http://cytonn.local.app/api/auth/register'
+  $authProvider.loginUrl = window.__env.baseUrl+'users/login'
+  $authProvider.signupUrl = window.__env.baseUrl+'auth/register'
   $authProvider.tokenRoot = 'data' // compensates success response macro
   $authProvider.tokenHeader = 'Authorization'
   $authProvider.authToken = 'Token'

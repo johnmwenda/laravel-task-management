@@ -1,9 +1,10 @@
 export class userService {
-  constructor ($http, $window) {
+  constructor ($http, $window, __env) {
     'ngInject'  
     this.$http = $http;
-    this.urlBase = "http://cytonn.local.app/api/";
     this.$window = $window;
+    this.__env = __env;
+    this.urlBase = this.__env.baseUrl;
 
     this.token = this.$window.localStorage.satellizer_token;
   } 
