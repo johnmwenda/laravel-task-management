@@ -1,10 +1,11 @@
 export class userService {
-  constructor ($http, $window, __env) {
+  constructor ($http, $window, __env, $q) {
     'ngInject'  
     this.$http = $http;
     this.$window = $window;
     this.__env = __env;
     this.urlBase = this.__env.baseUrl;
+    this.$q = $q;
 
     this.token = this.$window.localStorage.satellizer_token;
   } 
@@ -85,8 +86,10 @@ export class userService {
   }
 
   getSingleTask(id) {
-    if(id == null || id == undefined){
-      return
+    if(id == null || id == undefined || id == 'null'){
+      return this.$q(function(resolve, reject){
+        reject('cant search null value');
+      });
     }
     return this.$http.get(this.urlBase + 'tasks/' +id); 
   }

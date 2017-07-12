@@ -33,10 +33,10 @@ class RolesTableSeeder extends Seeder
 
         $administer_department = new Permission();
         $administer_department->name = "Administer departments functions";
-        $administer_department->description = "view private tasks";
+        $administer_department->description = "administer department functions";
         $administer_department->save();
 
-        $role_department_admin->givePermissionTo('Administer departments functions');
+        $role_department_admin->givePermissionTo($administer_department);
 
 
         $role_department_head = new Role();
@@ -44,12 +44,12 @@ class RolesTableSeeder extends Seeder
         $role_department_head->description = "The department head";
         $role_department_head->save();
 
-        $create_task_category = new Permission();
-        $create_task_category->name = "view private tasks";
-        $create_task_category->description = "view private tasks";
-        $create_task_category->save();
+        $view_private_tasks = new Permission();
+        $view_private_tasks->name = "view private tasks";
+        $view_private_tasks->description = "view private tasks";
+        $view_private_tasks->save();
 
-        $role_department_head->givePermissionTo('view private tasks');
+        $role_department_head->givePermissionTo($view_private_tasks);
 
 
     }

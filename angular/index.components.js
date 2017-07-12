@@ -1,3 +1,5 @@
+import {ReportsComponent} from './app/components/reports/reports.component';
+import {UsersBoardComponent} from './app/components/users-board/users-board.component';
 import {DepartmentAdministratorComponent} from './app/components/department-administrator/department-administrator.component';
 import {TaskDetailDirectiveComponent} from './app/components/task-detail-directive/task-detail-directive.component';
 import {TaskComponent} from './app/components/task/task.component';
@@ -36,6 +38,8 @@ import {TasksComponent} from './app/components/tasks/tasks.component';
 import {DepartmentTasksComponent} from './app/components/department-tasks/department-tasks.component';
 
 angular.module('app.components')
+	.component('reports', ReportsComponent)
+	.component('usersBoard', UsersBoardComponent)
 	.component('departmentAdministrator', DepartmentAdministratorComponent)
 	.component('taskDetailDirective', TaskDetailDirectiveComponent)
 	.component('task', TaskComponent)

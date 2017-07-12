@@ -11,19 +11,23 @@ class TasksDisplayController{
 
     $onChanges(changes) { 
         let vm = this;
-        vm.taskid = undefined;
-        // console.log('called onChanges',changes.tasks);
-        if(angular.isDefined(changes.tasks)) {
-            if(changes.tasks.currentValue.length == 0){
-                vm.taskid = undefined;
-            }else {
-                vm.taskid = changes.tasks.currentValue[0]['id'];    
-            }
-
+        vm.taskid = null;
+        
+console.log('called onChanges',changes);
+        if(!changes.tasks.isFirstChange()){
             
+                if(changes.tasks.currentValue.length == 0){
+                    vm.taskid = null;
+                }else {
+                    vm.taskid = changes.tasks.currentValue[0]['id'];    
+                }
 
-            console.log('task id in parent',vm.taskid);
+
+
+                // console.log('task id in parent',vm.taskid); 
         }
+        
+
     }
 
     displayOnSide() {

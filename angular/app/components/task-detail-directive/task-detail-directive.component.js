@@ -48,24 +48,39 @@ class TaskDetailDirectiveController{
 
     $onChanges(changes) {
         let vm = this;
-        // console.log('called onChanges',changes);
-        if(angular.isDefined(changes.taskid) ){
-            // console.log(changes.taskid); 
-            vm.taskid = changes.taskid.currentValue;
-            // if(vm.taskid == undefined) {
-            //     vm.task = {};
-            // }
-            vm.loadingfilterDetail = true;
-            // console.log(vm.taskid);
-            vm.userService.getSingleTask(vm.taskid).then(function(resp){
-                vm.loadingfilterDetail = false;
+        
+        // 
+        if(!changes.taskid.isFirstChange()){
+
+            if(angular.isDefined(changes.taskid) ){
+                // console.log(changes.taskid); 
+                console.log('called onChanges task detail directive',changes);
+                let taskid_inner = changes.taskid.currentValue;
+                // if(vm.taskid == undefined) {
+                //     vm.task = {};
+                // }
+                vm.loadingfilterDetail = true;
+                let taskid_inner_result = null;
+                if(taskid_inner == null) {
+                    taskid_inner_result = 'null'
+                }else{
+                    taskid_inner_result = taskid_inner
+                }
+
+                console.log(taskid_inner_result);
+
+                vm.userService.getSingleTask(taskid_inner_result).then(function(resp){
+                    vm.loadingfilterDetail = false;
                 // console.log(resp);
                 vm.task = resp.data.task;
             }, function(error){
                 vm.loadingfilterDetail = false;
                 // console.log(error);
             });
+            }
         }
+
+        
     }
 
     changeCurrentStatus() {

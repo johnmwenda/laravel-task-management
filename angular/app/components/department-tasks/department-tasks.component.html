@@ -18,7 +18,7 @@
     <div class="dropdown" style="margin-left: 10px; float: left">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Switch filter
       <span class="caret"></span></button>
-      <ul class="dropdown-menu">
+      <ul style="z-index: 901331;" class="dropdown-menu">
         
         <li ng-repeat = "department in vm.departments">
         <a href = "" ng-click = "vm.changeFilter(department)"><i ng-if ="vm.current_id == department.dep_id " class="fa fa-fw fa-check"></i> {{department.name}}</a>

@@ -58,6 +58,30 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
 
+    .state('app.reports', {
+      url: '/reports',
+      data: {
+        // auth: true
+      },
+      views: {
+        'main@app': {
+          template: '<coming-soon></coming-soon>' 
+        }
+      }
+    })
+
+    .state('app.users-board', {
+      url: '/users-board',
+      data: {
+        // auth: true
+      },
+      views: {
+        'main@app': {
+          template: '<coming-soon></coming-soon>' 
+        }
+      }
+    })
+
     .state('app.administrator', {
       url: '/administrator',
       data: {
@@ -65,7 +89,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       },
       views: {
         'main@app': {
-          template: '<department-administrator></department-administrator' 
+          template: '<department-administrator></department-administrator>' 
         }
       }
     })

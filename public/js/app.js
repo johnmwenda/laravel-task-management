@@ -56,9 +56,9 @@
 
 	__webpack_require__(17);
 
-	__webpack_require__(53);
+	__webpack_require__(55);
 
-	__webpack_require__(57);
+	__webpack_require__(59);
 
 /***/ }),
 /* 1 */
@@ -263,6 +263,26 @@
 	        template: '<tasks></tasks>'
 	      }
 	    }
+	  }).state('app.reports', {
+	    url: '/reports',
+	    data: {
+	      // auth: true
+	    },
+	    views: {
+	      'main@app': {
+	        template: '<coming-soon></coming-soon>'
+	      }
+	    }
+	  }).state('app.users-board', {
+	    url: '/users-board',
+	    data: {
+	      // auth: true
+	    },
+	    views: {
+	      'main@app': {
+	        template: '<coming-soon></coming-soon>'
+	      }
+	    }
 	  }).state('app.administrator', {
 	    url: '/administrator',
 	    data: {
@@ -270,7 +290,7 @@
 	    },
 	    views: {
 	      'main@app': {
-	        template: '<department-administrator></department-administrator'
+	        template: '<department-administrator></department-administrator>'
 	      }
 	    }
 	  }).state('app.single-task', {
@@ -874,83 +894,163 @@
 
 	'use strict';
 
-	var _departmentAdministrator = __webpack_require__(18);
+	var _reports = __webpack_require__(18);
 
-	var _taskDetailDirective = __webpack_require__(19);
+	var _usersBoard = __webpack_require__(19);
 
-	var _task = __webpack_require__(20);
+	var _departmentAdministrator = __webpack_require__(20);
 
-	var _tasksDisplay = __webpack_require__(21);
+	var _taskDetailDirective = __webpack_require__(21);
 
-	var _tablesSimple = __webpack_require__(22);
+	var _task = __webpack_require__(22);
 
-	var _uiModal = __webpack_require__(23);
+	var _tasksDisplay = __webpack_require__(23);
 
-	var _uiTimeline = __webpack_require__(24);
+	var _tablesSimple = __webpack_require__(24);
 
-	var _uiButtons = __webpack_require__(25);
+	var _uiModal = __webpack_require__(25);
 
-	var _uiIcons = __webpack_require__(26);
+	var _uiTimeline = __webpack_require__(26);
 
-	var _uiGeneral = __webpack_require__(27);
+	var _uiButtons = __webpack_require__(27);
 
-	var _formsGeneral = __webpack_require__(28);
+	var _uiIcons = __webpack_require__(28);
 
-	var _chartsChartjs = __webpack_require__(29);
+	var _uiGeneral = __webpack_require__(29);
 
-	var _widgets = __webpack_require__(30);
+	var _formsGeneral = __webpack_require__(30);
 
-	var _userProfile = __webpack_require__(31);
+	var _chartsChartjs = __webpack_require__(31);
 
-	var _userVerification = __webpack_require__(32);
+	var _widgets = __webpack_require__(32);
 
-	var _comingSoon = __webpack_require__(33);
+	var _userProfile = __webpack_require__(33);
 
-	var _userEdit = __webpack_require__(34);
+	var _userVerification = __webpack_require__(34);
 
-	var _userPermissionsEdit = __webpack_require__(35);
+	var _comingSoon = __webpack_require__(35);
 
-	var _userPermissionsAdd = __webpack_require__(36);
+	var _userEdit = __webpack_require__(36);
 
-	var _userPermissions = __webpack_require__(37);
+	var _userPermissionsEdit = __webpack_require__(37);
 
-	var _userRolesEdit = __webpack_require__(38);
+	var _userPermissionsAdd = __webpack_require__(38);
 
-	var _userRolesAdd = __webpack_require__(39);
+	var _userPermissions = __webpack_require__(39);
 
-	var _userRoles = __webpack_require__(40);
+	var _userRolesEdit = __webpack_require__(40);
 
-	var _userLists = __webpack_require__(41);
+	var _userRolesAdd = __webpack_require__(41);
 
-	var _dashboard = __webpack_require__(42);
+	var _userRoles = __webpack_require__(42);
 
-	var _navSidebar = __webpack_require__(43);
+	var _userLists = __webpack_require__(43);
 
-	var _navHeader = __webpack_require__(44);
+	var _dashboard = __webpack_require__(44);
 
-	var _loginLoader = __webpack_require__(45);
+	var _navSidebar = __webpack_require__(45);
 
-	var _resetPassword = __webpack_require__(46);
+	var _navHeader = __webpack_require__(46);
 
-	var _forgotPassword = __webpack_require__(47);
+	var _loginLoader = __webpack_require__(47);
 
-	var _loginForm = __webpack_require__(48);
+	var _resetPassword = __webpack_require__(48);
 
-	var _registerForm = __webpack_require__(49);
+	var _forgotPassword = __webpack_require__(49);
 
-	var _create_task = __webpack_require__(50);
+	var _loginForm = __webpack_require__(50);
 
-	var _tasks = __webpack_require__(51);
+	var _registerForm = __webpack_require__(51);
 
-	var _departmentTasks = __webpack_require__(52);
+	var _create_task = __webpack_require__(52);
 
-	angular.module('app.components').component('departmentAdministrator', _departmentAdministrator.DepartmentAdministratorComponent).component('taskDetailDirective', _taskDetailDirective.TaskDetailDirectiveComponent).component('task', _task.TaskComponent).component('tasksDisplay', _tasksDisplay.TasksDisplayComponent).component('tablesSimple', _tablesSimple.TablesSimpleComponent).component('uiModal', _uiModal.UiModalComponent).component('uiTimeline', _uiTimeline.UiTimelineComponent).component('uiButtons', _uiButtons.UiButtonsComponent).component('uiIcons', _uiIcons.UiIconsComponent).component('uiGeneral', _uiGeneral.UiGeneralComponent).component('formsGeneral', _formsGeneral.FormsGeneralComponent).component('chartsChartjs', _chartsChartjs.ChartsChartjsComponent).component('widgets', _widgets.WidgetsComponent).component('userProfile', _userProfile.UserProfileComponent).component('userVerification', _userVerification.UserVerificationComponent).component('comingSoon', _comingSoon.ComingSoonComponent).component('userEdit', _userEdit.UserEditComponent).component('userPermissionsEdit', _userPermissionsEdit.UserPermissionsEditComponent).component('userPermissionsAdd', _userPermissionsAdd.UserPermissionsAddComponent).component('userPermissions', _userPermissions.UserPermissionsComponent).component('userRolesEdit', _userRolesEdit.UserRolesEditComponent).component('userRolesAdd', _userRolesAdd.UserRolesAddComponent).component('userRoles', _userRoles.UserRolesComponent).component('userLists', _userLists.UserListsComponent).component('dashboard', _dashboard.DashboardComponent).component('navSidebar', _navSidebar.NavSidebarComponent).component('navHeader', _navHeader.NavHeaderComponent).component('loginLoader', _loginLoader.LoginLoaderComponent).component('resetPassword', _resetPassword.ResetPasswordComponent).component('forgotPassword', _forgotPassword.ForgotPasswordComponent).component('loginForm', _loginForm.LoginFormComponent).component('registerForm', _registerForm.RegisterFormComponent).component('createTask', _create_task.CreateTaskComponent).component('tasks', _tasks.TasksComponent
+	var _tasks = __webpack_require__(53);
+
+	var _departmentTasks = __webpack_require__(54);
+
+	angular.module('app.components').component('reports', _reports.ReportsComponent).component('usersBoard', _usersBoard.UsersBoardComponent).component('departmentAdministrator', _departmentAdministrator.DepartmentAdministratorComponent).component('taskDetailDirective', _taskDetailDirective.TaskDetailDirectiveComponent).component('task', _task.TaskComponent).component('tasksDisplay', _tasksDisplay.TasksDisplayComponent).component('tablesSimple', _tablesSimple.TablesSimpleComponent).component('uiModal', _uiModal.UiModalComponent).component('uiTimeline', _uiTimeline.UiTimelineComponent).component('uiButtons', _uiButtons.UiButtonsComponent).component('uiIcons', _uiIcons.UiIconsComponent).component('uiGeneral', _uiGeneral.UiGeneralComponent).component('formsGeneral', _formsGeneral.FormsGeneralComponent).component('chartsChartjs', _chartsChartjs.ChartsChartjsComponent).component('widgets', _widgets.WidgetsComponent).component('userProfile', _userProfile.UserProfileComponent).component('userVerification', _userVerification.UserVerificationComponent).component('comingSoon', _comingSoon.ComingSoonComponent).component('userEdit', _userEdit.UserEditComponent).component('userPermissionsEdit', _userPermissionsEdit.UserPermissionsEditComponent).component('userPermissionsAdd', _userPermissionsAdd.UserPermissionsAddComponent).component('userPermissions', _userPermissions.UserPermissionsComponent).component('userRolesEdit', _userRolesEdit.UserRolesEditComponent).component('userRolesAdd', _userRolesAdd.UserRolesAddComponent).component('userRoles', _userRoles.UserRolesComponent).component('userLists', _userLists.UserListsComponent).component('dashboard', _dashboard.DashboardComponent).component('navSidebar', _navSidebar.NavSidebarComponent).component('navHeader', _navHeader.NavHeaderComponent).component('loginLoader', _loginLoader.LoginLoaderComponent).component('resetPassword', _resetPassword.ResetPasswordComponent).component('forgotPassword', _forgotPassword.ForgotPasswordComponent).component('loginForm', _loginForm.LoginFormComponent).component('registerForm', _registerForm.RegisterFormComponent).component('createTask', _create_task.CreateTaskComponent).component('tasks', _tasks.TasksComponent
 	// .component('departments', DepartmentsComponent)
 	).component('departmentTasks', _departmentTasks.DepartmentTasksComponent);
 	// import {DepartmentsComponent} from './app/components/departments/departments.component';
 
 /***/ }),
 /* 18 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var ReportsController = function () {
+	    function ReportsController() {
+	        'ngInject';
+
+	        //
+
+	        _classCallCheck(this, ReportsController);
+	    }
+
+	    _createClass(ReportsController, [{
+	        key: '$onInit',
+	        value: function $onInit() {}
+	    }]);
+
+	    return ReportsController;
+	}();
+
+	var ReportsComponent = exports.ReportsComponent = {
+	    templateUrl: './views/app/components/reports/reports.component.html',
+	    controller: ReportsController,
+	    controllerAs: 'vm',
+	    bindings: {}
+	};
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var UsersBoardController = function () {
+	    function UsersBoardController() {
+	        'ngInject';
+
+	        //
+
+	        _classCallCheck(this, UsersBoardController);
+	    }
+
+	    _createClass(UsersBoardController, [{
+	        key: '$onInit',
+	        value: function $onInit() {}
+	    }]);
+
+	    return UsersBoardController;
+	}();
+
+	var UsersBoardComponent = exports.UsersBoardComponent = {
+	    templateUrl: './views/app/components/users-board/users-board.component.html',
+	    controller: UsersBoardController,
+	    controllerAs: 'vm',
+	    bindings: {}
+	};
+
+/***/ }),
+/* 20 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1016,7 +1116,7 @@
 	};
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1081,23 +1181,36 @@
 	        key: '$onChanges',
 	        value: function $onChanges(changes) {
 	            var vm = this;
-	            // console.log('called onChanges',changes);
-	            if (angular.isDefined(changes.taskid)) {
-	                // console.log(changes.taskid); 
-	                vm.taskid = changes.taskid.currentValue;
-	                // if(vm.taskid == undefined) {
-	                //     vm.task = {};
-	                // }
-	                vm.loadingfilterDetail = true;
-	                // console.log(vm.taskid);
-	                vm.userService.getSingleTask(vm.taskid).then(function (resp) {
-	                    vm.loadingfilterDetail = false;
-	                    // console.log(resp);
-	                    vm.task = resp.data.task;
-	                }, function (error) {
-	                    vm.loadingfilterDetail = false;
-	                    // console.log(error);
-	                });
+
+	            // 
+	            if (!changes.taskid.isFirstChange()) {
+
+	                if (angular.isDefined(changes.taskid)) {
+	                    // console.log(changes.taskid); 
+	                    console.log('called onChanges task detail directive', changes);
+	                    var taskid_inner = changes.taskid.currentValue;
+	                    // if(vm.taskid == undefined) {
+	                    //     vm.task = {};
+	                    // }
+	                    vm.loadingfilterDetail = true;
+	                    var taskid_inner_result = null;
+	                    if (taskid_inner == null) {
+	                        taskid_inner_result = 'null';
+	                    } else {
+	                        taskid_inner_result = taskid_inner;
+	                    }
+
+	                    console.log(taskid_inner_result);
+
+	                    vm.userService.getSingleTask(taskid_inner_result).then(function (resp) {
+	                        vm.loadingfilterDetail = false;
+	                        // console.log(resp);
+	                        vm.task = resp.data.task;
+	                    }, function (error) {
+	                        vm.loadingfilterDetail = false;
+	                        // console.log(error);
+	                    });
+	                }
 	            }
 	        }
 	    }, {
@@ -1161,7 +1274,7 @@
 	};
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1209,7 +1322,7 @@
 	};
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1238,16 +1351,18 @@
 	        key: '$onChanges',
 	        value: function $onChanges(changes) {
 	            var vm = this;
-	            vm.taskid = undefined;
-	            // console.log('called onChanges',changes.tasks);
-	            if (angular.isDefined(changes.tasks)) {
+	            vm.taskid = null;
+
+	            console.log('called onChanges', changes);
+	            if (!changes.tasks.isFirstChange()) {
+
 	                if (changes.tasks.currentValue.length == 0) {
-	                    vm.taskid = undefined;
+	                    vm.taskid = null;
 	                } else {
 	                    vm.taskid = changes.tasks.currentValue[0]['id'];
 	                }
 
-	                console.log('task id in parent', vm.taskid);
+	                // console.log('task id in parent',vm.taskid); 
 	            }
 	        }
 	    }, {
@@ -1269,7 +1384,7 @@
 	};
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1307,7 +1422,7 @@
 	};
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1514,7 +1629,7 @@
 	};
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1552,7 +1667,7 @@
 	};
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1590,7 +1705,7 @@
 	};
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1628,7 +1743,7 @@
 	};
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1666,7 +1781,7 @@
 	};
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1704,7 +1819,7 @@
 	};
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1787,7 +1902,7 @@
 	};
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1825,7 +1940,7 @@
 	};
 
 /***/ }),
-/* 31 */
+/* 33 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1913,7 +2028,7 @@
 	};
 
 /***/ }),
-/* 32 */
+/* 34 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1958,7 +2073,7 @@
 	};
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1996,7 +2111,7 @@
 	};
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2087,7 +2202,7 @@
 	};
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2156,7 +2271,7 @@
 	};
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2225,7 +2340,7 @@
 	};
 
 /***/ }),
-/* 37 */
+/* 39 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2317,7 +2432,7 @@
 	};
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2407,7 +2522,7 @@
 	};
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2476,7 +2591,7 @@
 	};
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2568,7 +2683,7 @@
 	};
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2660,7 +2775,7 @@
 	};
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2743,7 +2858,7 @@
 	};
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2788,7 +2903,7 @@
 	};
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2832,7 +2947,7 @@
 	};
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2874,7 +2989,7 @@
 	};
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2966,7 +3081,7 @@
 	};
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3028,7 +3143,7 @@
 	};
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3128,7 +3243,7 @@
 	};
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3209,7 +3324,7 @@
 	};
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3367,7 +3482,7 @@
 	};
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3417,9 +3532,9 @@
 	        value: function changeFilter(filter) {
 	            var vm = this;
 	            vm.tasks = [];
-	            this.loadingFilter = true;
+	            vm.loadingFilter = true;
 
-	            this.current_filter = filter;
+	            vm.current_filter = filter;
 	            var obj = {
 	                "all": "All Tasks",
 	                "reported_by_me": "Reported by me",
@@ -3428,17 +3543,18 @@
 	                "public_tasks": "Public tasks",
 	                "following": "Tasks that I am following"
 	            };
-	            this.current_filter_name = obj[filter];
+	            vm.current_filter_name = obj[filter];
 
-	            this.userService.getMyTasks(this.current_filter).then(function (resp) {
-	                // console.log(resp);
-	                vm.loadingFilter = false;
+	            // vm.userService.getMyTasks(vm.current_filter).then(function(resp){
+	            //     // console.log(resp);
+	            //     vm.loadingFilter = false;
 
-	                vm.tasks = resp.data.tasks;
-	            }, function (error) {
-	                // console.log(error);
-	                vm.loadingFilter = false;
-	            });
+	            //     vm.tasks = resp.data.tasks;
+
+	            // }, function(error){
+	            //     // console.log(error);
+	            //     vm.loadingFilter = false;
+	            // });
 	        }
 	    }]);
 
@@ -3453,7 +3569,7 @@
 	};
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3480,9 +3596,11 @@
 	        ContextService.me(function (data) {
 	            console.log(data);
 	            vm.userData = data;
-	            vm.current_department = vm.userData.department;
-	            vm.loadingFilter = true;
-	            vm.getInitialDepartmentTasks();
+	            if (angular.isDefined(vm.userData)) {
+	                vm.current_department = vm.userData.department;
+	                // vm.loadingFilter = true;
+	                vm.getInitialDepartmentTasks();
+	            }
 	        });
 	    }
 
@@ -3508,12 +3626,12 @@
 
 	            vm.userService.getDepartmentTasks(vm.userData.department.id).then(function (resp) {
 	                // console.log(resp);
-	                vm.loadingFilter = false;
+	                // vm.loadingFilter = false;
 
 	                vm.tasks = resp.data.tasks;
 	            }, function (error) {
 	                // console.log(error);
-	                vm.loadingFilter = false;
+	                // vm.loadingFilter = false;
 	            });
 	        }
 	    }, {
@@ -3574,12 +3692,12 @@
 
 	                this.userService.getDepartmentTasks(vm.current_department.id, 'department_public_tasks=true').then(function (resp) {
 	                    // console.log(resp);
-	                    vm.loadingFilter = false;
+	                    // vm.loadingFilter = false;
 
 	                    vm.tasks = resp.data.tasks;
 	                }, function (error) {
 	                    // console.log(error);
-	                    vm.loadingFilter = false;
+	                    // vm.loadingFilter = false;
 	                });
 	            } else {
 	                this.all_tasks();
@@ -3590,16 +3708,17 @@
 	        value: function private_filter(filter) {
 	            var vm = this;
 	            if (filter) {
-	                this.loadingFilter = true;
+	                // this.loadingFilter = true;
+
 
 	                this.userService.getDepartmentPrivateTasks(vm.current_department.id).then(function (resp) {
 	                    // console.log(resp);
-	                    vm.loadingFilter = false;
+	                    // vm.loadingFilter = false;
 
 	                    vm.tasks = resp.data.tasks;
 	                }, function (error) {
 	                    // console.log(error);
-	                    vm.loadingFilter = false;
+	                    // vm.loadingFilter = false;
 	                });
 	            } else {
 	                this.all_tasks();
@@ -3618,21 +3737,21 @@
 	};
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _showLoader = __webpack_require__(54);
+	var _showLoader = __webpack_require__(56);
 
-	var _routeBodyclass = __webpack_require__(55);
+	var _routeBodyclass = __webpack_require__(57);
 
-	var _passwordVerify = __webpack_require__(56);
+	var _passwordVerify = __webpack_require__(58);
 
 	angular.module('app.components').directive('routeBodyclass', _routeBodyclass.RouteBodyClassComponent).directive('passwordVerify', _passwordVerify.PasswordVerifyClassComponent).directive('showLoader', _showLoader.ShowLoaderDirective);
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3681,7 +3800,7 @@
 	var ShowLoaderDirective = exports.ShowLoaderDirective = ShowLoader;
 
 /***/ }),
-/* 55 */
+/* 57 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3717,7 +3836,7 @@
 	var RouteBodyClassComponent = exports.RouteBodyClassComponent = routeBodyClass;
 
 /***/ }),
-/* 56 */
+/* 58 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3762,21 +3881,21 @@
 	var PasswordVerifyClassComponent = exports.PasswordVerifyClassComponent = passwordVerifyClass;
 
 /***/ }),
-/* 57 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _context = __webpack_require__(58);
+	var _context = __webpack_require__(60);
 
-	var _API = __webpack_require__(59);
+	var _API = __webpack_require__(61);
 
-	var _userService = __webpack_require__(60);
+	var _userService = __webpack_require__(62);
 
 	angular.module('app.services').service('ContextService', _context.ContextService).service('API', _API.APIService).service('userService', _userService.userService);
 
 /***/ }),
-/* 58 */
+/* 60 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3828,7 +3947,7 @@
 	}();
 
 /***/ }),
-/* 59 */
+/* 61 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3879,7 +3998,7 @@
 	}];
 
 /***/ }),
-/* 60 */
+/* 62 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3893,8 +4012,8 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var userService = exports.userService = function () {
-	  userService.$inject = ["$http", "$window", "__env"];
-	  function userService($http, $window, __env) {
+	  userService.$inject = ["$http", "$window", "__env", "$q"];
+	  function userService($http, $window, __env, $q) {
 	    'ngInject';
 
 	    _classCallCheck(this, userService);
@@ -3903,6 +4022,7 @@
 	    this.$window = $window;
 	    this.__env = __env;
 	    this.urlBase = this.__env.baseUrl;
+	    this.$q = $q;
 
 	    this.token = this.$window.localStorage.satellizer_token;
 	  }
@@ -3992,8 +4112,10 @@
 	  }, {
 	    key: 'getSingleTask',
 	    value: function getSingleTask(id) {
-	      if (id == null || id == undefined) {
-	        return;
+	      if (id == null || id == undefined || id == 'null') {
+	        return this.$q(function (resolve, reject) {
+	          reject('cant search null value');
+	        });
 	      }
 	      return this.$http.get(this.urlBase + 'tasks/' + id);
 	    }

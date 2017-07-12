@@ -54,17 +54,17 @@ class UsersTableSeeder extends Seeder
         $dept_head->assignRole(['User']);
 
 
-        $dept_head = new User();
-        $dept_head->name = 'Mark Department Administrator';
-        $dept_head->email='mark@gmail.com';
-        $dept_head->avatar = 'dist/img/user2-160x160.jpg';
-        $dept_head->user_type = 'normal';
-        $dept_head->password=bcrypt('alice123');
-        $dept_head->department_id =  Department::first()->id;
-        $dept_head->save();
-        // $dept_head->assignRole(['Department Head']);
-        $dept_head->assignRole(['User']);
-        $dept_head->assignRole(['Department Admin']);
+        $dept_admin = new User();
+        $dept_admin->name = 'Mark Department Administrator';
+        $dept_admin->email='mark@gmail.com';
+        $dept_admin->avatar = 'dist/img/user2-160x160.jpg';
+        $dept_admin->user_type = 'normal';
+        $dept_admin->password=bcrypt('mark123');
+        $dept_admin->department_id =  Department::first()->id;
+        $dept_admin->save();
+        // $dept_admin->assignRole(['Department Head']);
+        $dept_admin->assignRole(['User']);
+        $dept_admin->assignRole(['Department Admin']);
         
     }
 }

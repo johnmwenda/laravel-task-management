@@ -28,9 +28,9 @@ class TasksController{
     changeFilter(filter) {
         let vm = this;
         vm.tasks = []; 
-        this.loadingFilter = true;
+        vm.loadingFilter = true;
 
-        this.current_filter = filter; 
+        vm.current_filter = filter; 
         let obj = {
             "all": "All Tasks",
             "reported_by_me": "Reported by me",
@@ -39,18 +39,18 @@ class TasksController{
             "public_tasks": "Public tasks",
             "following": "Tasks that I am following"
             }
-        this.current_filter_name = obj[filter];
+        vm.current_filter_name = obj[filter];
 
-        this.userService.getMyTasks(this.current_filter).then(function(resp){
-            // console.log(resp);
-            vm.loadingFilter = false;
+        // vm.userService.getMyTasks(vm.current_filter).then(function(resp){
+        //     // console.log(resp);
+        //     vm.loadingFilter = false;
 
-            vm.tasks = resp.data.tasks;
+        //     vm.tasks = resp.data.tasks;
 
-        }, function(error){
-            // console.log(error);
-            vm.loadingFilter = false;
-        })
+        // }, function(error){
+        //     // console.log(error);
+        //     vm.loadingFilter = false;
+        // });
     }
 }
 

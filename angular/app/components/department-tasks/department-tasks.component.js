@@ -8,9 +8,11 @@ class DepartmentTasksController{
         ContextService.me(function (data) {
             console.log(data);
             vm.userData = data;
-            vm.current_department = vm.userData.department
-            vm.loadingFilter = true;
-            vm.getInitialDepartmentTasks();
+            if(angular.isDefined(vm.userData)){
+                vm.current_department = vm.userData.department
+                // vm.loadingFilter = true;
+                vm.getInitialDepartmentTasks();
+            }            
         })
     }
 
@@ -35,12 +37,12 @@ class DepartmentTasksController{
 
         vm.userService.getDepartmentTasks(vm.userData.department.id).then(function(resp){
             // console.log(resp);
-            vm.loadingFilter = false;
+            // vm.loadingFilter = false;
 
             vm.tasks = resp.data.tasks; 
         }, function(error){ 
             // console.log(error);
-            vm.loadingFilter = false;
+            // vm.loadingFilter = false;
         })
     }
 
@@ -100,13 +102,13 @@ class DepartmentTasksController{
 
             this.userService.getDepartmentTasks(vm.current_department.id, 'department_public_tasks=true').then(function(resp){
                 // console.log(resp);
-                vm.loadingFilter = false;
+                // vm.loadingFilter = false;
 
                 vm.tasks = resp.data.tasks;
 
             }, function(error){
                 // console.log(error);
-                vm.loadingFilter = false;
+                // vm.loadingFilter = false;
             })
         }else {
             this.all_tasks();
@@ -116,7 +118,7 @@ class DepartmentTasksController{
     private_filter(filter) { 
         let vm = this;
         if(filter) {
-            this.loadingFilter = true;
+            // this.loadingFilter = true;
 
             
 
@@ -124,13 +126,13 @@ class DepartmentTasksController{
 
             this.userService.getDepartmentPrivateTasks(vm.current_department.id).then(function(resp){
                 // console.log(resp);
-                vm.loadingFilter = false;
+                // vm.loadingFilter = false;
 
                 vm.tasks = resp.data.tasks;
 
             }, function(error){
                 // console.log(error);
-                vm.loadingFilter = false;
+                // vm.loadingFilter = false;
             })
         }else {
             this.all_tasks();

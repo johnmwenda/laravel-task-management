@@ -32,9 +32,9 @@ class IsDepartmentAdmin
     {
         $user = User::all()->count();
         if (!($user == 1)) {
-            // if (auth()->user()->hasPermissionTo('Administer departments functions')) {
-            //     abort('401');
-            // }
+            if (! auth()->user()->hasPermissionTo('Administer departments functions')) {
+                abort('401');
+            }
         }
         
         return $next($request);

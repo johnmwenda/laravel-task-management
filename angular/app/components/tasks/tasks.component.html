@@ -6,7 +6,7 @@
   <div class="dropdown" style="margin-left: 10px; float: left">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Switch filter
       <span class="caret"></span></button>
-      <ul class="dropdown-menu">
+      <ul style="z-index: 901331;" class="dropdown-menu">
         <li><a ng-click = "vm.changeFilter('all')" href=""><i ng-if ="vm.current_filter == 'all' " class="fa fa-fw fa-check"></i> All tasks</a></li>
         <li><a ng-click = "vm.changeFilter('reported_by_me')" href=""><i ng-if ="vm.current_filter == 'reported_by_me' " class="fa fa-fw fa-check"></i>Reported by me</a></li>
         <li><a ng-click = "vm.changeFilter('assigned_to_me')" href=""><i ng-if ="vm.current_filter == 'assigned_to_me' " class="fa fa-fw fa-check"></i>Assigned to me</a></li>
