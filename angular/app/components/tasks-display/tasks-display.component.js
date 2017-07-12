@@ -14,8 +14,9 @@ class TasksDisplayController{
         vm.taskid = null;
         
 console.log('called onChanges',changes);
-        if(!changes.tasks.isFirstChange()){
-            
+        if(angular.isDefined(changes.tasks)){
+            if(!changes.tasks.isFirstChange()){
+                
                 if(changes.tasks.currentValue.length == 0){
                     vm.taskid = null;
                 }else {
@@ -25,7 +26,9 @@ console.log('called onChanges',changes);
 
 
                 // console.log('task id in parent',vm.taskid); 
+            }
         }
+        
         
 
     }

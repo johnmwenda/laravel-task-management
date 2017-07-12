@@ -34,15 +34,15 @@ class DepartmentTasksController{
         // console.log(this.current_filter);
 
 
-
+        vm.loadingFilter = true;
         vm.userService.getDepartmentTasks(vm.userData.department.id).then(function(resp){
             // console.log(resp);
-            // vm.loadingFilter = false;
+            vm.loadingFilter = false;
 
             vm.tasks = resp.data.tasks; 
         }, function(error){ 
             // console.log(error);
-            // vm.loadingFilter = false;
+            vm.loadingFilter = false;
         })
     }
 
@@ -102,13 +102,13 @@ class DepartmentTasksController{
 
             this.userService.getDepartmentTasks(vm.current_department.id, 'department_public_tasks=true').then(function(resp){
                 // console.log(resp);
-                // vm.loadingFilter = false;
-
+                vm.loadingFilter = false;
+                
                 vm.tasks = resp.data.tasks;
 
             }, function(error){
                 // console.log(error);
-                // vm.loadingFilter = false;
+                vm.loadingFilter = false;
             })
         }else {
             this.all_tasks();
@@ -118,7 +118,7 @@ class DepartmentTasksController{
     private_filter(filter) { 
         let vm = this;
         if(filter) {
-            // this.loadingFilter = true;
+            this.loadingFilter = true;
 
             
 
@@ -126,13 +126,13 @@ class DepartmentTasksController{
 
             this.userService.getDepartmentPrivateTasks(vm.current_department.id).then(function(resp){
                 // console.log(resp);
-                // vm.loadingFilter = false;
+                vm.loadingFilter = false;
 
                 vm.tasks = resp.data.tasks;
 
             }, function(error){
                 // console.log(error);
-                // vm.loadingFilter = false;
+                vm.loadingFilter = false;
             })
         }else {
             this.all_tasks();

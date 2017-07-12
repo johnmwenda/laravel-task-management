@@ -116,7 +116,7 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         // auth: true
       },
       params: {
-        filter: null //retrieve all tasks whether reportedBy or assignedTo
+        id: null //retrieve all tasks whether reportedBy or assignedTo
       },
       views: {
         'main@app': {

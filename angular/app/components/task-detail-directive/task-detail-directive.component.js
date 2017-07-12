@@ -1,11 +1,13 @@
 class TaskDetailDirectiveController{
-    constructor(userService, $state, ContextService, $location, $anchorScroll){
+    constructor(userService, $state, ContextService, $location, $anchorScroll, $stateParams){
         'ngInject';
         let vm = this;
         this.userService = userService;
         this.$state = $state;
         this.$location = $location;
         this.$anchorScroll = $anchorScroll;
+
+        this.$stateParams = $stateParams;
 
         ContextService.me(function (data) {
             console.log(data)
@@ -14,6 +16,20 @@ class TaskDetailDirectiveController{
     }
 
     $onInit(){
+        let vm = this;
+        console.log('called task detail');
+        if(angular.isDefined(this.$stateParams.id)) {
+            vm.loadingfilterDetail = true;
+            vm.userService.getSingleTask(this.$stateParams.id).then(function(resp){
+                vm.loadingfilterDetail = false;
+                // console.log(resp);
+                vm.task = resp.data.task;
+            }, function(error){
+                vm.loadingfilterDetail = false;
+                // console.log(error);
+            });
+        }
+
         this.progress_data = {};
         this.statuses = ['ON GOING', 'COMPLETE', 'NOT STARTED'];
         this.progress_data.overall_status = 'NOT STARTED';
@@ -75,7 +91,7 @@ class TaskDetailDirectiveController{
                 vm.task = resp.data.task;
             }, function(error){
                 vm.loadingfilterDetail = false;
-                // console.log(error);
+                vm.task = {};
             });
             }
         }

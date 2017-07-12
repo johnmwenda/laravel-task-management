@@ -109410,7 +109410,7 @@ module.run(['$templateCache', function($templateCache) {
 	      // auth: true
 	    },
 	    params: {
-	      filter: null //retrieve all tasks whether reportedBy or assignedTo
+	      id: null //retrieve all tasks whether reportedBy or assignedTo
 	    },
 	    views: {
 	      'main@app': {
@@ -110228,8 +110228,8 @@ module.run(['$templateCache', function($templateCache) {
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var TaskDetailDirectiveController = function () {
-	    TaskDetailDirectiveController.$inject = ["userService", "$state", "ContextService", "$location", "$anchorScroll"];
-	    function TaskDetailDirectiveController(userService, $state, ContextService, $location, $anchorScroll) {
+	    TaskDetailDirectiveController.$inject = ["userService", "$state", "ContextService", "$location", "$anchorScroll", "$stateParams"];
+	    function TaskDetailDirectiveController(userService, $state, ContextService, $location, $anchorScroll, $stateParams) {
 	        'ngInject';
 
 	        _classCallCheck(this, TaskDetailDirectiveController);
@@ -110240,6 +110240,8 @@ module.run(['$templateCache', function($templateCache) {
 	        this.$location = $location;
 	        this.$anchorScroll = $anchorScroll;
 
+	        this.$stateParams = $stateParams;
+
 	        ContextService.me(function (data) {
 	            console.log(data);
 	            vm.userData = data;
@@ -110249,6 +110251,20 @@ module.run(['$templateCache', function($templateCache) {
 	    _createClass(TaskDetailDirectiveController, [{
 	        key: '$onInit',
 	        value: function $onInit() {
+	            var vm = this;
+	            console.log('called task detail');
+	            if (angular.isDefined(this.$stateParams.id)) {
+	                vm.loadingfilterDetail = true;
+	                vm.userService.getSingleTask(this.$stateParams.id).then(function (resp) {
+	                    vm.loadingfilterDetail = false;
+	                    // console.log(resp);
+	                    vm.task = resp.data.task;
+	                }, function (error) {
+	                    vm.loadingfilterDetail = false;
+	                    // console.log(error);
+	                });
+	            }
+
 	            this.progress_data = {};
 	            this.statuses = ['ON GOING', 'COMPLETE', 'NOT STARTED'];
 	            this.progress_data.overall_status = 'NOT STARTED';
@@ -110306,7 +110322,7 @@ module.run(['$templateCache', function($templateCache) {
 	                        vm.task = resp.data.task;
 	                    }, function (error) {
 	                        vm.loadingfilterDetail = false;
-	                        // console.log(error);
+	                        vm.task = {};
 	                    });
 	                }
 	            }
@@ -110452,15 +110468,17 @@ module.run(['$templateCache', function($templateCache) {
 	            vm.taskid = null;
 
 	            console.log('called onChanges', changes);
-	            if (!changes.tasks.isFirstChange()) {
+	            if (angular.isDefined(changes.tasks)) {
+	                if (!changes.tasks.isFirstChange()) {
 
-	                if (changes.tasks.currentValue.length == 0) {
-	                    vm.taskid = null;
-	                } else {
-	                    vm.taskid = changes.tasks.currentValue[0]['id'];
+	                    if (changes.tasks.currentValue.length == 0) {
+	                        vm.taskid = null;
+	                    } else {
+	                        vm.taskid = changes.tasks.currentValue[0]['id'];
+	                    }
+
+	                    // console.log('task id in parent',vm.taskid); 
 	                }
-
-	                // console.log('task id in parent',vm.taskid); 
 	            }
 	        }
 	    }, {
@@ -112722,14 +112740,15 @@ module.run(['$templateCache', function($templateCache) {
 	            // console.log(this.current_filter);
 
 
+	            vm.loadingFilter = true;
 	            vm.userService.getDepartmentTasks(vm.userData.department.id).then(function (resp) {
 	                // console.log(resp);
-	                // vm.loadingFilter = false;
+	                vm.loadingFilter = false;
 
 	                vm.tasks = resp.data.tasks;
 	            }, function (error) {
 	                // console.log(error);
-	                // vm.loadingFilter = false;
+	                vm.loadingFilter = false;
 	            });
 	        }
 	    }, {
@@ -112790,12 +112809,12 @@ module.run(['$templateCache', function($templateCache) {
 
 	                this.userService.getDepartmentTasks(vm.current_department.id, 'department_public_tasks=true').then(function (resp) {
 	                    // console.log(resp);
-	                    // vm.loadingFilter = false;
+	                    vm.loadingFilter = false;
 
 	                    vm.tasks = resp.data.tasks;
 	                }, function (error) {
 	                    // console.log(error);
-	                    // vm.loadingFilter = false;
+	                    vm.loadingFilter = false;
 	                });
 	            } else {
 	                this.all_tasks();
@@ -112806,17 +112825,16 @@ module.run(['$templateCache', function($templateCache) {
 	        value: function private_filter(filter) {
 	            var vm = this;
 	            if (filter) {
-	                // this.loadingFilter = true;
-
+	                this.loadingFilter = true;
 
 	                this.userService.getDepartmentPrivateTasks(vm.current_department.id).then(function (resp) {
 	                    // console.log(resp);
-	                    // vm.loadingFilter = false;
+	                    vm.loadingFilter = false;
 
 	                    vm.tasks = resp.data.tasks;
 	                }, function (error) {
 	                    // console.log(error);
-	                    // vm.loadingFilter = false;
+	                    vm.loadingFilter = false;
 	                });
 	            } else {
 	                this.all_tasks();
