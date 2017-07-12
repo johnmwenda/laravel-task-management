@@ -58,6 +58,18 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
       }
     })
 
+    .state('app.administrator', {
+      url: '/administrator',
+      data: {
+        // auth: true
+      },
+      views: {
+        'main@app': {
+          template: '<department-administrator></department-administrator' 
+        }
+      }
+    })
+
     .state('app.single-task', {
       url: '/singletask/:id',
       data: {

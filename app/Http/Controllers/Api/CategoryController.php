@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Category;
+use App\Http\Requests\Api\CreateCategory;
 use App\TaskManagement\Transformers\CategoryTransformer;
 // use Illuminate\Http\Request;
 
@@ -24,7 +25,9 @@ class CategoryController extends ApiController
      */
     public function index()
     {
+        $categories = Category::where('department_id', auth()->user()->department_id)->get();
 
+        return $this->respondWithTransformer($categories);
     }
 
     /**
@@ -45,23 +48,21 @@ class CategoryController extends ApiController
      */
     
     //Check department_id must be an integer
-    public function store(Request $request)
+    public function store(CreateCategory $request)
     {
-        $this->validate($request, [
-            'name'=>'required|max:100',
-            'description' =>'required|max:100',
-            'department_id' =>'required'
-            ]);
+        
 
         $category = Category::create([
-                'name' => request('name'),
-                'description' => request('description'),
-                'department_id' => request('department_id')
+                'name' => $request->input('category.name'),
+                'description' => $request->input('category.description'),
+                'department_id' => auth()->user()->department_id
             ]);
 
         // $category = Category::create([$request->only('name','description','department_id')]);
 
-        return redirect()->route('home');
+        // return redirect()->route('home');
+        // 
+        return $this->respondSuccess('Successfully created a new category');
     }
 
     /**

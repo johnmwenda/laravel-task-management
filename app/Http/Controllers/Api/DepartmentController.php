@@ -96,4 +96,5 @@ class DepartmentController extends ApiController
     {
         //
     }
+
 }

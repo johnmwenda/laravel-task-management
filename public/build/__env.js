@@ -21,7 +21,7 @@
 
   window.__env = window.__env || {};
   // console.log(window.__env);
-  var environment = 'PRODUCTION';    
+  var environment = 'LOCAL';    
 
   window.__env.debug = false; 
 

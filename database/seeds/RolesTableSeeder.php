@@ -25,6 +25,19 @@ class RolesTableSeeder extends Seeder
 
         $role_normal_employee->givePermissionTo($create_task_category);
 
+        
+        $role_department_admin = new Role();
+        $role_department_admin->name = "Department Admin";
+        $role_department_admin->description = "The department admin can do department administrative functions eg creating task categories";
+        $role_department_admin->save();
+
+        $administer_department = new Permission();
+        $administer_department->name = "Administer departments functions";
+        $administer_department->description = "view private tasks";
+        $administer_department->save();
+
+        $role_department_admin->givePermissionTo('Administer departments functions');
+
 
         $role_department_head = new Role();
         $role_department_head->name = "Department Head";

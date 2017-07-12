@@ -60,6 +60,7 @@ class Kernel extends HttpKernel
         'auth.api' => \App\Http\Middleware\AuthenticateWithJWT::class,
         'cors' => \Barryvdh\Cors\HandleCors::class,
 
+        'isDepartmentAdmin' => \App\Http\Middleware\IsDepartmentAdmin::class,
         // 'category' => \App\Http\Middleware\CategoryPermissions::class,
     ];
 }

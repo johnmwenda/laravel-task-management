@@ -99943,284 +99943,25 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/create-task/create-task.page.html',
-    '<create-task></create-task>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/department-tasks/department-tasks.page.html',
-    '<department-tasks></department-tasks>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/footer/footer.page.html',
-    '<footer class="main-footer">\n' +
-    '  <div class="pull-right hidden-xs">\n' +
-    '    <b>Version</b> 2.3.3\n' +
-    '  </div>\n' +
-    '  <strong>Copyright &copy; 2016-2017 <a>Cytonn Web App</a>.</strong> All rights reserved.\n' +
-    '</footer>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/forgot-password/forgot-password.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <h3>Forgot your password?</h3>\n' +
+  $templateCache.put('./views/app/components/coming-soon/coming-soon.component.html',
+    '<section class="content">\n' +
+    '  <div class="row">\n' +
+    '    <div class="col-md-12">\n' +
+    '      <div class="box box-info">\n' +
+    '        <div class="box-header with-border">\n' +
+    '          <div class="box-tools pull-right">\n' +
+    '            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>\n' +
+    '            </button>\n' +
+    '            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>\n' +
+    '          </div>\n' +
+    '        </div>\n' +
+    '        <div class="box-body">\n' +
+    '          <h3>Coming Soon... (Pull Requests are Welcome)</h3>\n' +
     '        </div>\n' +
     '      </div>\n' +
     '    </div>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <forgot-password></forgot-password>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <br>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <a ui-sref="login">Back to Login Page</a>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
     '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/header/header.page.html',
-    '<nav-header></nav-header>\n' +
-    '<nav-sidebar></nav-sidebar>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/landing/landing.page.html',
-    '<section class="content-header">\n' +
-    '  <h1>\n' +
-    '    Home\n' +
-    '  </h1>\n' +
-    '  <ol class="breadcrumb">\n' +
-    '    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
-    '    <li class="active">Dashboard</li>\n' +
-    '  </ol>\n' +
     '</section>\n' +
-    '<dashboard></dashboard>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/layout/layout.page.html',
-    '<div ui-view="header" id = "cytonn-app"></div>\n' +
-    '<div class="content-wrapper">\n' +
-    '    <div ui-view="main"></div>\n' +
-    '</div>\n' +
-    '<div ui-view="footer"></div>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/login/login.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>App</b>System</a> \n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <h3>Sign in</h3>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <login-form></login-form>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/login-loader/login-loader.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <login-loader></login-loader>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/register/register.page.html',
-    '<div class="register-box">\n' +
-    '  <div class="register-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="register-box-body">\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <h3>Create a new account</h3>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <register-form></register-form>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <br>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <a ui-sref="login">I already have an account</a>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <br>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        By signing up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Privacy Policy</a>.\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/reset-password/reset-password.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <div class="row-">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <h3>Reset Password</h3>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <reset-password></reset-password>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/tasks/tasks.page.html',
-    '<tasks></tasks>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/user-verification/user-verification.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <user-verification></user-verification>\n' +
-    '  </div>\n' +
-    '</div>\n' +
     '');
 }]);
 })();
@@ -100351,36 +100092,6 @@ module.run(['$templateCache', function($templateCache) {
     '              </div>\n' +
     '            </div>\n' +
     '          </div>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</section>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/components/coming-soon/coming-soon.component.html',
-    '<section class="content">\n' +
-    '  <div class="row">\n' +
-    '    <div class="col-md-12">\n' +
-    '      <div class="box box-info">\n' +
-    '        <div class="box-header with-border">\n' +
-    '          <div class="box-tools pull-right">\n' +
-    '            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>\n' +
-    '            </button>\n' +
-    '            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>\n' +
-    '          </div>\n' +
-    '        </div>\n' +
-    '        <div class="box-body">\n' +
-    '          <h3>Coming Soon... (Pull Requests are Welcome)</h3>\n' +
     '        </div>\n' +
     '      </div>\n' +
     '    </div>\n' +
@@ -101654,18 +101365,18 @@ module.run(['$templateCache', function($templateCache) {
     '                  <td>{{$index+1}}</td>\n' +
     '                  <td>{{task.name}}</td>\n' +
     '                  <td>{{task.category.name}}</td>\n' +
-    '                  <td><span class="badge bg-red">55%</span></td>\n' +
+    '                  <td><span class="badge bg-red">{{task.progress[task.progress.length-1][\'progress_status_percent\'] || 0}}%</span></td>\n' +
     '                </tr>\n' +
     '                \n' +
     '              </tbody></table>\n' +
     '        </div>\n' +
     '        <div class="box-footer text-center">\n' +
-    '          <a href="javascript:void(0)" class="uppercase">View All Products</a>\n' +
+    '          <!-- <a href="javascript:void(0)" class="uppercase">View All Products</a> -->\n' +
     '        </div>\n' +
     '      </div>\n' +
     '    </div>\n' +
     '\n' +
-    '    <div class="col-md-4"><!-- \n' +
+    '    <div class="col-md-4 no-padding-left"><!-- \n' +
     '      <div class="info-box bg-yellow">\n' +
     '        <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>\n' +
     '        <div class="info-box-content">\n' +
@@ -101759,7 +101470,7 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '               <span ng-if="item.data.type == \'update_progress_status\' ">\n' +
     '                  <a href="">{{item.data.progress.owner.name}}</a>  \n' +
-    '                 <span><small>added</small> a progress message on <a ui-sref="app.single-task({id: item.data.task_id})">task-{{item.data.task_id}}</a></span>\n' +
+    '                 <span><small>added</small> a progress message on <a ui-sref="app.single-task({id: item.data.task_id})">task{{item.data.task_id}}</a></span>\n' +
     '               </span><br/>\n' +
     '\n' +
     '                <blockquote ng-if = "item.data.type == \'create_task\'">\n' +
@@ -101935,6 +101646,105 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/components/department-administrator/department-administrator.component.html',
+    '<section class="content">\n' +
+    '<!-- ############# 1 ROW ################ -->\n' +
+    '\n' +
+    '  <div class="row">\n' +
+    '    <div class="col-md-8">\n' +
+    '      <div class="row">\n' +
+    '   \n' +
+    '      </div>\n' +
+    '      <div class="box box-primary">\n' +
+    '        <div class="box-header">\n' +
+    '          <h3 class="box-title">Department task categories</h3> \n' +
+    '          <div class="box-tools pull-right">\n' +
+    '            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>\n' +
+    '            </button>\n' +
+    '            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>\n' +
+    '          </div>\n' +
+    '        </div>\n' +
+    '        <div class="box-body">\n' +
+    '      \n' +
+    '          <table class="table table-striped table-hover">\n' +
+    '                <tbody>\n' +
+    '                <tr>\n' +
+    '                  <th style="width: 10px">#</th>\n' +
+    '                   <th>Name</th>\n' +
+    '                  <th style="">Description</th>\n' +
+    '                 \n' +
+    '                  \n' +
+    '                  <!-- <th style="width: 40px">Description</th> -->\n' +
+    '                </tr>\n' +
+    '                <tr style="cursor: pointer"  ng-repeat = "category in vm.department_categories">\n' +
+    '                  <td>{{$index+1}}</td>\n' +
+    '                  <td>{{category.name}}</td>\n' +
+    '                  <td>{{category.description}}</td>\n' +
+    '                  <!-- <td><span class="badge bg-red">{{task.progress[task.progress.length-1][\'progress_status_percent\'] || 0}}%</span></td> -->\n' +
+    '                </tr>\n' +
+    '                \n' +
+    '              </tbody></table>\n' +
+    '        </div>\n' +
+    '        <div class="box-footer text-center">\n' +
+    '          <!-- <a href="javascript:void(0)" class="uppercase">View All Products</a> -->\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '        <div class="col-md-4 no-padding-left">\n' +
+    '      <div class="box box-default" dw-loading = "addingNewCategory" dw-loading-options = "{text: \'\', spinner:false }"  show-loader loader-key = "\'addingNewCategory\'" is-true = "vm.addingNewCategory">\n' +
+    '        <div class="box-header with-border">\n' +
+    '          <h3 class="box-title">Add new task category</h3>\n' +
+    '          <div class="box-tools pull-right">\n' +
+    '            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>\n' +
+    '            </button>\n' +
+    '            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>\n' +
+    '          </div>\n' +
+    '        </div>\n' +
+    '\n' +
+    '        <div class="box-body">\n' +
+    '          <form ng-submit = "vm.createNewCategory()" role="form">\n' +
+    '            <!-- <legend>Form title</legend> -->\n' +
+    '          \n' +
+    '            <div class="form-group">\n' +
+    '              <label for="">Name of category</label>\n' +
+    '              <input ng-model="vm.category_data.name" type="text" class="form-control" id="" placeholder="">\n' +
+    '            </div>\n' +
+    '\n' +
+    '            <div class="form-group">\n' +
+    '              <label for="">Short description of this category</label>\n' +
+    '              <input ng-model="vm.category_data.description" type="text" class="form-control" id="" placeholder="">\n' +
+    '            </div>\n' +
+    '          \n' +
+    '            \n' +
+    '          \n' +
+    '            <button type="submit" class="btn btn-primary">Submit</button>\n' +
+    '          </form>\n' +
+    '        </div>\n' +
+    '\n' +
+    '        <div class="box-footer no-padding">\n' +
+    '          <ul class="nav nav-pills nav-stacked">\n' +
+    '            \n' +
+    '          </ul>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '\n' +
+    '  </div>\n' +
+    '</section>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/components/department-tasks/department-tasks.component.html',
     '<section class="content-header">\n' +
     '	<h1 style="display: inline-block;float: left;">\n' +
@@ -101959,7 +101769,7 @@ module.run(['$templateCache', function($templateCache) {
     '      <ul class="dropdown-menu">\n' +
     '        \n' +
     '        <li ng-repeat = "department in vm.departments">\n' +
-    '        <a ng-click = "vm.changeFilter(department)"><i ng-if ="vm.current_id == department.dep_id " class="fa fa-fw fa-check"></i> {{department.name}}</a>\n' +
+    '        <a href = "" ng-click = "vm.changeFilter(department)"><i ng-if ="vm.current_id == department.dep_id " class="fa fa-fw fa-check"></i> {{department.name}}</a>\n' +
     '        </li>\n' +
     '        \n' +
     '\n' +
@@ -101973,9 +101783,9 @@ module.run(['$templateCache', function($templateCache) {
     '    </div>\n' +
     '    <!-- <div class="clearfix"></div> -->\n' +
     '    <div>\n' +
-    '    <button style="margin-left: 10px" type="button" class="btn btn-default">Public</button>\n' +
+    '    <button ng-class = "{\'btn-warning\': vm.publicfilter}" ng-click = "vm.privatefilter = false;vm.publicfilter = !vm.publicfilter; vm.public_filter(vm.publicfilter)" style="margin-left: 10px" type="button" class="btn btn-default">Public</button>\n' +
     '\n' +
-    '    <button style="margin-left: 5px" type="button" class="btn btn-default">Private</button>\n' +
+    '    <button ng-class = "{\'btn-warning\': vm.privatefilter}" ng-click = "vm.publicfilter = false;vm.privatefilter = !vm.privatefilter; vm.private_filter(vm.privatefilter)" style="margin-left: 5px" type="button" class="btn btn-default">Private</button>\n' +
     '    <!-- <div class="dropdown" style="margin-left: 10px; float: left">\n' +
     '    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Public\n' +
     '      <span class="caret"></span></button>\n' +
@@ -101996,7 +101806,7 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '<section class="content">\n' +
     '<div class="row">\n' +
-    '      <tasks-display tasks="vm.tasks"></tasks-display>\n' +
+    '      <tasks-display tasks="vm.tasks" loadingfilter="vm.loadingFilter"></tasks-display>\n' +
     '      \n' +
     '      </div>\n' +
     '</section>');
@@ -102677,10 +102487,10 @@ module.run(['$templateCache', function($templateCache) {
     '    <div class="navbar-custom-menu">\n' +
     '      <ul class="nav navbar-nav">\n' +
     '        <li class="dropdown messages-menu" uib-dropdown>\n' +
-    '          <a href="#" class="dropdown-toggle" data-toggle="dropdown" uib-dropdown-toggle>\n' +
+    '          <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" uib-dropdown-toggle>\n' +
     '            <i class="fa fa-envelope-o"></i>\n' +
     '            <span class="label label-success">4</span>\n' +
-    '          </a>\n' +
+    '          </a> -->\n' +
     '          <ul class="dropdown-menu" uib-dropdown-menu>\n' +
     '            <li class="header">You have 4 messages</li>\n' +
     '            <li>\n' +
@@ -102751,10 +102561,10 @@ module.run(['$templateCache', function($templateCache) {
     '          </ul>\n' +
     '        </li>\n' +
     '        <li class="dropdown notifications-menu" uib-dropdown>\n' +
-    '          <a href="#" class="dropdown-toggle" data-toggle="dropdown" uib-dropdown-toggle>\n' +
+    '         <!--  <a href="#" class="dropdown-toggle" data-toggle="dropdown" uib-dropdown-toggle>\n' +
     '            <i class="fa fa-bell-o"></i>\n' +
     '            <span class="label label-warning">10</span>\n' +
-    '          </a>\n' +
+    '          </a> -->\n' +
     '          <ul class="dropdown-menu" uib-dropdown-menu>\n' +
     '            <li class="header">You have 10 notifications</li>\n' +
     '            <li>\n' +
@@ -102790,10 +102600,10 @@ module.run(['$templateCache', function($templateCache) {
     '          </ul>\n' +
     '        </li>\n' +
     '        <li class="dropdown tasks-menu" uib-dropdown>\n' +
-    '          <a href="#" class="dropdown-toggle" uib-dropdown-toggle>\n' +
+    '          <!-- <a href="#" class="dropdown-toggle" uib-dropdown-toggle>\n' +
     '            <i class="fa fa-flag-o"></i>\n' +
     '            <span class="label label-danger">9</span>\n' +
-    '          </a>\n' +
+    '          </a> -->\n' +
     '          <ul class="dropdown-menu" uib-dropdown-menu>\n' +
     '            <li class="header">You have 9 tasks</li>\n' +
     '            <li>\n' +
@@ -102972,7 +102782,7 @@ module.run(['$templateCache', function($templateCache) {
     '      </li>\n' +
     '\n' +
     '      <li ui-sref-active = "active">\n' +
-    '        <a ui-sref=\'app.reports\'>\n' +
+    '        <a ui-sref=\'app.administrator\'>\n' +
     '         <i class="fa fa-laptop"></i> <span>Administrator</span>\n' +
     '        </a>\n' +
     '      </li>\n' +
@@ -103599,7 +103409,7 @@ module.run(['$templateCache', function($templateCache) {
     '          <div class="box-header with-border">\n' +
     '            <h3 class="box-title" style="display: inline-block;">Task Description</h3>\n' +
     '            <div class="pull-right" style="padding-top: -1px;">\n' +
-    '            <div style="float: left;"><small>Status</small> <span class="label label-primary">{{vm.task.progress[vm.task.progress.length-1][\'overall_status\']}}</span></div>\n' +
+    '            <div style="float: left;"><small>Status</small> <span class="label label-primary">{{vm.task.progress[vm.task.progress.length-1][\'overall_status\'] || \'NOT STARTED\'}}</span></div>\n' +
     '            <div ng-click = "vm.goToDetailPage(vm.task.id)" style="cursor: pointer;margin-top: -1px;margin-left: 3px;display: inline-block;font-size: 19px;">\n' +
     '              <i class="fa fa-fw fa-expand" style="padding-top: 3px;"></i>\n' +
     '            </div>\n' +
@@ -103623,7 +103433,7 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '                  </h4>\n' +
     '                  <div class="pull-right" style="margin-top: 8px;margin-left: 28px"> \n' +
-    '                  <span class="label label-danger">{{vm.task.progress[vm.task.progress.length-1][\'progress_status_percent\']}}% DONE</span>\n' +
+    '                  <span class="label label-danger">{{vm.task.progress[vm.task.progress.length-1][\'progress_status_percent\'] || 0}}% DONE</span>\n' +
     '                  </div>\n' +
     '                </div>\n' +
     '              </div>\n' +
@@ -103670,7 +103480,7 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '            <h5 style="margin-top: 25px; margin-left: 5px; margin-bottom: 15px">Activity</h5>\n' +
     '\n' +
-    '            <div class="nav-tabs-custom" style="margin-left: 7px">\n' +
+    '            <div ng-if="vm.task" class="nav-tabs-custom" style="margin-left: 7px">\n' +
     '              <ul class="nav nav-tabs">\n' +
     '                <li style="cursor: pointer;" class="active"><a data-target="#all" data-toggle="tab">All</a></li>\n' +
     '                <li style="cursor: pointer;"><a data-target="#comments" data-toggle="tab">Comments</a></li>\n' +
@@ -107925,41 +107735,6 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/components/user-roles/user-roles.component.html',
-    '<section class="content-header">\n' +
-    '  <h1>User Roles <small>Module description here</small></h1>\n' +
-    '  <ol class="breadcrumb">\n' +
-    '    <li><a ui-sref="app.landing"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
-    '    <li class="active">Role List</li>\n' +
-    '  </ol>\n' +
-    '</section>\n' +
-    '<section class="content">\n' +
-    '  <div class="box">\n' +
-    '    <div class="box-header with-border">\n' +
-    '      <h3 class="box-title">Role List</h3>\n' +
-    '      <div class="box-tools pull-right">\n' +
-    '        <a ui-sref="app.userrolesadd" class="btn btn-block btn-success btn-xs"><i class="fa fa-plus"></i> Add New</a>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="box-body">\n' +
-    '      <table datatable="" width="100%" class="table table-striped table-bordered" ng-if="vm.displayTable" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"></table>\n' +
-    '    </div>\n' +
-    '    <div class="box-footer">\n' +
-    '      Footer\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</section>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/components/user-profile/user-profile.component.html',
     '<section class="content-header">\n' +
     '  <h1>Users <small>Module description here</small></h1>\n' +
@@ -108064,65 +107839,27 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/components/user-roles-edit/user-roles-edit.component.html',
+  $templateCache.put('./views/app/components/user-roles/user-roles.component.html',
     '<section class="content-header">\n' +
-    '  <h1>Users Roles<small>Module description here</small></h1>\n' +
+    '  <h1>User Roles <small>Module description here</small></h1>\n' +
     '  <ol class="breadcrumb">\n' +
     '    <li><a ui-sref="app.landing"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
-    '    <li><a ui-sref="app.userroles">Role Lists</a></li>\n' +
-    '    <li class="active">Edit User Role</li>\n' +
+    '    <li class="active">Role List</li>\n' +
     '  </ol>\n' +
     '</section>\n' +
     '<section class="content">\n' +
-    '  <div class="row">\n' +
-    '    <div class="col-sm-12 col-md-7">\n' +
-    '      <div class="box box-primary">\n' +
-    '        <div class="box-header with-border">\n' +
-    '          <h3 class="box-title">Edit User Role</h3>\n' +
-    '        </div>\n' +
-    '        <form class="form-horizontal" name="roleForm" ng-submit="vm.save(roleForm.$valid)" novalidate>\n' +
-    '          <div class="box-body">\n' +
-    '            <div ng-if="vm.alerts" class="alert alert-{{alert.type}}" ng-repeat="alert in vm.alerts">\n' +
-    '              <h4>{{alert.title}}</h4>\n' +
-    '              <p>{{alert.msg}}</p>\n' +
-    '            </div>\n' +
-    '            <div class="form-group" ng-class="{ \'has-error\': roleForm.role.$invalid && ( vm.formSubmitted || roleForm.role.$touched) }">\n' +
-    '              <label for="inputEmail3" class="col-sm-2 control-label">Role</label>\n' +
-    '              <div class="col-sm-10">\n' +
-    '                <input type="text" class="form-control" ng-model="vm.role.data.name" name="role" placeholder="Role" required>\n' +
-    '                <p ng-show="roleForm.role.$error.required && ( vm.formSubmitted || roleForm.role.$touched)" class="help-block">Role is required.</p>\n' +
-    '              </div>\n' +
-    '            </div>\n' +
-    '            <div class="form-group" ng-class="{ \'has-error\': roleForm.slug.$invalid && ( vm.formSubmitted || roleForm.slug.$touched) }">\n' +
-    '              <label for="inputPassword3" class="col-sm-2 control-label">Slug</label>\n' +
-    '              <div class="col-sm-10">\n' +
-    '                <input type="text" class="form-control" ng-model="vm.role.data.slug" name="slug" placeholder="Slug" required>\n' +
-    '                <p ng-show="roleForm.slug.$error.required && ( vm.formSubmitted || roleForm.slug.$touched)" class="help-block">Slug is required.</p>\n' +
-    '              </div>\n' +
-    '            </div>\n' +
-    '            <div class="form-group">\n' +
-    '              <label for="inputPassword3" class="col-sm-2 control-label">Description</label>\n' +
-    '              <div class="col-sm-10">\n' +
-    '                <textarea class="form-control" rows="3" ng-model="vm.role.data.description" name="description" placeholder="Description"></textarea>\n' +
-    '              </div>\n' +
-    '            </div>\n' +
-    '            <div class="form-group">\n' +
-    '              <label for="inputEmail3" class="col-sm-2 control-label">Permission</label>\n' +
-    '              <div class="col-sm-10">\n' +
-    '                <div class="checkbox" ng-repeat="permission in vm.systemPermissions">\n' +
-    '                  <label>\n' +
-    '                    <input type="checkbox" checklist-model="vm.role.data.permissions" checklist-value="permission.id"> {{permission.name}}\n' +
-    '                  </label>\n' +
-    '                </div>\n' +
-    '              </div>\n' +
-    '            </div>\n' +
-    '          </div>\n' +
-    '          <div class="box-footer">\n' +
-    '            <a ui-sref="app.userroles" class="btn btn-default"><i class="fa fa-angle-double-left"></i> Back</a>\n' +
-    '            <button type="submit" class="btn btn-primary pull-right">Update</button>\n' +
-    '          </div>\n' +
-    '        </form>\n' +
+    '  <div class="box">\n' +
+    '    <div class="box-header with-border">\n' +
+    '      <h3 class="box-title">Role List</h3>\n' +
+    '      <div class="box-tools pull-right">\n' +
+    '        <a ui-sref="app.userrolesadd" class="btn btn-block btn-success btn-xs"><i class="fa fa-plus"></i> Add New</a>\n' +
     '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="box-body">\n' +
+    '      <table datatable="" width="100%" class="table table-striped table-bordered" ng-if="vm.displayTable" dt-options="vm.dtOptions" dt-columns="vm.dtColumns"></table>\n' +
+    '    </div>\n' +
+    '    <div class="box-footer">\n' +
+    '      Footer\n' +
     '    </div>\n' +
     '  </div>\n' +
     '</section>\n' +
@@ -108183,6 +107920,79 @@ module.run(['$templateCache', function($templateCache) {
     '          <div class="box-footer">\n' +
     '            <a ui-sref="app.userroles" class="btn btn-default"><i class="fa fa-angle-double-left"></i> Back</a>\n' +
     '            <button type="submit" class="btn btn-primary pull-right">Add New</button>\n' +
+    '          </div>\n' +
+    '        </form>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</section>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/components/user-roles-edit/user-roles-edit.component.html',
+    '<section class="content-header">\n' +
+    '  <h1>Users Roles<small>Module description here</small></h1>\n' +
+    '  <ol class="breadcrumb">\n' +
+    '    <li><a ui-sref="app.landing"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
+    '    <li><a ui-sref="app.userroles">Role Lists</a></li>\n' +
+    '    <li class="active">Edit User Role</li>\n' +
+    '  </ol>\n' +
+    '</section>\n' +
+    '<section class="content">\n' +
+    '  <div class="row">\n' +
+    '    <div class="col-sm-12 col-md-7">\n' +
+    '      <div class="box box-primary">\n' +
+    '        <div class="box-header with-border">\n' +
+    '          <h3 class="box-title">Edit User Role</h3>\n' +
+    '        </div>\n' +
+    '        <form class="form-horizontal" name="roleForm" ng-submit="vm.save(roleForm.$valid)" novalidate>\n' +
+    '          <div class="box-body">\n' +
+    '            <div ng-if="vm.alerts" class="alert alert-{{alert.type}}" ng-repeat="alert in vm.alerts">\n' +
+    '              <h4>{{alert.title}}</h4>\n' +
+    '              <p>{{alert.msg}}</p>\n' +
+    '            </div>\n' +
+    '            <div class="form-group" ng-class="{ \'has-error\': roleForm.role.$invalid && ( vm.formSubmitted || roleForm.role.$touched) }">\n' +
+    '              <label for="inputEmail3" class="col-sm-2 control-label">Role</label>\n' +
+    '              <div class="col-sm-10">\n' +
+    '                <input type="text" class="form-control" ng-model="vm.role.data.name" name="role" placeholder="Role" required>\n' +
+    '                <p ng-show="roleForm.role.$error.required && ( vm.formSubmitted || roleForm.role.$touched)" class="help-block">Role is required.</p>\n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '            <div class="form-group" ng-class="{ \'has-error\': roleForm.slug.$invalid && ( vm.formSubmitted || roleForm.slug.$touched) }">\n' +
+    '              <label for="inputPassword3" class="col-sm-2 control-label">Slug</label>\n' +
+    '              <div class="col-sm-10">\n' +
+    '                <input type="text" class="form-control" ng-model="vm.role.data.slug" name="slug" placeholder="Slug" required>\n' +
+    '                <p ng-show="roleForm.slug.$error.required && ( vm.formSubmitted || roleForm.slug.$touched)" class="help-block">Slug is required.</p>\n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '            <div class="form-group">\n' +
+    '              <label for="inputPassword3" class="col-sm-2 control-label">Description</label>\n' +
+    '              <div class="col-sm-10">\n' +
+    '                <textarea class="form-control" rows="3" ng-model="vm.role.data.description" name="description" placeholder="Description"></textarea>\n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '            <div class="form-group">\n' +
+    '              <label for="inputEmail3" class="col-sm-2 control-label">Permission</label>\n' +
+    '              <div class="col-sm-10">\n' +
+    '                <div class="checkbox" ng-repeat="permission in vm.systemPermissions">\n' +
+    '                  <label>\n' +
+    '                    <input type="checkbox" checklist-model="vm.role.data.permissions" checklist-value="permission.id"> {{permission.name}}\n' +
+    '                  </label>\n' +
+    '                </div>\n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '          </div>\n' +
+    '          <div class="box-footer">\n' +
+    '            <a ui-sref="app.userroles" class="btn btn-default"><i class="fa fa-angle-double-left"></i> Back</a>\n' +
+    '            <button type="submit" class="btn btn-primary pull-right">Update</button>\n' +
     '          </div>\n' +
     '        </form>\n' +
     '      </div>\n' +
@@ -108970,6 +108780,295 @@ module.run(['$templateCache', function($templateCache) {
 }]);
 })();
 
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/create-task/create-task.page.html',
+    '<create-task></create-task>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/department-tasks/department-tasks.page.html',
+    '<department-tasks></department-tasks>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/footer/footer.page.html',
+    '<footer class="main-footer">\n' +
+    '  <div class="pull-right hidden-xs">\n' +
+    '    <b>Version</b> 2.3.3\n' +
+    '  </div>\n' +
+    '  <strong>Copyright &copy; 2016-2017 <a>Cytonn Web App</a>.</strong> All rights reserved.\n' +
+    '</footer>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/forgot-password/forgot-password.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <h3>Forgot your password?</h3>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <forgot-password></forgot-password>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <br>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <a ui-sref="login">Back to Login Page</a>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/header/header.page.html',
+    '<nav-header></nav-header>\n' +
+    '<nav-sidebar></nav-sidebar>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/landing/landing.page.html',
+    '<section class="content-header">\n' +
+    '  <h1>\n' +
+    '    Home\n' +
+    '  </h1>\n' +
+    '  <ol class="breadcrumb">\n' +
+    '    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
+    '    <li class="active">Dashboard</li>\n' +
+    '  </ol>\n' +
+    '</section>\n' +
+    '<dashboard></dashboard>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/layout/layout.page.html',
+    '<div ui-view="header" id = "cytonn-app"></div>\n' +
+    '<div class="content-wrapper">\n' +
+    '    <div ui-view="main"></div>\n' +
+    '</div>\n' +
+    '<div ui-view="footer"></div>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/login/login.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>App</b>System</a> \n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <h3>Sign in</h3>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <login-form></login-form>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/login-loader/login-loader.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <login-loader></login-loader>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/register/register.page.html',
+    '<div class="register-box">\n' +
+    '  <div class="register-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="register-box-body">\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <h3>Create a new account</h3>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <register-form></register-form>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <br>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <a ui-sref="login">I already have an account</a>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <br>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        By signing up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Privacy Policy</a>.\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/reset-password/reset-password.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <div class="row-">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <h3>Reset Password</h3>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <reset-password></reset-password>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/tasks/tasks.page.html',
+    '<tasks></tasks>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/user-verification/user-verification.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <user-verification></user-verification>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -109028,9 +109127,9 @@ module.run(['$templateCache', function($templateCache) {
 
 	__webpack_require__(17);
 
-	__webpack_require__(52);
+	__webpack_require__(53);
 
-	__webpack_require__(56);
+	__webpack_require__(57);
 
 /***/ }),
 /* 1 */
@@ -109233,6 +109332,16 @@ module.run(['$templateCache', function($templateCache) {
 	    views: {
 	      'main@app': {
 	        template: '<tasks></tasks>'
+	      }
+	    }
+	  }).state('app.administrator', {
+	    url: '/administrator',
+	    data: {
+	      // auth: true
+	    },
+	    views: {
+	      'main@app': {
+	        template: '<department-administrator></department-administrator'
 	      }
 	    }
 	  }).state('app.single-task', {
@@ -109836,81 +109945,149 @@ module.run(['$templateCache', function($templateCache) {
 
 	'use strict';
 
-	var _taskDetailDirective = __webpack_require__(18);
+	var _departmentAdministrator = __webpack_require__(18);
 
-	var _task = __webpack_require__(19);
+	var _taskDetailDirective = __webpack_require__(19);
 
-	var _tasksDisplay = __webpack_require__(20);
+	var _task = __webpack_require__(20);
 
-	var _tablesSimple = __webpack_require__(21);
+	var _tasksDisplay = __webpack_require__(21);
 
-	var _uiModal = __webpack_require__(22);
+	var _tablesSimple = __webpack_require__(22);
 
-	var _uiTimeline = __webpack_require__(23);
+	var _uiModal = __webpack_require__(23);
 
-	var _uiButtons = __webpack_require__(24);
+	var _uiTimeline = __webpack_require__(24);
 
-	var _uiIcons = __webpack_require__(25);
+	var _uiButtons = __webpack_require__(25);
 
-	var _uiGeneral = __webpack_require__(26);
+	var _uiIcons = __webpack_require__(26);
 
-	var _formsGeneral = __webpack_require__(27);
+	var _uiGeneral = __webpack_require__(27);
 
-	var _chartsChartjs = __webpack_require__(28);
+	var _formsGeneral = __webpack_require__(28);
 
-	var _widgets = __webpack_require__(29);
+	var _chartsChartjs = __webpack_require__(29);
 
-	var _userProfile = __webpack_require__(30);
+	var _widgets = __webpack_require__(30);
 
-	var _userVerification = __webpack_require__(31);
+	var _userProfile = __webpack_require__(31);
 
-	var _comingSoon = __webpack_require__(32);
+	var _userVerification = __webpack_require__(32);
 
-	var _userEdit = __webpack_require__(33);
+	var _comingSoon = __webpack_require__(33);
 
-	var _userPermissionsEdit = __webpack_require__(34);
+	var _userEdit = __webpack_require__(34);
 
-	var _userPermissionsAdd = __webpack_require__(35);
+	var _userPermissionsEdit = __webpack_require__(35);
 
-	var _userPermissions = __webpack_require__(36);
+	var _userPermissionsAdd = __webpack_require__(36);
 
-	var _userRolesEdit = __webpack_require__(37);
+	var _userPermissions = __webpack_require__(37);
 
-	var _userRolesAdd = __webpack_require__(38);
+	var _userRolesEdit = __webpack_require__(38);
 
-	var _userRoles = __webpack_require__(39);
+	var _userRolesAdd = __webpack_require__(39);
 
-	var _userLists = __webpack_require__(40);
+	var _userRoles = __webpack_require__(40);
 
-	var _dashboard = __webpack_require__(41);
+	var _userLists = __webpack_require__(41);
 
-	var _navSidebar = __webpack_require__(42);
+	var _dashboard = __webpack_require__(42);
 
-	var _navHeader = __webpack_require__(43);
+	var _navSidebar = __webpack_require__(43);
 
-	var _loginLoader = __webpack_require__(44);
+	var _navHeader = __webpack_require__(44);
 
-	var _resetPassword = __webpack_require__(45);
+	var _loginLoader = __webpack_require__(45);
 
-	var _forgotPassword = __webpack_require__(46);
+	var _resetPassword = __webpack_require__(46);
 
-	var _loginForm = __webpack_require__(47);
+	var _forgotPassword = __webpack_require__(47);
 
-	var _registerForm = __webpack_require__(48);
+	var _loginForm = __webpack_require__(48);
 
-	var _create_task = __webpack_require__(49);
+	var _registerForm = __webpack_require__(49);
 
-	var _tasks = __webpack_require__(50);
+	var _create_task = __webpack_require__(50);
 
-	var _departmentTasks = __webpack_require__(51);
+	var _tasks = __webpack_require__(51);
 
-	angular.module('app.components').component('taskDetailDirective', _taskDetailDirective.TaskDetailDirectiveComponent).component('task', _task.TaskComponent).component('tasksDisplay', _tasksDisplay.TasksDisplayComponent).component('tablesSimple', _tablesSimple.TablesSimpleComponent).component('uiModal', _uiModal.UiModalComponent).component('uiTimeline', _uiTimeline.UiTimelineComponent).component('uiButtons', _uiButtons.UiButtonsComponent).component('uiIcons', _uiIcons.UiIconsComponent).component('uiGeneral', _uiGeneral.UiGeneralComponent).component('formsGeneral', _formsGeneral.FormsGeneralComponent).component('chartsChartjs', _chartsChartjs.ChartsChartjsComponent).component('widgets', _widgets.WidgetsComponent).component('userProfile', _userProfile.UserProfileComponent).component('userVerification', _userVerification.UserVerificationComponent).component('comingSoon', _comingSoon.ComingSoonComponent).component('userEdit', _userEdit.UserEditComponent).component('userPermissionsEdit', _userPermissionsEdit.UserPermissionsEditComponent).component('userPermissionsAdd', _userPermissionsAdd.UserPermissionsAddComponent).component('userPermissions', _userPermissions.UserPermissionsComponent).component('userRolesEdit', _userRolesEdit.UserRolesEditComponent).component('userRolesAdd', _userRolesAdd.UserRolesAddComponent).component('userRoles', _userRoles.UserRolesComponent).component('userLists', _userLists.UserListsComponent).component('dashboard', _dashboard.DashboardComponent).component('navSidebar', _navSidebar.NavSidebarComponent).component('navHeader', _navHeader.NavHeaderComponent).component('loginLoader', _loginLoader.LoginLoaderComponent).component('resetPassword', _resetPassword.ResetPasswordComponent).component('forgotPassword', _forgotPassword.ForgotPasswordComponent).component('loginForm', _loginForm.LoginFormComponent).component('registerForm', _registerForm.RegisterFormComponent).component('createTask', _create_task.CreateTaskComponent).component('tasks', _tasks.TasksComponent
+	var _departmentTasks = __webpack_require__(52);
+
+	angular.module('app.components').component('departmentAdministrator', _departmentAdministrator.DepartmentAdministratorComponent).component('taskDetailDirective', _taskDetailDirective.TaskDetailDirectiveComponent).component('task', _task.TaskComponent).component('tasksDisplay', _tasksDisplay.TasksDisplayComponent).component('tablesSimple', _tablesSimple.TablesSimpleComponent).component('uiModal', _uiModal.UiModalComponent).component('uiTimeline', _uiTimeline.UiTimelineComponent).component('uiButtons', _uiButtons.UiButtonsComponent).component('uiIcons', _uiIcons.UiIconsComponent).component('uiGeneral', _uiGeneral.UiGeneralComponent).component('formsGeneral', _formsGeneral.FormsGeneralComponent).component('chartsChartjs', _chartsChartjs.ChartsChartjsComponent).component('widgets', _widgets.WidgetsComponent).component('userProfile', _userProfile.UserProfileComponent).component('userVerification', _userVerification.UserVerificationComponent).component('comingSoon', _comingSoon.ComingSoonComponent).component('userEdit', _userEdit.UserEditComponent).component('userPermissionsEdit', _userPermissionsEdit.UserPermissionsEditComponent).component('userPermissionsAdd', _userPermissionsAdd.UserPermissionsAddComponent).component('userPermissions', _userPermissions.UserPermissionsComponent).component('userRolesEdit', _userRolesEdit.UserRolesEditComponent).component('userRolesAdd', _userRolesAdd.UserRolesAddComponent).component('userRoles', _userRoles.UserRolesComponent).component('userLists', _userLists.UserListsComponent).component('dashboard', _dashboard.DashboardComponent).component('navSidebar', _navSidebar.NavSidebarComponent).component('navHeader', _navHeader.NavHeaderComponent).component('loginLoader', _loginLoader.LoginLoaderComponent).component('resetPassword', _resetPassword.ResetPasswordComponent).component('forgotPassword', _forgotPassword.ForgotPasswordComponent).component('loginForm', _loginForm.LoginFormComponent).component('registerForm', _registerForm.RegisterFormComponent).component('createTask', _create_task.CreateTaskComponent).component('tasks', _tasks.TasksComponent
 	// .component('departments', DepartmentsComponent)
 	).component('departmentTasks', _departmentTasks.DepartmentTasksComponent);
 	// import {DepartmentsComponent} from './app/components/departments/departments.component';
 
 /***/ }),
 /* 18 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var DepartmentAdministratorController = function () {
+	    DepartmentAdministratorController.$inject = ["userService", "$state"];
+	    function DepartmentAdministratorController(userService, $state) {
+	        'ngInject';
+
+	        _classCallCheck(this, DepartmentAdministratorController);
+
+	        this.userService = userService;
+	        this.$state = $state;
+
+	        //
+	    }
+
+	    _createClass(DepartmentAdministratorController, [{
+	        key: '$onInit',
+	        value: function $onInit() {
+	            var vm = this;
+	            this.userService.getDepartmentCategories().then(function (resp) {
+	                console.log(resp);
+	                vm.department_categories = resp.data.categories;
+	            }, function (error) {
+	                console.log(error);
+	            });
+	        }
+	    }, {
+	        key: 'createNewCategory',
+	        value: function createNewCategory() {
+	            var vm = this;
+	            vm.addingNewCategory = true;
+	            console.log(this.category_data);
+	            this.userService.createNewCategory({ category: this.category_data }).then(function (resp) {
+	                vm.addingNewCategory = false;
+	                vm.category_data = {};
+	                vm.$state.go('app.administrator', {}, { reload: true });
+	                console.log(resp);
+	            }, function (error) {
+	                vm.addingNewCategory = false;
+	                console.log(error);
+	            });
+	        }
+	    }]);
+
+	    return DepartmentAdministratorController;
+	}();
+
+	var DepartmentAdministratorComponent = exports.DepartmentAdministratorComponent = {
+	    templateUrl: './views/app/components/department-administrator/department-administrator.component.html',
+	    controller: DepartmentAdministratorController,
+	    controllerAs: 'vm',
+	    bindings: {}
+	};
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -109976,10 +110153,14 @@ module.run(['$templateCache', function($templateCache) {
 	        value: function $onChanges(changes) {
 	            var vm = this;
 	            // console.log('called onChanges',changes);
-	            if (angular.isDefined(changes.taskid.currentValue)) {
+	            if (angular.isDefined(changes.taskid)) {
+	                // console.log(changes.taskid); 
 	                vm.taskid = changes.taskid.currentValue;
+	                // if(vm.taskid == undefined) {
+	                //     vm.task = {};
+	                // }
 	                vm.loadingfilterDetail = true;
-	                console.log(vm.taskid);
+	                // console.log(vm.taskid);
 	                vm.userService.getSingleTask(vm.taskid).then(function (resp) {
 	                    vm.loadingfilterDetail = false;
 	                    // console.log(resp);
@@ -110051,7 +110232,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110099,7 +110280,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110129,8 +110310,8 @@ module.run(['$templateCache', function($templateCache) {
 	        value: function $onChanges(changes) {
 	            var vm = this;
 	            vm.taskid = undefined;
-	            console.log('called onChanges', changes);
-	            if (angular.isDefined(changes.tasks.currentValue)) {
+	            // console.log('called onChanges',changes.tasks);
+	            if (angular.isDefined(changes.tasks)) {
 	                if (changes.tasks.currentValue.length == 0) {
 	                    vm.taskid = undefined;
 	                } else {
@@ -110159,7 +110340,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110197,7 +110378,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110404,7 +110585,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110442,7 +110623,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110480,7 +110661,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110518,7 +110699,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110556,7 +110737,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110594,7 +110775,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110677,7 +110858,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110715,7 +110896,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110803,7 +110984,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110848,7 +111029,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110886,7 +111067,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -110977,7 +111158,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111046,7 +111227,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111115,7 +111296,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111207,7 +111388,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111297,7 +111478,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111366,7 +111547,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111458,7 +111639,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111550,7 +111731,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111633,7 +111814,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111678,7 +111859,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111722,7 +111903,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111764,7 +111945,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111856,7 +112037,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -111918,7 +112099,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112018,7 +112199,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112099,7 +112280,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112257,7 +112438,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112343,7 +112524,7 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112380,10 +112561,10 @@ module.run(['$templateCache', function($templateCache) {
 	        key: '$onInit',
 	        value: function $onInit() {
 	            var vm = this;
-
+	            vm.departments = {};
 	            this.userService.getAllDepartments().then(function (resp) {
 	                // console.log(resp);
-	                vm.departments = resp.data;
+	                vm.departments = resp.data.departments;
 	            }, function (error) {
 	                // console.log(error);
 	            });
@@ -112411,14 +112592,17 @@ module.run(['$templateCache', function($templateCache) {
 	        value: function changeFilter(department) {
 	            var vm = this;
 
+	            console.log(department);
 	            vm.current_department = department;
 
 	            vm.tasks = [];
 	            this.loadingFilter = true;
 
-	            this.dep_id = vm.current_department.id;
+	            this.dep_id = vm.current_department.dep_id;
 
-	            this.userService.getMyTasks(this.dep_id).then(function (resp) {
+	            console.log(this.dep_id);
+
+	            this.userService.getDepartmentTasks(this.dep_id).then(function (resp) {
 	                // console.log(resp);
 	                vm.loadingFilter = false;
 
@@ -112427,6 +112611,70 @@ module.run(['$templateCache', function($templateCache) {
 	                // console.log(error);
 	                vm.loadingFilter = false;
 	            });
+	        }
+	    }, {
+	        key: 'all_tasks',
+	        value: function all_tasks() {
+	            var vm = this;
+
+	            this.loadingFilter = true;
+
+	            this.dep_id = vm.current_department.id;
+
+	            // console.log(this.dep_id);
+
+	            this.userService.getDepartmentTasks(this.dep_id).then(function (resp) {
+	                // console.log(resp);
+	                vm.loadingFilter = false;
+
+	                vm.tasks = resp.data.tasks;
+	            }, function (error) {
+	                // console.log(error);
+	                vm.loadingFilter = false;
+	            });
+	        }
+	    }, {
+	        key: 'public_filter',
+	        value: function public_filter(filter) {
+	            var vm = this;
+	            if (filter) {
+	                this.loadingFilter = true;
+
+	                // this.dep_id = vm.current_department.id;
+	                // console.log(vm.current_department);
+
+	                this.userService.getDepartmentTasks(vm.current_department.id, 'department_public_tasks=true').then(function (resp) {
+	                    // console.log(resp);
+	                    vm.loadingFilter = false;
+
+	                    vm.tasks = resp.data.tasks;
+	                }, function (error) {
+	                    // console.log(error);
+	                    vm.loadingFilter = false;
+	                });
+	            } else {
+	                this.all_tasks();
+	            }
+	        }
+	    }, {
+	        key: 'private_filter',
+	        value: function private_filter(filter) {
+	            var vm = this;
+	            if (filter) {
+	                this.loadingFilter = true;
+
+	                this.userService.getDepartmentPrivateTasks(vm.current_department.id).then(function (resp) {
+	                    // console.log(resp);
+	                    vm.loadingFilter = false;
+
+	                    vm.tasks = resp.data.tasks;
+	                }, function (error) {
+	                    // console.log(error);
+	                    vm.loadingFilter = false;
+	                });
+	            } else {
+	                this.all_tasks();
+	            }
 	        }
 	    }]);
 
@@ -112441,21 +112689,21 @@ module.run(['$templateCache', function($templateCache) {
 	};
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _showLoader = __webpack_require__(53);
+	var _showLoader = __webpack_require__(54);
 
-	var _routeBodyclass = __webpack_require__(54);
+	var _routeBodyclass = __webpack_require__(55);
 
-	var _passwordVerify = __webpack_require__(55);
+	var _passwordVerify = __webpack_require__(56);
 
 	angular.module('app.components').directive('routeBodyclass', _routeBodyclass.RouteBodyClassComponent).directive('passwordVerify', _passwordVerify.PasswordVerifyClassComponent).directive('showLoader', _showLoader.ShowLoaderDirective);
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112504,7 +112752,7 @@ module.run(['$templateCache', function($templateCache) {
 	var ShowLoaderDirective = exports.ShowLoaderDirective = ShowLoader;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112540,7 +112788,7 @@ module.run(['$templateCache', function($templateCache) {
 	var RouteBodyClassComponent = exports.RouteBodyClassComponent = routeBodyClass;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112585,21 +112833,21 @@ module.run(['$templateCache', function($templateCache) {
 	var PasswordVerifyClassComponent = exports.PasswordVerifyClassComponent = passwordVerifyClass;
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _context = __webpack_require__(57);
+	var _context = __webpack_require__(58);
 
-	var _API = __webpack_require__(58);
+	var _API = __webpack_require__(59);
 
-	var _userService = __webpack_require__(59);
+	var _userService = __webpack_require__(60);
 
 	angular.module('app.services').service('ContextService', _context.ContextService).service('API', _API.APIService).service('userService', _userService.userService);
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112651,7 +112899,7 @@ module.run(['$templateCache', function($templateCache) {
 	}();
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112702,7 +112950,7 @@ module.run(['$templateCache', function($templateCache) {
 	}];
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -112815,7 +113063,7 @@ module.run(['$templateCache', function($templateCache) {
 	  }, {
 	    key: 'getSingleTask',
 	    value: function getSingleTask(id) {
-	      if (id == null) {
+	      if (id == null || id == undefined) {
 	        return;
 	      }
 	      return this.$http.get(this.urlBase + 'tasks/' + id);
@@ -112830,13 +113078,35 @@ module.run(['$templateCache', function($templateCache) {
 
 	  }, {
 	    key: 'getDepartmentTasks',
-	    value: function getDepartmentTasks(id) {
-	      return this.$http.get(this.urlBase + 'departments/' + id + '/tasks');
+	    value: function getDepartmentTasks(id, filter) {
+	      if (!filter) {
+	        return this.$http.get(this.urlBase + 'departments/' + id + '/tasks');
+	      } else {
+	        return this.$http.get(this.urlBase + 'departments/' + id + '/tasks?' + filter);
+	      }
 	    }
 	  }, {
 	    key: 'getAllDepartments',
 	    value: function getAllDepartments() {
 	      return this.$http.get(this.urlBase + 'departments');
+	    }
+	  }, {
+	    key: 'getDepartmentPrivateTasks',
+	    value: function getDepartmentPrivateTasks(id) {
+	      return this.$http.get(this.urlBase + 'departments/' + id + '/tasks/private');
+	    }
+
+	    //CATEGORY URLS
+
+	  }, {
+	    key: 'getDepartmentCategories',
+	    value: function getDepartmentCategories() {
+	      return this.$http.get(this.urlBase + 'categories');
+	    }
+	  }, {
+	    key: 'createNewCategory',
+	    value: function createNewCategory(data) {
+	      return this.$http.post(this.urlBase + 'categories', data);
 	    }
 	  }]);
 

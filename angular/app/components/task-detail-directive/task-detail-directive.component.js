@@ -49,10 +49,14 @@ class TaskDetailDirectiveController{
     $onChanges(changes) {
         let vm = this;
         // console.log('called onChanges',changes);
-        if(angular.isDefined(changes.taskid.currentValue) ){ 
+        if(angular.isDefined(changes.taskid) ){
+            // console.log(changes.taskid); 
             vm.taskid = changes.taskid.currentValue;
+            // if(vm.taskid == undefined) {
+            //     vm.task = {};
+            // }
             vm.loadingfilterDetail = true;
-            console.log(vm.taskid);
+            // console.log(vm.taskid);
             vm.userService.getSingleTask(vm.taskid).then(function(resp){
                 vm.loadingfilterDetail = false;
                 // console.log(resp);
@@ -60,7 +64,7 @@ class TaskDetailDirectiveController{
             }, function(error){
                 vm.loadingfilterDetail = false;
                 // console.log(error);
-            })
+            });
         }
     }
 

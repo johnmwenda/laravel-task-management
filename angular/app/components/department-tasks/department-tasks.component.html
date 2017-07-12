@@ -21,7 +21,7 @@
       <ul class="dropdown-menu">
         
         <li ng-repeat = "department in vm.departments">
-        <a ng-click = "vm.changeFilter(department)"><i ng-if ="vm.current_id == department.dep_id " class="fa fa-fw fa-check"></i> {{department.name}}</a>
+        <a href = "" ng-click = "vm.changeFilter(department)"><i ng-if ="vm.current_id == department.dep_id " class="fa fa-fw fa-check"></i> {{department.name}}</a>
         </li>
         
 
@@ -35,9 +35,9 @@
     </div>
     <!-- <div class="clearfix"></div> -->
     <div>
-    <button style="margin-left: 10px" type="button" class="btn btn-default">Public</button>
+    <button ng-class = "{'btn-warning': vm.publicfilter}" ng-click = "vm.privatefilter = false;vm.publicfilter = !vm.publicfilter; vm.public_filter(vm.publicfilter)" style="margin-left: 10px" type="button" class="btn btn-default">Public</button>
 
-    <button style="margin-left: 5px" type="button" class="btn btn-default">Private</button>
+    <button ng-class = "{'btn-warning': vm.privatefilter}" ng-click = "vm.publicfilter = false;vm.privatefilter = !vm.privatefilter; vm.private_filter(vm.privatefilter)" style="margin-left: 5px" type="button" class="btn btn-default">Private</button>
     <!-- <div class="dropdown" style="margin-left: 10px; float: left">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Public
       <span class="caret"></span></button>
@@ -58,7 +58,7 @@
 
 <section class="content">
 <div class="row">
-      <tasks-display tasks="vm.tasks"></tasks-display>
+      <tasks-display tasks="vm.tasks" loadingfilter="vm.loadingFilter"></tasks-display>
       
       </div>
 </section>

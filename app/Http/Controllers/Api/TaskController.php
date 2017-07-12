@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 
+use App\Department;
 use App\Http\Requests\Api\CreateProgress;
 use App\Http\Requests\Api\CreateTask;
 use App\Task;
@@ -183,6 +184,32 @@ class TaskController extends ApiController
         return $this->respondWithPagination($tasks);
     }
 
+    /**
+     * Get the department tasks
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function getDepartmentTasks(TaskFilter $filter, Department $department)
+    {
+        $tasks = new Paginate(Task::where('department_id', $department->id)->filter($filter));
+
+        return $this->respondWithPagination($tasks);
+    }
+
+
+    /**
+     * Get the department tasks
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function getDepartmentPrivateTasks(TaskFilter $filter, Department $department)
+    {
+        $tasks = new Paginate(Task::where('department_id', $department->id)->where('access_level', 'private'));
+
+        return $this->respondWithPagination($tasks);
+    }
 
 
 

@@ -56,9 +56,9 @@
 
 	__webpack_require__(17);
 
-	__webpack_require__(52);
+	__webpack_require__(53);
 
-	__webpack_require__(56);
+	__webpack_require__(57);
 
 /***/ }),
 /* 1 */
@@ -261,6 +261,16 @@
 	    views: {
 	      'main@app': {
 	        template: '<tasks></tasks>'
+	      }
+	    }
+	  }).state('app.administrator', {
+	    url: '/administrator',
+	    data: {
+	      // auth: true
+	    },
+	    views: {
+	      'main@app': {
+	        template: '<department-administrator></department-administrator'
 	      }
 	    }
 	  }).state('app.single-task', {
@@ -864,81 +874,149 @@
 
 	'use strict';
 
-	var _taskDetailDirective = __webpack_require__(18);
+	var _departmentAdministrator = __webpack_require__(18);
 
-	var _task = __webpack_require__(19);
+	var _taskDetailDirective = __webpack_require__(19);
 
-	var _tasksDisplay = __webpack_require__(20);
+	var _task = __webpack_require__(20);
 
-	var _tablesSimple = __webpack_require__(21);
+	var _tasksDisplay = __webpack_require__(21);
 
-	var _uiModal = __webpack_require__(22);
+	var _tablesSimple = __webpack_require__(22);
 
-	var _uiTimeline = __webpack_require__(23);
+	var _uiModal = __webpack_require__(23);
 
-	var _uiButtons = __webpack_require__(24);
+	var _uiTimeline = __webpack_require__(24);
 
-	var _uiIcons = __webpack_require__(25);
+	var _uiButtons = __webpack_require__(25);
 
-	var _uiGeneral = __webpack_require__(26);
+	var _uiIcons = __webpack_require__(26);
 
-	var _formsGeneral = __webpack_require__(27);
+	var _uiGeneral = __webpack_require__(27);
 
-	var _chartsChartjs = __webpack_require__(28);
+	var _formsGeneral = __webpack_require__(28);
 
-	var _widgets = __webpack_require__(29);
+	var _chartsChartjs = __webpack_require__(29);
 
-	var _userProfile = __webpack_require__(30);
+	var _widgets = __webpack_require__(30);
 
-	var _userVerification = __webpack_require__(31);
+	var _userProfile = __webpack_require__(31);
 
-	var _comingSoon = __webpack_require__(32);
+	var _userVerification = __webpack_require__(32);
 
-	var _userEdit = __webpack_require__(33);
+	var _comingSoon = __webpack_require__(33);
 
-	var _userPermissionsEdit = __webpack_require__(34);
+	var _userEdit = __webpack_require__(34);
 
-	var _userPermissionsAdd = __webpack_require__(35);
+	var _userPermissionsEdit = __webpack_require__(35);
 
-	var _userPermissions = __webpack_require__(36);
+	var _userPermissionsAdd = __webpack_require__(36);
 
-	var _userRolesEdit = __webpack_require__(37);
+	var _userPermissions = __webpack_require__(37);
 
-	var _userRolesAdd = __webpack_require__(38);
+	var _userRolesEdit = __webpack_require__(38);
 
-	var _userRoles = __webpack_require__(39);
+	var _userRolesAdd = __webpack_require__(39);
 
-	var _userLists = __webpack_require__(40);
+	var _userRoles = __webpack_require__(40);
 
-	var _dashboard = __webpack_require__(41);
+	var _userLists = __webpack_require__(41);
 
-	var _navSidebar = __webpack_require__(42);
+	var _dashboard = __webpack_require__(42);
 
-	var _navHeader = __webpack_require__(43);
+	var _navSidebar = __webpack_require__(43);
 
-	var _loginLoader = __webpack_require__(44);
+	var _navHeader = __webpack_require__(44);
 
-	var _resetPassword = __webpack_require__(45);
+	var _loginLoader = __webpack_require__(45);
 
-	var _forgotPassword = __webpack_require__(46);
+	var _resetPassword = __webpack_require__(46);
 
-	var _loginForm = __webpack_require__(47);
+	var _forgotPassword = __webpack_require__(47);
 
-	var _registerForm = __webpack_require__(48);
+	var _loginForm = __webpack_require__(48);
 
-	var _create_task = __webpack_require__(49);
+	var _registerForm = __webpack_require__(49);
 
-	var _tasks = __webpack_require__(50);
+	var _create_task = __webpack_require__(50);
 
-	var _departmentTasks = __webpack_require__(51);
+	var _tasks = __webpack_require__(51);
 
-	angular.module('app.components').component('taskDetailDirective', _taskDetailDirective.TaskDetailDirectiveComponent).component('task', _task.TaskComponent).component('tasksDisplay', _tasksDisplay.TasksDisplayComponent).component('tablesSimple', _tablesSimple.TablesSimpleComponent).component('uiModal', _uiModal.UiModalComponent).component('uiTimeline', _uiTimeline.UiTimelineComponent).component('uiButtons', _uiButtons.UiButtonsComponent).component('uiIcons', _uiIcons.UiIconsComponent).component('uiGeneral', _uiGeneral.UiGeneralComponent).component('formsGeneral', _formsGeneral.FormsGeneralComponent).component('chartsChartjs', _chartsChartjs.ChartsChartjsComponent).component('widgets', _widgets.WidgetsComponent).component('userProfile', _userProfile.UserProfileComponent).component('userVerification', _userVerification.UserVerificationComponent).component('comingSoon', _comingSoon.ComingSoonComponent).component('userEdit', _userEdit.UserEditComponent).component('userPermissionsEdit', _userPermissionsEdit.UserPermissionsEditComponent).component('userPermissionsAdd', _userPermissionsAdd.UserPermissionsAddComponent).component('userPermissions', _userPermissions.UserPermissionsComponent).component('userRolesEdit', _userRolesEdit.UserRolesEditComponent).component('userRolesAdd', _userRolesAdd.UserRolesAddComponent).component('userRoles', _userRoles.UserRolesComponent).component('userLists', _userLists.UserListsComponent).component('dashboard', _dashboard.DashboardComponent).component('navSidebar', _navSidebar.NavSidebarComponent).component('navHeader', _navHeader.NavHeaderComponent).component('loginLoader', _loginLoader.LoginLoaderComponent).component('resetPassword', _resetPassword.ResetPasswordComponent).component('forgotPassword', _forgotPassword.ForgotPasswordComponent).component('loginForm', _loginForm.LoginFormComponent).component('registerForm', _registerForm.RegisterFormComponent).component('createTask', _create_task.CreateTaskComponent).component('tasks', _tasks.TasksComponent
+	var _departmentTasks = __webpack_require__(52);
+
+	angular.module('app.components').component('departmentAdministrator', _departmentAdministrator.DepartmentAdministratorComponent).component('taskDetailDirective', _taskDetailDirective.TaskDetailDirectiveComponent).component('task', _task.TaskComponent).component('tasksDisplay', _tasksDisplay.TasksDisplayComponent).component('tablesSimple', _tablesSimple.TablesSimpleComponent).component('uiModal', _uiModal.UiModalComponent).component('uiTimeline', _uiTimeline.UiTimelineComponent).component('uiButtons', _uiButtons.UiButtonsComponent).component('uiIcons', _uiIcons.UiIconsComponent).component('uiGeneral', _uiGeneral.UiGeneralComponent).component('formsGeneral', _formsGeneral.FormsGeneralComponent).component('chartsChartjs', _chartsChartjs.ChartsChartjsComponent).component('widgets', _widgets.WidgetsComponent).component('userProfile', _userProfile.UserProfileComponent).component('userVerification', _userVerification.UserVerificationComponent).component('comingSoon', _comingSoon.ComingSoonComponent).component('userEdit', _userEdit.UserEditComponent).component('userPermissionsEdit', _userPermissionsEdit.UserPermissionsEditComponent).component('userPermissionsAdd', _userPermissionsAdd.UserPermissionsAddComponent).component('userPermissions', _userPermissions.UserPermissionsComponent).component('userRolesEdit', _userRolesEdit.UserRolesEditComponent).component('userRolesAdd', _userRolesAdd.UserRolesAddComponent).component('userRoles', _userRoles.UserRolesComponent).component('userLists', _userLists.UserListsComponent).component('dashboard', _dashboard.DashboardComponent).component('navSidebar', _navSidebar.NavSidebarComponent).component('navHeader', _navHeader.NavHeaderComponent).component('loginLoader', _loginLoader.LoginLoaderComponent).component('resetPassword', _resetPassword.ResetPasswordComponent).component('forgotPassword', _forgotPassword.ForgotPasswordComponent).component('loginForm', _loginForm.LoginFormComponent).component('registerForm', _registerForm.RegisterFormComponent).component('createTask', _create_task.CreateTaskComponent).component('tasks', _tasks.TasksComponent
 	// .component('departments', DepartmentsComponent)
 	).component('departmentTasks', _departmentTasks.DepartmentTasksComponent);
 	// import {DepartmentsComponent} from './app/components/departments/departments.component';
 
 /***/ }),
 /* 18 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var DepartmentAdministratorController = function () {
+	    DepartmentAdministratorController.$inject = ["userService", "$state"];
+	    function DepartmentAdministratorController(userService, $state) {
+	        'ngInject';
+
+	        _classCallCheck(this, DepartmentAdministratorController);
+
+	        this.userService = userService;
+	        this.$state = $state;
+
+	        //
+	    }
+
+	    _createClass(DepartmentAdministratorController, [{
+	        key: '$onInit',
+	        value: function $onInit() {
+	            var vm = this;
+	            this.userService.getDepartmentCategories().then(function (resp) {
+	                console.log(resp);
+	                vm.department_categories = resp.data.categories;
+	            }, function (error) {
+	                console.log(error);
+	            });
+	        }
+	    }, {
+	        key: 'createNewCategory',
+	        value: function createNewCategory() {
+	            var vm = this;
+	            vm.addingNewCategory = true;
+	            console.log(this.category_data);
+	            this.userService.createNewCategory({ category: this.category_data }).then(function (resp) {
+	                vm.addingNewCategory = false;
+	                vm.category_data = {};
+	                vm.$state.go('app.administrator', {}, { reload: true });
+	                console.log(resp);
+	            }, function (error) {
+	                vm.addingNewCategory = false;
+	                console.log(error);
+	            });
+	        }
+	    }]);
+
+	    return DepartmentAdministratorController;
+	}();
+
+	var DepartmentAdministratorComponent = exports.DepartmentAdministratorComponent = {
+	    templateUrl: './views/app/components/department-administrator/department-administrator.component.html',
+	    controller: DepartmentAdministratorController,
+	    controllerAs: 'vm',
+	    bindings: {}
+	};
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1004,10 +1082,14 @@
 	        value: function $onChanges(changes) {
 	            var vm = this;
 	            // console.log('called onChanges',changes);
-	            if (angular.isDefined(changes.taskid.currentValue)) {
+	            if (angular.isDefined(changes.taskid)) {
+	                // console.log(changes.taskid); 
 	                vm.taskid = changes.taskid.currentValue;
+	                // if(vm.taskid == undefined) {
+	                //     vm.task = {};
+	                // }
 	                vm.loadingfilterDetail = true;
-	                console.log(vm.taskid);
+	                // console.log(vm.taskid);
 	                vm.userService.getSingleTask(vm.taskid).then(function (resp) {
 	                    vm.loadingfilterDetail = false;
 	                    // console.log(resp);
@@ -1079,7 +1161,7 @@
 	};
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1127,7 +1209,7 @@
 	};
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1157,8 +1239,8 @@
 	        value: function $onChanges(changes) {
 	            var vm = this;
 	            vm.taskid = undefined;
-	            console.log('called onChanges', changes);
-	            if (angular.isDefined(changes.tasks.currentValue)) {
+	            // console.log('called onChanges',changes.tasks);
+	            if (angular.isDefined(changes.tasks)) {
 	                if (changes.tasks.currentValue.length == 0) {
 	                    vm.taskid = undefined;
 	                } else {
@@ -1187,7 +1269,7 @@
 	};
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1225,7 +1307,7 @@
 	};
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1432,7 +1514,7 @@
 	};
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1470,7 +1552,7 @@
 	};
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1508,7 +1590,7 @@
 	};
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1546,7 +1628,7 @@
 	};
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1584,7 +1666,7 @@
 	};
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1622,7 +1704,7 @@
 	};
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1705,7 +1787,7 @@
 	};
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1743,7 +1825,7 @@
 	};
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1831,7 +1913,7 @@
 	};
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1876,7 +1958,7 @@
 	};
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1914,7 +1996,7 @@
 	};
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2005,7 +2087,7 @@
 	};
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2074,7 +2156,7 @@
 	};
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2143,7 +2225,7 @@
 	};
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2235,7 +2317,7 @@
 	};
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2325,7 +2407,7 @@
 	};
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2394,7 +2476,7 @@
 	};
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2486,7 +2568,7 @@
 	};
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2578,7 +2660,7 @@
 	};
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2661,7 +2743,7 @@
 	};
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2706,7 +2788,7 @@
 	};
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2750,7 +2832,7 @@
 	};
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2792,7 +2874,7 @@
 	};
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2884,7 +2966,7 @@
 	};
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2946,7 +3028,7 @@
 	};
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3046,7 +3128,7 @@
 	};
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3127,7 +3209,7 @@
 	};
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3285,7 +3367,7 @@
 	};
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3371,7 +3453,7 @@
 	};
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3408,10 +3490,10 @@
 	        key: '$onInit',
 	        value: function $onInit() {
 	            var vm = this;
-
+	            vm.departments = {};
 	            this.userService.getAllDepartments().then(function (resp) {
 	                // console.log(resp);
-	                vm.departments = resp.data;
+	                vm.departments = resp.data.departments;
 	            }, function (error) {
 	                // console.log(error);
 	            });
@@ -3439,14 +3521,17 @@
 	        value: function changeFilter(department) {
 	            var vm = this;
 
+	            console.log(department);
 	            vm.current_department = department;
 
 	            vm.tasks = [];
 	            this.loadingFilter = true;
 
-	            this.dep_id = vm.current_department.id;
+	            this.dep_id = vm.current_department.dep_id;
 
-	            this.userService.getMyTasks(this.dep_id).then(function (resp) {
+	            console.log(this.dep_id);
+
+	            this.userService.getDepartmentTasks(this.dep_id).then(function (resp) {
 	                // console.log(resp);
 	                vm.loadingFilter = false;
 
@@ -3455,6 +3540,70 @@
 	                // console.log(error);
 	                vm.loadingFilter = false;
 	            });
+	        }
+	    }, {
+	        key: 'all_tasks',
+	        value: function all_tasks() {
+	            var vm = this;
+
+	            this.loadingFilter = true;
+
+	            this.dep_id = vm.current_department.id;
+
+	            // console.log(this.dep_id);
+
+	            this.userService.getDepartmentTasks(this.dep_id).then(function (resp) {
+	                // console.log(resp);
+	                vm.loadingFilter = false;
+
+	                vm.tasks = resp.data.tasks;
+	            }, function (error) {
+	                // console.log(error);
+	                vm.loadingFilter = false;
+	            });
+	        }
+	    }, {
+	        key: 'public_filter',
+	        value: function public_filter(filter) {
+	            var vm = this;
+	            if (filter) {
+	                this.loadingFilter = true;
+
+	                // this.dep_id = vm.current_department.id;
+	                // console.log(vm.current_department);
+
+	                this.userService.getDepartmentTasks(vm.current_department.id, 'department_public_tasks=true').then(function (resp) {
+	                    // console.log(resp);
+	                    vm.loadingFilter = false;
+
+	                    vm.tasks = resp.data.tasks;
+	                }, function (error) {
+	                    // console.log(error);
+	                    vm.loadingFilter = false;
+	                });
+	            } else {
+	                this.all_tasks();
+	            }
+	        }
+	    }, {
+	        key: 'private_filter',
+	        value: function private_filter(filter) {
+	            var vm = this;
+	            if (filter) {
+	                this.loadingFilter = true;
+
+	                this.userService.getDepartmentPrivateTasks(vm.current_department.id).then(function (resp) {
+	                    // console.log(resp);
+	                    vm.loadingFilter = false;
+
+	                    vm.tasks = resp.data.tasks;
+	                }, function (error) {
+	                    // console.log(error);
+	                    vm.loadingFilter = false;
+	                });
+	            } else {
+	                this.all_tasks();
+	            }
 	        }
 	    }]);
 
@@ -3469,21 +3618,21 @@
 	};
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _showLoader = __webpack_require__(53);
+	var _showLoader = __webpack_require__(54);
 
-	var _routeBodyclass = __webpack_require__(54);
+	var _routeBodyclass = __webpack_require__(55);
 
-	var _passwordVerify = __webpack_require__(55);
+	var _passwordVerify = __webpack_require__(56);
 
 	angular.module('app.components').directive('routeBodyclass', _routeBodyclass.RouteBodyClassComponent).directive('passwordVerify', _passwordVerify.PasswordVerifyClassComponent).directive('showLoader', _showLoader.ShowLoaderDirective);
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3532,7 +3681,7 @@
 	var ShowLoaderDirective = exports.ShowLoaderDirective = ShowLoader;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3568,7 +3717,7 @@
 	var RouteBodyClassComponent = exports.RouteBodyClassComponent = routeBodyClass;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3613,21 +3762,21 @@
 	var PasswordVerifyClassComponent = exports.PasswordVerifyClassComponent = passwordVerifyClass;
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _context = __webpack_require__(57);
+	var _context = __webpack_require__(58);
 
-	var _API = __webpack_require__(58);
+	var _API = __webpack_require__(59);
 
-	var _userService = __webpack_require__(59);
+	var _userService = __webpack_require__(60);
 
 	angular.module('app.services').service('ContextService', _context.ContextService).service('API', _API.APIService).service('userService', _userService.userService);
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3679,7 +3828,7 @@
 	}();
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3730,7 +3879,7 @@
 	}];
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -3843,7 +3992,7 @@
 	  }, {
 	    key: 'getSingleTask',
 	    value: function getSingleTask(id) {
-	      if (id == null) {
+	      if (id == null || id == undefined) {
 	        return;
 	      }
 	      return this.$http.get(this.urlBase + 'tasks/' + id);
@@ -3858,13 +4007,35 @@
 
 	  }, {
 	    key: 'getDepartmentTasks',
-	    value: function getDepartmentTasks(id) {
-	      return this.$http.get(this.urlBase + 'departments/' + id + '/tasks');
+	    value: function getDepartmentTasks(id, filter) {
+	      if (!filter) {
+	        return this.$http.get(this.urlBase + 'departments/' + id + '/tasks');
+	      } else {
+	        return this.$http.get(this.urlBase + 'departments/' + id + '/tasks?' + filter);
+	      }
 	    }
 	  }, {
 	    key: 'getAllDepartments',
 	    value: function getAllDepartments() {
 	      return this.$http.get(this.urlBase + 'departments');
+	    }
+	  }, {
+	    key: 'getDepartmentPrivateTasks',
+	    value: function getDepartmentPrivateTasks(id) {
+	      return this.$http.get(this.urlBase + 'departments/' + id + '/tasks/private');
+	    }
+
+	    //CATEGORY URLS
+
+	  }, {
+	    key: 'getDepartmentCategories',
+	    value: function getDepartmentCategories() {
+	      return this.$http.get(this.urlBase + 'categories');
+	    }
+	  }, {
+	    key: 'createNewCategory',
+	    value: function createNewCategory(data) {
+	      return this.$http.post(this.urlBase + 'categories', data);
 	    }
 	  }]);
 

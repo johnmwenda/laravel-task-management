@@ -429,18 +429,18 @@
                   <td>{{$index+1}}</td>
                   <td>{{task.name}}</td>
                   <td>{{task.category.name}}</td>
-                  <td><span class="badge bg-red">55%</span></td>
+                  <td><span class="badge bg-red">{{task.progress[task.progress.length-1]['progress_status_percent'] || 0}}%</span></td>
                 </tr>
                 
               </tbody></table>
         </div>
         <div class="box-footer text-center">
-          <a href="javascript:void(0)" class="uppercase">View All Products</a>
+          <!-- <a href="javascript:void(0)" class="uppercase">View All Products</a> -->
         </div>
       </div>
     </div>
 
-    <div class="col-md-4"><!-- 
+    <div class="col-md-4 no-padding-left"><!-- 
       <div class="info-box bg-yellow">
         <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
         <div class="info-box-content">
@@ -534,7 +534,7 @@
 
                <span ng-if="item.data.type == 'update_progress_status' ">
                   <a href="">{{item.data.progress.owner.name}}</a>  
-                 <span><small>added</small> a progress message on <a ui-sref="app.single-task({id: item.data.task_id})">task-{{item.data.task_id}}</a></span>
+                 <span><small>added</small> a progress message on <a ui-sref="app.single-task({id: item.data.task_id})">task{{item.data.task_id}}</a></span>
                </span><br/>
 
                 <blockquote ng-if = "item.data.type == 'create_task'">

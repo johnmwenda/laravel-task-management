@@ -39,6 +39,12 @@ Route::group(['namespace' => 'Api'], function() {
     Route::delete('users/me/notifications/{notification}', 'UserNotificationsController@destroy');
     //Current logged in user categories
     Route::get('users/me/categories', 'CategoryController@getTaskCategoriesForLoggedInUser');
+
+    //Administer categories of a department
+    Route::get('categories', 'CategoryController@index')->middleware('auth.api','isDepartmentAdmin');
+
+    Route::post('categories', 'CategoryController@store')->middleware('auth.api','isDepartmentAdmin');
+
     //Other user's tasks
     Route::get('users/{user}/tasks', 'TaskController@otherUsersTasks');
     //View, Update, Delete, Edit a single task
@@ -50,7 +56,9 @@ Route::group(['namespace' => 'Api'], function() {
 	Route::post('users', 'AuthController@register');
 
     //Get a departments tasks
-    Route::get('departments/{department}/tasks', 'DepartmentController@getAllUsers');    
+    Route::get('departments/{department}/tasks', 'TaskController@getDepartmentTasks');    
+    //Get a department private tasks
+    Route::get('departments/{department}/tasks/private', 'TaskController@getDepartmentPrivateTasks');    
     //View, Update, Delete, Edit a single department
     Route::resource('departments', 'DepartmentController');
     // Route::get('/test', function () {

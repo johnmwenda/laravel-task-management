@@ -101,4 +101,19 @@ class TaskFilter extends Filter
     //     return $this->builder->whereUserId($userId);
     // }
 
+
+    /**
+     * Filter by private.
+     * Get all the articles by the user with given username.
+     *
+     * @param $boolean... should be true
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    protected function department_public_tasks($param)
+    {
+        // dd($param);
+        if($param === true || $param == 'true') {
+            return $this->builder->where('access_level', 'public' );
+        }   
+    }
 }

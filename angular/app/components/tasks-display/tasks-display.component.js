@@ -12,8 +12,8 @@ class TasksDisplayController{
     $onChanges(changes) { 
         let vm = this;
         vm.taskid = undefined;
-        console.log('called onChanges',changes);
-        if(angular.isDefined(changes.tasks.currentValue)) {
+        // console.log('called onChanges',changes.tasks);
+        if(angular.isDefined(changes.tasks)) {
             if(changes.tasks.currentValue.length == 0){
                 vm.taskid = undefined;
             }else {

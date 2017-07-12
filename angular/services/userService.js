@@ -85,7 +85,7 @@ export class userService {
   }
 
   getSingleTask(id) {
-    if(id == null){
+    if(id == null || id == undefined){
       return
     }
     return this.$http.get(this.urlBase + 'tasks/' +id); 
@@ -96,12 +96,30 @@ export class userService {
   }
 
   //DEPARTMENT URLS
-  getDepartmentTasks(id) {
-    return this.$http.get(this.urlBase + 'departments/' + id +'/tasks');
+  getDepartmentTasks(id, filter) {
+    if(!filter){
+      return this.$http.get(this.urlBase + 'departments/' + id +'/tasks');  
+    }else {
+      return this.$http.get(this.urlBase + 'departments/' + id +'/tasks?'+filter);
+    }
+    
   }
 
   getAllDepartments() {
     return this.$http.get(this.urlBase + 'departments'); 
+  }
+
+  getDepartmentPrivateTasks(id) {
+    return this.$http.get(this.urlBase + 'departments/' + id +'/tasks/private');  
+  }
+
+  //CATEGORY URLS
+  getDepartmentCategories() {
+    return this.$http.get(this.urlBase + 'categories');   
+  }
+
+  createNewCategory(data) {
+    return this.$http.post(this.urlBase + 'categories', data);
   }
 
 }
