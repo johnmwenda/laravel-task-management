@@ -99943,6 +99943,295 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/create-task/create-task.page.html',
+    '<create-task></create-task>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/department-tasks/department-tasks.page.html',
+    '<department-tasks></department-tasks>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/footer/footer.page.html',
+    '<footer class="main-footer">\n' +
+    '  <div class="pull-right hidden-xs">\n' +
+    '    <b>Version</b> 2.3.3\n' +
+    '  </div>\n' +
+    '  <strong>Copyright &copy; 2016-2017 <a>Cytonn Web App</a>.</strong> All rights reserved.\n' +
+    '</footer>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/forgot-password/forgot-password.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <h3>Forgot your password?</h3>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <forgot-password></forgot-password>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <br>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <a ui-sref="login">Back to Login Page</a>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/header/header.page.html',
+    '<nav-header></nav-header>\n' +
+    '<nav-sidebar></nav-sidebar>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/landing/landing.page.html',
+    '<section class="content-header">\n' +
+    '  <h1>\n' +
+    '    Home\n' +
+    '  </h1>\n' +
+    '  <ol class="breadcrumb">\n' +
+    '    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
+    '    <li class="active">Dashboard</li>\n' +
+    '  </ol>\n' +
+    '</section>\n' +
+    '<dashboard></dashboard>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/layout/layout.page.html',
+    '<div ui-view="header" id = "cytonn-app"></div>\n' +
+    '<div class="content-wrapper">\n' +
+    '    <div ui-view="main"></div>\n' +
+    '</div>\n' +
+    '<div ui-view="footer"></div>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/login/login.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>App</b>System</a> \n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <h3>Sign in</h3>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <login-form></login-form>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/login-loader/login-loader.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <login-loader></login-loader>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/register/register.page.html',
+    '<div class="register-box">\n' +
+    '  <div class="register-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="register-box-body">\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <h3>Create a new account</h3>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <register-form></register-form>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <br>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <a ui-sref="login">I already have an account</a>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <br>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        By signing up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Privacy Policy</a>.\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/reset-password/reset-password.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <div class="row-">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <div class="text-center">\n' +
+    '          <h3>Reset Password</h3>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="row">\n' +
+    '      <div class="col-xs-12">\n' +
+    '        <reset-password></reset-password>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/tasks/tasks.page.html',
+    '<tasks></tasks>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/user-verification/user-verification.page.html',
+    '<div class="login-box">\n' +
+    '  <div class="login-logo">\n' +
+    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
+    '  </div>\n' +
+    '  <div class="login-box-body">\n' +
+    '    <user-verification></user-verification>\n' +
+    '  </div>\n' +
+    '</div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/components/charts-chartjs/charts-chartjs.component.html',
     '<section class="content-header">\n' +
     '  <h1>ChartJS<small>Preview sample</small></h1>\n' +
@@ -101649,8 +101938,11 @@ module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/components/department-administrator/department-administrator.component.html',
     '<section class="content">\n' +
     '<!-- ############# 1 ROW ################ -->\n' +
+    '  <h4>Only authorized user is able to add Task Categories for their department. They have a role of Department Administrator</h4>\n' +
+    '  username: <b>mark@gmail.com</b><br/>\n' +
+    '  password: <b>mark123</b><br/>  \n' +
     '\n' +
-    '  <div class="row">\n' +
+    '  <div class="row" style="margin-top: 10px">\n' +
     '    <div class="col-md-8">\n' +
     '      <div class="row">\n' +
     '   \n' +
@@ -101734,6 +102026,113 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '  </div>\n' +
     '</section>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/components/department-tasks/department-tasks.component.html',
+    '<section class="content-header">\n' +
+    '	<h1 style="display: inline-block;float: left;">\n' +
+    '		Departments \n' +
+    '		<!-- <small>Preview</small> -->\n' +
+    '	</h1>\n' +
+    '  <!-- <div class="dropdown" style="margin-left: 10px; float: left">\n' +
+    '    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Administration Department\n' +
+    '      <span class="caret"></span></button>\n' +
+    '      <ul class="dropdown-menu">\n' +
+    '        <li><a href="">IT Department</a></li>\n' +
+    '        <li><a href="">Finance</a></li>\n' +
+    '        <li><a href="">Stores and supplies</a></li>\n' +
+    '        <li><a href="">Operations department</a></li>\n' +
+    '        \n' +
+    '      </ul>\n' +
+    '    </div> -->\n' +
+    '\n' +
+    '    <div class="dropdown" style="margin-left: 10px; float: left">\n' +
+    '    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Switch filter\n' +
+    '      <span class="caret"></span></button>\n' +
+    '      <ul style="z-index: 901331;" class="dropdown-menu">\n' +
+    '        \n' +
+    '        <li ng-repeat = "department in vm.departments">\n' +
+    '        <a href = "" ng-click = "vm.changeFilter(department)"><i ng-if ="vm.current_id == department.dep_id " class="fa fa-fw fa-check"></i> {{department.name}}</a>\n' +
+    '        </li>\n' +
+    '        \n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '       <!--  <li><a ng-click = "vm.changeFilter(\'finance\')" href=""><i ng-if ="vm.current_filter == \'finance\' " class="fa fa-fw fa-check"></i>Finance</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'stores_and_supplies\')" href=""><i ng-if ="vm.current_filter == \'stores_and_supplies\' " class="fa fa-fw fa-check"></i>Stores and supplies</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'operations\')" href=""><i ng-if ="vm.current_filter == \'operations\' " class="fa fa-fw fa-check"></i>Operations department</a></li> -->\n' +
+    '\n' +
+    '      </ul>\n' +
+    '    </div>\n' +
+    '    <!-- <div class="clearfix"></div> -->\n' +
+    '    <div>\n' +
+    '    <button ng-class = "{\'btn-warning\': vm.publicfilter}" ng-click = "vm.privatefilter = false;vm.publicfilter = !vm.publicfilter; vm.public_filter(vm.publicfilter)" style="margin-left: 10px" type="button" class="btn btn-default">Public</button>\n' +
+    '\n' +
+    '    <button ng-class = "{\'btn-warning\': vm.privatefilter}" ng-click = "vm.publicfilter = false;vm.privatefilter = !vm.privatefilter; vm.private_filter(vm.privatefilter)" style="margin-left: 5px" type="button" class="btn btn-default">Private</button>\n' +
+    '    <!-- <div class="dropdown" style="margin-left: 10px; float: left">\n' +
+    '    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Public\n' +
+    '      <span class="caret"></span></button>\n' +
+    '      <ul class="dropdown-menu">\n' +
+    '        <li><a href="">Private</a></li>\n' +
+    '        \n' +
+    '      </ul>\n' +
+    '    </div> -->\n' +
+    '    <div class="clearfix"></div>\n' +
+    '    <h4>{{vm.current_department.name}}</h4>\n' +
+    '     <!--  <ol class="breadcrumb">\n' +
+    '        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
+    '        <li><a href="#">Forms</a></li>\n' +
+    '        <li class="active">General Elements</li>\n' +
+    '    </ol> -->\n' +
+    '</section>\n' +
+    '\n' +
+    '\n' +
+    '<section class="content">\n' +
+    '<div class="row">\n' +
+    '      <tasks-display tasks="vm.tasks" loadingfilter="vm.loadingFilter"></tasks-display>\n' +
+    '      \n' +
+    '      </div>\n' +
+    '</section>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/components/forgot-password/forgot-password.component.html',
+    '<form ng-submit="vm.submit()" class="ForgotPassword-form" name="vm.forgotPasswordForm" novalidate>\n' +
+    '  <div class="callout callout-danger" ng-if="vm.errorTrigger">\n' +
+    '    <h4>Error:</h4>\n' +
+    '    <p>Please check your email and try again.</p>\n' +
+    '  </div>\n' +
+    '  <div class="form-group has-feedback" ng-class="{ \'has-error\': (vm.forgotPasswordForm.email.$invalid || vm.serverError) && ( vm.formSubmitted || vm.forgotPasswordForm.email.$touched) }">\n' +
+    '    <input type="email" class="form-control" placeholder="Please enter your email address" name="email" ng-model="vm.email" ng-required="true" ng-pattern="/^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/">\n' +
+    '    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>\n' +
+    '    <p ng-show="vm.forgotPasswordForm.email.$error.email  && ( vm.formSubmitted || vm.forgotPasswordForm.email.$touched)" class="help-block">This is not a valid email</p>\n' +
+    '    <p ng-show="vm.forgotPasswordForm.email.$error.required && ( vm.formSubmitted || vm.forgotPasswordForm.email.$touched)" class="help-block">Email is required.</p>\n' +
+    '    <p ng-show=\'vm.serverError\' class="help-block">{{ vm.serverError }}</p>\n' +
+    '  </div>\n' +
+    '  <div class="row">\n' +
+    '    <div class="col-xs-12">\n' +
+    '      <button type="submit" class="btn btn-primary btn-block btn-flat">\n' +
+    '        Submit\n' +
+    '      </button>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</form>\n' +
     '');
 }]);
 })();
@@ -101946,113 +102345,6 @@ module.run(['$templateCache', function($templateCache) {
     '        <!--/.col (right) -->\n' +
     '      </div>\n' +
     '</section>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/components/department-tasks/department-tasks.component.html',
-    '<section class="content-header">\n' +
-    '	<h1 style="display: inline-block;float: left;">\n' +
-    '		Departments \n' +
-    '		<!-- <small>Preview</small> -->\n' +
-    '	</h1>\n' +
-    '  <!-- <div class="dropdown" style="margin-left: 10px; float: left">\n' +
-    '    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Administration Department\n' +
-    '      <span class="caret"></span></button>\n' +
-    '      <ul class="dropdown-menu">\n' +
-    '        <li><a href="">IT Department</a></li>\n' +
-    '        <li><a href="">Finance</a></li>\n' +
-    '        <li><a href="">Stores and supplies</a></li>\n' +
-    '        <li><a href="">Operations department</a></li>\n' +
-    '        \n' +
-    '      </ul>\n' +
-    '    </div> -->\n' +
-    '\n' +
-    '    <div class="dropdown" style="margin-left: 10px; float: left">\n' +
-    '    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Switch filter\n' +
-    '      <span class="caret"></span></button>\n' +
-    '      <ul style="z-index: 901331;" class="dropdown-menu">\n' +
-    '        \n' +
-    '        <li ng-repeat = "department in vm.departments">\n' +
-    '        <a href = "" ng-click = "vm.changeFilter(department)"><i ng-if ="vm.current_id == department.dep_id " class="fa fa-fw fa-check"></i> {{department.name}}</a>\n' +
-    '        </li>\n' +
-    '        \n' +
-    '\n' +
-    '\n' +
-    '\n' +
-    '       <!--  <li><a ng-click = "vm.changeFilter(\'finance\')" href=""><i ng-if ="vm.current_filter == \'finance\' " class="fa fa-fw fa-check"></i>Finance</a></li>\n' +
-    '        <li><a ng-click = "vm.changeFilter(\'stores_and_supplies\')" href=""><i ng-if ="vm.current_filter == \'stores_and_supplies\' " class="fa fa-fw fa-check"></i>Stores and supplies</a></li>\n' +
-    '        <li><a ng-click = "vm.changeFilter(\'operations\')" href=""><i ng-if ="vm.current_filter == \'operations\' " class="fa fa-fw fa-check"></i>Operations department</a></li> -->\n' +
-    '\n' +
-    '      </ul>\n' +
-    '    </div>\n' +
-    '    <!-- <div class="clearfix"></div> -->\n' +
-    '    <div>\n' +
-    '    <button ng-class = "{\'btn-warning\': vm.publicfilter}" ng-click = "vm.privatefilter = false;vm.publicfilter = !vm.publicfilter; vm.public_filter(vm.publicfilter)" style="margin-left: 10px" type="button" class="btn btn-default">Public</button>\n' +
-    '\n' +
-    '    <button ng-class = "{\'btn-warning\': vm.privatefilter}" ng-click = "vm.publicfilter = false;vm.privatefilter = !vm.privatefilter; vm.private_filter(vm.privatefilter)" style="margin-left: 5px" type="button" class="btn btn-default">Private</button>\n' +
-    '    <!-- <div class="dropdown" style="margin-left: 10px; float: left">\n' +
-    '    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Public\n' +
-    '      <span class="caret"></span></button>\n' +
-    '      <ul class="dropdown-menu">\n' +
-    '        <li><a href="">Private</a></li>\n' +
-    '        \n' +
-    '      </ul>\n' +
-    '    </div> -->\n' +
-    '    <div class="clearfix"></div>\n' +
-    '    <h4>{{vm.current_department.name}}</h4>\n' +
-    '     <!--  <ol class="breadcrumb">\n' +
-    '        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
-    '        <li><a href="#">Forms</a></li>\n' +
-    '        <li class="active">General Elements</li>\n' +
-    '    </ol> -->\n' +
-    '</section>\n' +
-    '\n' +
-    '\n' +
-    '<section class="content">\n' +
-    '<div class="row">\n' +
-    '      <tasks-display tasks="vm.tasks" loadingfilter="vm.loadingFilter"></tasks-display>\n' +
-    '      \n' +
-    '      </div>\n' +
-    '</section>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/components/forgot-password/forgot-password.component.html',
-    '<form ng-submit="vm.submit()" class="ForgotPassword-form" name="vm.forgotPasswordForm" novalidate>\n' +
-    '  <div class="callout callout-danger" ng-if="vm.errorTrigger">\n' +
-    '    <h4>Error:</h4>\n' +
-    '    <p>Please check your email and try again.</p>\n' +
-    '  </div>\n' +
-    '  <div class="form-group has-feedback" ng-class="{ \'has-error\': (vm.forgotPasswordForm.email.$invalid || vm.serverError) && ( vm.formSubmitted || vm.forgotPasswordForm.email.$touched) }">\n' +
-    '    <input type="email" class="form-control" placeholder="Please enter your email address" name="email" ng-model="vm.email" ng-required="true" ng-pattern="/^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/">\n' +
-    '    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>\n' +
-    '    <p ng-show="vm.forgotPasswordForm.email.$error.email  && ( vm.formSubmitted || vm.forgotPasswordForm.email.$touched)" class="help-block">This is not a valid email</p>\n' +
-    '    <p ng-show="vm.forgotPasswordForm.email.$error.required && ( vm.formSubmitted || vm.forgotPasswordForm.email.$touched)" class="help-block">Email is required.</p>\n' +
-    '    <p ng-show=\'vm.serverError\' class="help-block">{{ vm.serverError }}</p>\n' +
-    '  </div>\n' +
-    '  <div class="row">\n' +
-    '    <div class="col-xs-12">\n' +
-    '      <button type="submit" class="btn btn-primary btn-block btn-flat">\n' +
-    '        Submit\n' +
-    '      </button>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</form>\n' +
-    '');
 }]);
 })();
 
@@ -103363,91 +103655,6 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/components/task/task.component.html',
-    '<section class="content-header">\n' +
-    '	<h1 style="display: inline-block;float: left;">\n' +
-    '		View Task\n' +
-    '		<!-- <small>Preview</small> -->\n' +
-    '	</h1>\n' +
-    '    <div class="clearfix"></div>\n' +
-    '     <!--  <ol class="breadcrumb">\n' +
-    '        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
-    '        <li><a href="#">Forms</a></li>\n' +
-    '        <li class="active">General Elements</li>\n' +
-    '    </ol> -->\n' +
-    '</section>\n' +
-    '\n' +
-    '\n' +
-    '<section class="content">\n' +
-    '<div class="row">\n' +
-    '  <div class="col-md-12" dw-loading = "loadingFilter" dw-loading-options = "{text: \'\', spinner:false }"  show-loader loader-key = "\'loadingFilter\'" is-true = "vm.loadingFilter">\n' +
-    '        <!-- Horizontal Form -->\n' +
-    '        <task-detail-directive taskid = "vm.taskid"></task-detail-directive>\n' +
-    '          <!-- /.box -->\n' +
-    '          <!-- general form elements disabled -->\n' +
-    '\n' +
-    '          <!-- /.box -->\n' +
-    '        </div>\n' +
-    '        <!-- left column -->  \n' +
-    '        <!--/.col (right) -->\n' +
-    '      </div>\n' +
-    '</section>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/components/tasks/tasks.component.html',
-    '<section class="content-header">\n' +
-    '	<h1 style="display: inline-block;float: left;">\n' +
-    '		{{vm.current_filter_name}} \n' +
-    '		<!-- <small>Preview</small> -->\n' +
-    '	</h1>\n' +
-    '  <div class="dropdown" style="margin-left: 10px; float: left">\n' +
-    '    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Switch filter\n' +
-    '      <span class="caret"></span></button>\n' +
-    '      <ul style="z-index: 901331;" class="dropdown-menu">\n' +
-    '        <li><a ng-click = "vm.changeFilter(\'all\')" href=""><i ng-if ="vm.current_filter == \'all\' " class="fa fa-fw fa-check"></i> All tasks</a></li>\n' +
-    '        <li><a ng-click = "vm.changeFilter(\'reported_by_me\')" href=""><i ng-if ="vm.current_filter == \'reported_by_me\' " class="fa fa-fw fa-check"></i>Reported by me</a></li>\n' +
-    '        <li><a ng-click = "vm.changeFilter(\'assigned_to_me\')" href=""><i ng-if ="vm.current_filter == \'assigned_to_me\' " class="fa fa-fw fa-check"></i>Assigned to me</a></li>\n' +
-    '        <li><a ng-click = "vm.changeFilter(\'private_tasks\')" href=""><i ng-if ="vm.current_filter == \'private_tasks\' " class="fa fa-fw fa-check"></i>Private tasks</a></li>\n' +
-    '        <li><a ng-click = "vm.changeFilter(\'public_tasks\')" href=""><i ng-if ="vm.current_filter == \'public_tasks\' " class="fa fa-fw fa-check"></i>Public tasks</a></li>\n' +
-    '        <li><a ng-click = "vm.changeFilter(\'following\')" href=""><i ng-if ="vm.current_filter == \'following\' " class="fa fa-fw fa-check"></i>Following</a></li>\n' +
-    '\n' +
-    '      </ul>\n' +
-    '    </div>\n' +
-    '    <div class="clearfix"></div>\n' +
-    '     <!--  <ol class="breadcrumb">\n' +
-    '        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
-    '        <li><a href="#">Forms</a></li>\n' +
-    '        <li class="active">General Elements</li>\n' +
-    '    </ol> -->\n' +
-    '</section>\n' +
-    '\n' +
-    '\n' +
-    '<section class="content">\n' +
-    '<div class="row">\n' +
-    '\n' +
-    '  <tasks-display tasks="vm.tasks" loadingfilter="vm.loadingFilter"></tasks-display>\n' +
-    '        <!-- left column -->  \n' +
-    '        <!--/.col (right) -->\n' +
-    '      </div>\n' +
-    '</section>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/components/task-detail-directive/task-detail-directive.component.html',
     '<div class="pad margin no-print" ng-if = "vm.show_progress_created">\n' +
     '  <div class="callout callout-success" style="margin-bottom: 0!important;">\n' +
@@ -103662,6 +103869,91 @@ module.run(['$templateCache', function($templateCache) {
     '\n' +
     '\n' +
     '          </div>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/components/task/task.component.html',
+    '<section class="content-header">\n' +
+    '	<h1 style="display: inline-block;float: left;">\n' +
+    '		View Task\n' +
+    '		<!-- <small>Preview</small> -->\n' +
+    '	</h1>\n' +
+    '    <div class="clearfix"></div>\n' +
+    '     <!--  <ol class="breadcrumb">\n' +
+    '        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
+    '        <li><a href="#">Forms</a></li>\n' +
+    '        <li class="active">General Elements</li>\n' +
+    '    </ol> -->\n' +
+    '</section>\n' +
+    '\n' +
+    '\n' +
+    '<section class="content">\n' +
+    '<div class="row">\n' +
+    '  <div class="col-md-12" dw-loading = "loadingFilter" dw-loading-options = "{text: \'\', spinner:false }"  show-loader loader-key = "\'loadingFilter\'" is-true = "vm.loadingFilter">\n' +
+    '        <!-- Horizontal Form -->\n' +
+    '        <task-detail-directive taskid = "vm.taskid"></task-detail-directive>\n' +
+    '          <!-- /.box -->\n' +
+    '          <!-- general form elements disabled -->\n' +
+    '\n' +
+    '          <!-- /.box -->\n' +
+    '        </div>\n' +
+    '        <!-- left column -->  \n' +
+    '        <!--/.col (right) -->\n' +
+    '      </div>\n' +
+    '</section>');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/components/tasks/tasks.component.html',
+    '<section class="content-header">\n' +
+    '	<h1 style="display: inline-block;float: left;">\n' +
+    '		{{vm.current_filter_name}} \n' +
+    '		<!-- <small>Preview</small> -->\n' +
+    '	</h1>\n' +
+    '  <div class="dropdown" style="margin-left: 10px; float: left">\n' +
+    '    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Switch filter\n' +
+    '      <span class="caret"></span></button>\n' +
+    '      <ul style="z-index: 901331;" class="dropdown-menu">\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'all\')" href=""><i ng-if ="vm.current_filter == \'all\' " class="fa fa-fw fa-check"></i> All tasks</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'reported_by_me\')" href=""><i ng-if ="vm.current_filter == \'reported_by_me\' " class="fa fa-fw fa-check"></i>Reported by me</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'assigned_to_me\')" href=""><i ng-if ="vm.current_filter == \'assigned_to_me\' " class="fa fa-fw fa-check"></i>Assigned to me</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'private_tasks\')" href=""><i ng-if ="vm.current_filter == \'private_tasks\' " class="fa fa-fw fa-check"></i>Private tasks</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'public_tasks\')" href=""><i ng-if ="vm.current_filter == \'public_tasks\' " class="fa fa-fw fa-check"></i>Public tasks</a></li>\n' +
+    '        <li><a ng-click = "vm.changeFilter(\'following\')" href=""><i ng-if ="vm.current_filter == \'following\' " class="fa fa-fw fa-check"></i>Following</a></li>\n' +
+    '\n' +
+    '      </ul>\n' +
+    '    </div>\n' +
+    '    <div class="clearfix"></div>\n' +
+    '     <!--  <ol class="breadcrumb">\n' +
+    '        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
+    '        <li><a href="#">Forms</a></li>\n' +
+    '        <li class="active">General Elements</li>\n' +
+    '    </ol> -->\n' +
+    '</section>\n' +
+    '\n' +
+    '\n' +
+    '<section class="content">\n' +
+    '<div class="row">\n' +
+    '\n' +
+    '  <tasks-display tasks="vm.tasks" loadingfilter="vm.loadingFilter"></tasks-display>\n' +
+    '        <!-- left column -->  \n' +
+    '        <!--/.col (right) -->\n' +
+    '      </div>\n' +
+    '</section>');
 }]);
 })();
 
@@ -107621,69 +107913,6 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/components/user-permissions-add/user-permissions-add.component.html',
-    '<section class="content-header">\n' +
-    '  <h1>Users <small>Module description here</small></h1>\n' +
-    '  <ol class="breadcrumb">\n' +
-    '    <li><a ui-sref="app.landing"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
-    '    <li><a ui-sref="app.userpermissions">Permission Lists</a></li>\n' +
-    '    <li class="active">Add New User Permission</li>\n' +
-    '  </ol>\n' +
-    '</section>\n' +
-    '<section class="content">\n' +
-    '  <div class="row">\n' +
-    '    <div class="col-sm-12 col-md-7">\n' +
-    '      <div class="box box-primary">\n' +
-    '        <div class="box-header with-border">\n' +
-    '          <h3 class="box-title">Add New User Permission</h3>\n' +
-    '        </div>\n' +
-    '        <form class="form-horizontal" name="permissionForm" ng-submit="vm.save(permissionForm.$valid, permissionForm)" novalidate>\n' +
-    '          <div class="box-body">\n' +
-    '            <div ng-if="vm.alerts" class="alert alert-{{alert.type}}" ng-repeat="alert in vm.alerts">\n' +
-    '              <h4>{{alert.title}}</h4>\n' +
-    '              <p>{{alert.msg}}</p>\n' +
-    '            </div>\n' +
-    '            <div class="form-group" ng-class="{ \'has-error\': permissionForm.name.$invalid && ( vm.formSubmitted || permissionForm.name.$touched) }">\n' +
-    '              <label for="inputEmail3" class="col-sm-2 control-label">Name</label>\n' +
-    '              <div class="col-sm-10">\n' +
-    '                <input type="text" class="form-control" ng-model="vm.name" name="name" placeholder="Name" required>\n' +
-    '                <p ng-show="permissionForm.name.$error.required && ( vm.formSubmitted || permissionForm.name.$touched)" class="help-block">Name is required.</p>\n' +
-    '              </div>\n' +
-    '            </div>\n' +
-    '            <div class="form-group" ng-class="{ \'has-error\': permissionForm.slug.$invalid && ( vm.formSubmitted || permissionForm.slug.$touched) }">\n' +
-    '              <label for="inputPassword3" class="col-sm-2 control-label">Slug</label>\n' +
-    '              <div class="col-sm-10">\n' +
-    '                <input type="text" class="form-control" ng-model="vm.slug" name="slug" placeholder="Slug" required>\n' +
-    '                <p ng-show="permissionForm.slug.$error.required && ( vm.formSubmitted || permissionForm.slug.$touched)" class="help-block">Slug is required.</p>\n' +
-    '              </div>\n' +
-    '            </div>\n' +
-    '            <div class="form-group">\n' +
-    '              <label for="inputPassword3" class="col-sm-2 control-label">Description</label>\n' +
-    '              <div class="col-sm-10">\n' +
-    '                <textarea class="form-control" rows="3" ng-model="vm.description" name="description" placeholder="Description"></textarea>\n' +
-    '              </div>\n' +
-    '            </div>\n' +
-    '          </div>\n' +
-    '          <div class="box-footer">\n' +
-    '            <a ui-sref="app.userpermissions" class="btn btn-default"><i class="fa fa-angle-double-left"></i> Back</a>\n' +
-    '            <button type="submit" class="btn btn-primary pull-right">Add New</button>\n' +
-    '          </div>\n' +
-    '        </form>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</section>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/components/user-permissions-edit/user-permissions-edit.component.html',
     '<section class="content-header">\n' +
     '  <h1>Users <small>Module description here</small></h1>\n' +
@@ -107730,6 +107959,69 @@ module.run(['$templateCache', function($templateCache) {
     '          <div class="box-footer">\n' +
     '            <a ui-sref="app.userpermissions" class="btn btn-default"><i class="fa fa-angle-double-left"></i> Back</a>\n' +
     '            <button type="submit" class="btn btn-primary pull-right">Update</button>\n' +
+    '          </div>\n' +
+    '        </form>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</section>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/components/user-permissions-add/user-permissions-add.component.html',
+    '<section class="content-header">\n' +
+    '  <h1>Users <small>Module description here</small></h1>\n' +
+    '  <ol class="breadcrumb">\n' +
+    '    <li><a ui-sref="app.landing"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
+    '    <li><a ui-sref="app.userpermissions">Permission Lists</a></li>\n' +
+    '    <li class="active">Add New User Permission</li>\n' +
+    '  </ol>\n' +
+    '</section>\n' +
+    '<section class="content">\n' +
+    '  <div class="row">\n' +
+    '    <div class="col-sm-12 col-md-7">\n' +
+    '      <div class="box box-primary">\n' +
+    '        <div class="box-header with-border">\n' +
+    '          <h3 class="box-title">Add New User Permission</h3>\n' +
+    '        </div>\n' +
+    '        <form class="form-horizontal" name="permissionForm" ng-submit="vm.save(permissionForm.$valid, permissionForm)" novalidate>\n' +
+    '          <div class="box-body">\n' +
+    '            <div ng-if="vm.alerts" class="alert alert-{{alert.type}}" ng-repeat="alert in vm.alerts">\n' +
+    '              <h4>{{alert.title}}</h4>\n' +
+    '              <p>{{alert.msg}}</p>\n' +
+    '            </div>\n' +
+    '            <div class="form-group" ng-class="{ \'has-error\': permissionForm.name.$invalid && ( vm.formSubmitted || permissionForm.name.$touched) }">\n' +
+    '              <label for="inputEmail3" class="col-sm-2 control-label">Name</label>\n' +
+    '              <div class="col-sm-10">\n' +
+    '                <input type="text" class="form-control" ng-model="vm.name" name="name" placeholder="Name" required>\n' +
+    '                <p ng-show="permissionForm.name.$error.required && ( vm.formSubmitted || permissionForm.name.$touched)" class="help-block">Name is required.</p>\n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '            <div class="form-group" ng-class="{ \'has-error\': permissionForm.slug.$invalid && ( vm.formSubmitted || permissionForm.slug.$touched) }">\n' +
+    '              <label for="inputPassword3" class="col-sm-2 control-label">Slug</label>\n' +
+    '              <div class="col-sm-10">\n' +
+    '                <input type="text" class="form-control" ng-model="vm.slug" name="slug" placeholder="Slug" required>\n' +
+    '                <p ng-show="permissionForm.slug.$error.required && ( vm.formSubmitted || permissionForm.slug.$touched)" class="help-block">Slug is required.</p>\n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '            <div class="form-group">\n' +
+    '              <label for="inputPassword3" class="col-sm-2 control-label">Description</label>\n' +
+    '              <div class="col-sm-10">\n' +
+    '                <textarea class="form-control" rows="3" ng-model="vm.description" name="description" placeholder="Description"></textarea>\n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '          </div>\n' +
+    '          <div class="box-footer">\n' +
+    '            <a ui-sref="app.userpermissions" class="btn btn-default"><i class="fa fa-angle-double-left"></i> Back</a>\n' +
+    '            <button type="submit" class="btn btn-primary pull-right">Add New</button>\n' +
     '          </div>\n' +
     '        </form>\n' +
     '      </div>\n' +
@@ -108800,295 +109092,6 @@ module.run(['$templateCache', function($templateCache) {
     '    </div>\n' +
     '  </div>\n' +
     '</section>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/create-task/create-task.page.html',
-    '<create-task></create-task>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/department-tasks/department-tasks.page.html',
-    '<department-tasks></department-tasks>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/footer/footer.page.html',
-    '<footer class="main-footer">\n' +
-    '  <div class="pull-right hidden-xs">\n' +
-    '    <b>Version</b> 2.3.3\n' +
-    '  </div>\n' +
-    '  <strong>Copyright &copy; 2016-2017 <a>Cytonn Web App</a>.</strong> All rights reserved.\n' +
-    '</footer>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/forgot-password/forgot-password.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <h3>Forgot your password?</h3>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <forgot-password></forgot-password>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <br>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <a ui-sref="login">Back to Login Page</a>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/header/header.page.html',
-    '<nav-header></nav-header>\n' +
-    '<nav-sidebar></nav-sidebar>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/landing/landing.page.html',
-    '<section class="content-header">\n' +
-    '  <h1>\n' +
-    '    Home\n' +
-    '  </h1>\n' +
-    '  <ol class="breadcrumb">\n' +
-    '    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>\n' +
-    '    <li class="active">Dashboard</li>\n' +
-    '  </ol>\n' +
-    '</section>\n' +
-    '<dashboard></dashboard>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/layout/layout.page.html',
-    '<div ui-view="header" id = "cytonn-app"></div>\n' +
-    '<div class="content-wrapper">\n' +
-    '    <div ui-view="main"></div>\n' +
-    '</div>\n' +
-    '<div ui-view="footer"></div>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/login/login.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>App</b>System</a> \n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <h3>Sign in</h3>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <login-form></login-form>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/login-loader/login-loader.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <login-loader></login-loader>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/register/register.page.html',
-    '<div class="register-box">\n' +
-    '  <div class="register-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="register-box-body">\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <h3>Create a new account</h3>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <register-form></register-form>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <br>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <a ui-sref="login">I already have an account</a>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <br>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        By signing up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Privacy Policy</a>.\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/reset-password/reset-password.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <div class="row-">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <div class="text-center">\n' +
-    '          <h3>Reset Password</h3>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '    <div class="row">\n' +
-    '      <div class="col-xs-12">\n' +
-    '        <reset-password></reset-password>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </div>\n' +
-    '</div>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/tasks/tasks.page.html',
-    '<tasks></tasks>');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/user-verification/user-verification.page.html',
-    '<div class="login-box">\n' +
-    '  <div class="login-logo">\n' +
-    '    <a ui-sref="login"><b>Admin</b>LTE</a>\n' +
-    '  </div>\n' +
-    '  <div class="login-box-body">\n' +
-    '    <user-verification></user-verification>\n' +
-    '  </div>\n' +
-    '</div>\n' +
     '');
 }]);
 })();
