@@ -21,7 +21,7 @@
 
   window.__env = window.__env || {};
   // console.log(window.__env);
-  var environment = 'LOCAL';    
+  var environment = 'PRODUCTION';    
 
   window.__env.debug = false; 
 
@@ -41,7 +41,7 @@ function localEnvironment() {
 
 function productionEnvironment() {
   window.__env.environment = 'PRODUCTION';
-  window.__env.baseUrl = 'http://johnweb.ga/api/';
+  window.__env.baseUrl = 'https://cytonn-web-app.herokuapp.com/api/';
 
 }
 
