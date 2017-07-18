@@ -183,7 +183,7 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
-        LaravelAngular\Generators\LaravelServiceProvider::class
+        
     ],  
 
     /*
