@@ -41,7 +41,7 @@ function localEnvironment() {
 
 function productionEnvironment() {
   window.__env.environment = 'PRODUCTION';
-  window.__env.baseUrl = 'https://cytonn-web-app.herokuapp.com/api/';
+  window.__env.baseUrl = 'http://cytonn-web-app.herokuapp.com/api/';
 
 }
 
